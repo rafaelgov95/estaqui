@@ -1,23 +1,17 @@
 <div class="login-page">
     <div class="row" [hidden]="submitted">
         <div class="col-md-4 push-md-4">
-            <!--<img src="assets/images/logo.png" width="150px" class="user-avatar" />-->
+
             <h1>Vou Estacionar</h1>
-            <form [formGroup]="UserForm" *ngIf="active" (ngSubmit)="login()">
-                <!--<div class="form-content">
 
-                    <div class="form-group">
-                        <input type="text" class="form-control input-underline input-lg" id="" placeholder="Email" name="username" [(ngModel)]="model.username" #username="ngModel" required>
+            <div [hidden]="alert" class="alert alert-danger alert-dismissable">
+                <!--<a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>-->
+                <strong>Erro</strong> Email ou Senha incorretos.
 
-                    </div>
-
-                    <div class="form-group">
-                        <input type="password" class="form-control input-underline input-lg" id="" placeholder="Password" name="password" [(ngModel)]="model.password" #password="ngModel" required>
-                    </div>
-                </div>-->
+            </div>
+            <form [formGroup]="UserForm" (ngSubmit)="login()">
 
                 <div class="form-group">
-                    <!--<label for="email">Name</label>-->
 
                     <input type="text" id="email" class="form-control input-underline input-lg" formControlName="email" placeholder="Email" name="email" required>
 
@@ -27,7 +21,6 @@
                 </div>
 
                 <div class="form-group">
-                    <!--<label for="alterEgo">Alter Ego</label>-->
                     <input type="password" id="senha" class="form-control input-underline input-lg" formControlName="senha" placeholder="Password" name="senha" required>
                     <div *ngIf="formErrors.senha" class="alert alert-danger">
                         {{ formErrors.senha }}
