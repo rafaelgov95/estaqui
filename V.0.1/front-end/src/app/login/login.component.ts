@@ -102,8 +102,6 @@ export class LoginComponent implements OnInit {
                 data => {
                      localStorage.setItem('isLoggedin', 'true');
                      this.router.navigate([this.returnUrl]);
-                             
-                             
                                 
              },
                 error => {
