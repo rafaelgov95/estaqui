@@ -6,15 +6,13 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 // import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthGuard } from './shared';
+
 import { AlertService } from './shared/services/alert.service';
-import { AuthenticationService } from './shared/services/autenticacao.service';
 
 import { AgmCoreModule } from '@agm/core';
-// import { LoginModule } from './login/login.module';
 
 
 import { AppComponent } from './app.component';
-// import { MapsComponent } from './layout/dashboard/components/maps/maps.component';
 
 @NgModule({
   declarations: [
@@ -34,9 +32,7 @@ import { AppComponent } from './app.component';
     TranslateModule.forRoot()
   ],
   providers: [
-  AuthGuard,
-  AlertService,
-  AuthenticationService
+  AuthGuard
   ],
   bootstrap: [AppComponent]
 })

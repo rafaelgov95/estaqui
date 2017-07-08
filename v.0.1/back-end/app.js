@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
-    // res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
     next();
 });
 app.get('/', function(req, res) {
@@ -38,12 +38,16 @@ app.get('/', function(req, res) {
 });
 
 // console.log(path.join(__dirname + '/views/index.html'))
-
+app.use(function(req, res, next) {
+    console.log(req.body) // populated!
+    next()
+})
 
 // console.log('teste');
 app.post('/autentica', login) // autentica
-app.use(require('./routes/verifica-toke')) // verifica o token 
+
 app.use('/api/usuario', usuario)
+app.use(require('./routes/verifica-toke')) // verifica o token 
 app.use('/api/funcioario', funcionario)
 app.use('/api/estacionamento', estacionamento);
 app.use('/api/gerente', gerencia);

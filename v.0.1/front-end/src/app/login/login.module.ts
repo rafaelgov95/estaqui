@@ -4,10 +4,11 @@ import { RouterModule } from '@angular/router';
 import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
 
 import { LoginRoutingModule } from './login-routing.module';
-import { AuthenticationService } from '../shared/services/autenticacao.service';
+import { AuthenticationService } from '../shared/services/login/autenticacao.service';
+import { LoginService } from '../shared/services/login/LoginService.service';
 
-
-// import { SharedModule} from '../shared/shared.module';
+import { AlertService } from '../shared/services/alert.service';
+import { SharedModule} from '../shared/shared.module';
 import { LoginComponent } from './login.component';
 
 
@@ -16,10 +17,10 @@ import { LoginComponent } from './login.component';
     CommonModule,
     FormsModule,
     LoginRoutingModule,
-    ReactiveFormsModule
-    // SharedModule
+    ReactiveFormsModule,
+    SharedModule
   ], 
-   providers :[AuthenticationService],
+   providers :[AuthenticationService,AlertService,LoginService],
    declarations: [LoginComponent],
    exports:[LoginComponent]
 })

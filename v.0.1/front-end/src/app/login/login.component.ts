@@ -4,9 +4,9 @@ import { FormGroup, FormBuilder
  } from '@angular/forms';
 import { Router,ActivatedRoute } from '@angular/router';
 
-import { LoginUser } from '../_modelos/login-user';
+import { User } from '../_modelos/user';
 // import { forbiddenNameValidator } from '../shared/directivas/forbidden-name.directive';
-import { AuthenticationService } from '../shared/services/autenticacao.service';
+import { LoginService } from '../shared/services/login/LoginService.service';
 import { AlertService } from '../shared/services/alert.service';
 
 @Component({
@@ -19,24 +19,25 @@ export class LoginComponent implements OnInit {
     alert =true;
     returnUrl: string;
     UserForm: FormGroup;
-    user:LoginUser;
+    user:User;
     submitted = false;
 
   constructor(
         private fb: FormBuilder,
         private route: ActivatedRoute,
         private router: Router,
-        private authenticationService: AuthenticationService,
+        private loginService: LoginService,
         private alertService: AlertService
         
     ) {  
-      this.user = new LoginUser(0, '', '');
+      this.user = new User('', '', '');
     }
 
    ngOnInit(): void {
     this.buildForm();
+    this.alertService.getMessage(); 
         // reset login status
-    this.authenticationService.logout();
+    this.loginService.logout();
 
         // get return url from route parameters or default to '/'
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || 'dashboard';
@@ -97,7 +98,7 @@ export class LoginComponent implements OnInit {
 
     login() {
  
-        this.authenticationService.login(this.UserForm.get('email').value, this.UserForm.get('senha').value)
+        this.loginService.logar(this.UserForm.get('email').value, this.UserForm.get('senha').value)
             .subscribe(
                 data => {
                      localStorage.setItem('isLoggedin', 'true');
