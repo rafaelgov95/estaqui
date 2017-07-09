@@ -113,7 +113,7 @@ export class SignupComponent implements OnInit {
        this.user.nome=this.UserForm.get('nome').value;
        this.user.email=this.UserForm.get('email').value;
        this.user.senha=this.UserForm.get('senha').value;
-
+      console.log("aqui",this.user);
         this.loginService.create(this.user)
             .subscribe(
                 data => {
