@@ -67,7 +67,7 @@ export class AuthService {
     localStorage.removeItem('access_token');
     localStorage.removeItem('id_token');
     localStorage.removeItem('expires_at');
-     localStorage.getItem('isLoggedin');
+    localStorage.getItem('isLoggedin');
     // Go back to the home route
     this.router.navigate(['/']);
   }

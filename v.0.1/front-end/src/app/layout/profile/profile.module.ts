@@ -5,7 +5,7 @@ import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
 
 import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './profile.component';
-
+import { PageHeaderModule } from './../../shared';
 
 
 
@@ -15,10 +15,11 @@ import { ProfileComponent } from './profile.component';
     FormsModule,
     ProfileRoutingModule,
     ReactiveFormsModule,
+    PageHeaderModule
     
   ], 
    providers :[],
    declarations: [ProfileComponent],
    exports:[ProfileComponent]
 })
-export class LoginModule { }
+export class ProfileModule { }
