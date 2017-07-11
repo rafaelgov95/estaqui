@@ -16,7 +16,6 @@ import {
 import { StatModule } from '../../shared';
 import { AgmCoreModule } from '@agm/core';
 import {MapsComponent} from './components/maps/maps.component';
-import { PageHeaderModule } from './../../shared';
 
 @NgModule({
     imports: [
@@ -27,7 +26,8 @@ import { PageHeaderModule } from './../../shared';
         StatModule,
         AgmCoreModule.forRoot({
             apiKey: 'AIzaSyDYeNFzbOHKshPnZ11jefzhIlvUmufvr5w'
-        })        ,PageHeaderModule
+        })
+        ,
     ],
     declarations: [
         DashboardComponent,
