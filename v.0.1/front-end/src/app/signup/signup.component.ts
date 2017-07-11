@@ -37,12 +37,14 @@ export class SignupComponent implements OnInit {
           Validators.required,
           Validators.minLength(4),
         ]
-      ],
+      ]
+      ,
       'email': [this.user.email, [
           Validators.required,
           Validators.minLength(4),
         ]
-      ],
+      ]
+      ,
       'senha': [this.user.senha,[
             Validators.required,
             Validators.minLength(4)
@@ -81,32 +83,32 @@ export class SignupComponent implements OnInit {
 
    formErrors = {
     'nome':'',
-    'email': '',
-    'senha': '',
-    'confirmaSenha':''
+    // 'email': ''
+    // 'senha': '',
+    // 'confirmaSenha':''
   };
 
   validationMessages = {
     'nome': {
-      'required': 'required.',
-       'minlength':     'Name must be at least 4 characters long.',
-      'maxlength':     'Name cannot be more than 24 characters long.'
-    },
-    'email': {
-      'required':      'Name is required.',
-      'minlength':     'Name must be at least 4 characters long.',
-      'maxlength':     'Name cannot be more than 24 characters long.'
-    },
-    'senha': {
-      'required': 'required.',
-       'minlength':     'Name must be at least 4 characters long.',
-       'maxlength':     'Name cannot be more than 24 characters long.'
-    },
-    'confirmaSenha': {
-      'required': 'required.',
-       'minlength':     'Name must be at least 4 characters long.',
-      'maxlength':     'Name cannot be more than 24 characters long.'
+      'required': 'Nome de usuário requerido.',
+      'minlength': 'Nome tem que possuir mais de 4 caracteres'
     }
+    //,
+    // 'email': {
+    //  'required': 'Nome de usuário requerido.',
+    //   'minlength': 'Nome tem que possuir mais de 4 caracteres'
+    // }
+    // ,
+    // 'senha': {
+    //   'required': 'required.',
+    //    'minlength':     'Name must be at least 4 characters long.',
+    //    'maxlength':     'Name cannot be more than 24 characters long.'
+    // },
+    // 'confirmaSenha': {
+    //   'required': 'required.',
+    //    'minlength':     'Name must be at least 4 characters long.',
+    //   'maxlength':     'Name cannot be more than 24 characters long.'
+    // }
   };
      register() {
 

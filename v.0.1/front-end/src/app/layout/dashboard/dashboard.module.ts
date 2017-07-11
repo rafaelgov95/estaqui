@@ -25,7 +25,7 @@ import {ListaModule} from './components/maps/lista/lista.module';
         NgbAlertModule.forRoot(),
         DashboardRoutingModule,
         StatModule,
-        ListaModule   ,
+        // ListaModule   ,
         PageHeaderModule
         
         

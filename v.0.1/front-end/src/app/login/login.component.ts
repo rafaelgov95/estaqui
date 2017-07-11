@@ -86,19 +86,22 @@ export class LoginComponent implements OnInit {
   }
 
   formErrors = {
-    'email': '',
-    'senha': ''
+    'email': ''
+    // ,
+    // 'senha': ''
   };
 
   validationMessages = {
     'email': {
-      'required': 'Name is required.',
-      'minlength': 'Name must be at least 4 characters long.',
-      'maxlength': 'Name cannot be more than 24 characters long.'
-    },
-    'senha': {
-      'required': 'Power is required.'
+      'required': 'Nome de usuário requerido.',
+      'minlength': 'Nome tem que possuir mais de 4 caracteres'
+      // ,
+      // 'maxlength': 'Name cannot be more than 24 characters long.'
     }
+    // ,
+    // 'senha': {
+    //   'required': 'Power is required.'
+    // }
   };
 
   

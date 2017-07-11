@@ -22,9 +22,9 @@ const lista: EstacionamentoGeo[] = [
     
     <ul class="heroes">
       <li *ngFor="let estacinamento of estacinamentos"
-        // [class.selected]="estacinamento === selectedEstacionamento"
-        // (click)="onSelect(estacinamento)">
-        <span class="badge">{{estacinamento.id}}</span> {{estacinamento.name}}
+        [class.selected]="estacinamento === selectedEstacionamento"
+        (click)="onSelect(estacinamento)">
+       <span class="badge">{{estacinamento.id}}</span> {{estacinamento.name}}
       </li>
     </ul>
     <br>
@@ -86,13 +86,13 @@ const lista: EstacionamentoGeo[] = [
 })
 export class ListaComponent {
   title = 'Estacionamentos';
-  estacinamentos = lista;
-  selectedEstacionamento: EstacionamentoGeo;
+  // estacinamentos = lista;
+  // selectedEstacionamento: EstacionamentoGeo;
 
-  onSelect(estacinamento: EstacionamentoGeo): void {
-    this.selectedEstacionamento = estacinamento;
-    console.log(this.selectedEstacionamento);
-  }
+  // onSelect(estacinamento: EstacionamentoGeo): void {
+  //   this.selectedEstacionamento = estacinamento;
+  //   console.log(this.selectedEstacionamento);
+  // }
 }
 
 

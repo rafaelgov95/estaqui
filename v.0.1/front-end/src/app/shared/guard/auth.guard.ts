@@ -16,14 +16,14 @@ export class AuthGuard implements CanActivate {
         this.router.navigate(['/login']);
         return false;
     }
-    canDeactivate(){
- if (localStorage.getItem('isLoggedin')) {
+    redirectTo(){
+       if (localStorage.getItem('isLoggedin')) {
 
-            return false;
+            return 'dashboard';
         }
 
-        this.router.navigate(['/dashboard']);
-        return true;
+        // this.router.navigate(['/dashboard']);
+        return 'login';
 
     }
 }
