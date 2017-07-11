@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-configuracoes',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./configuracoes.component.scss']
 })
 export class ConfiguracoesComponent implements OnInit {
-    constructor() { }
-    ngOnInit() { }
+    constructor(public router: Router) { }
+    ngOnInit() {
+        if (this.router.url === '/') {
+            this.router.navigate(['/configuracoes']);
+        }
+    }
 }

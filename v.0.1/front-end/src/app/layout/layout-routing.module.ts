@@ -23,11 +23,9 @@ const routes: Routes = [
     }
     // ,
     // {
-    //     path: 'configuracoes', component: ConfiguracoesComponent,
-
-    //     children: [
-    //         { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' }
-    //     ]
+    //     // path: 'configuracoes', component: './configuracoes/configuracoes.module#ConfiguracoesModule',
+    //     // path: 'configuracoes', component: ConfiguracoesComponent,
+    //     path: 'configuracoes', loadChildren: './configuracoes/configuracoes.module#ConfiguracoesModule'
     // }
 ];
 
