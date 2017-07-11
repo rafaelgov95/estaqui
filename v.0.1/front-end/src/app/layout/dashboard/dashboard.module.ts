@@ -15,7 +15,8 @@ import {
 } from './components';
 import { StatModule } from '../../shared';
 import { AgmCoreModule } from '@agm/core';
-import {MapsComponent} from './components/maps/maps.component';
+     import { PageHeaderModule } from './../../shared';
+import {ListaModule} from './components/maps/lista/lista.module';
 
 @NgModule({
     imports: [
@@ -24,17 +25,17 @@ import {MapsComponent} from './components/maps/maps.component';
         NgbAlertModule.forRoot(),
         DashboardRoutingModule,
         StatModule,
-        AgmCoreModule.forRoot({
-            apiKey: 'AIzaSyDYeNFzbOHKshPnZ11jefzhIlvUmufvr5w'
-        })
-        ,
+        ListaModule   ,
+        PageHeaderModule
+        
+        
     ],
     declarations: [
         DashboardComponent,
         TimelineComponent,
         NotificationComponent,
-        ChatComponent,
-        MapsComponent
+        ChatComponent
+        
 
     ]
 })

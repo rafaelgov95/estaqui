@@ -17,18 +17,13 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [
     AppComponent,
-  
-
-    // MapsComponent
-  ],
+    ],
   imports: [
     FormsModule,
     HttpModule,
     AppRoutingModule,
     BrowserModule,
-    
-    //  LoginModule,
-    
+   
     TranslateModule.forRoot()
   ],
   providers: [
