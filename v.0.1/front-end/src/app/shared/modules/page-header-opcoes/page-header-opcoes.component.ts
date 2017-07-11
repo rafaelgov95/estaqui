@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'app-page-heade',
+    selector: 'app-page-header-opcoes',
     templateUrl: './page-header-opcoes.component.html',
     styleUrls: ['./page-header-opcoes.component.scss']
 })
