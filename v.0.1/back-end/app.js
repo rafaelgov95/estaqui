@@ -34,7 +34,7 @@ app.use(function (req, res, next) {
 });
 
 
-app.use('/api/*',()=>{
+app.use('/api/*', function (req, res) {
     console.log('entro aqui ufa')
     app.post('autentica', login) // autentica
     app.use('usuario', usuario)
@@ -42,11 +42,11 @@ app.use('/api/*',()=>{
     app.use('funcioario', funcionario)
     app.use('estacionamento', estacionamento);
     app.use('gerente', gerencia);
-    // app.get('/*', function(req, res) {
-    //     res.render(path.join(__dirname + '/views/dist/index.html'));
-    //     //__dirname : It will resolve to your project folder.
-    // });
-});
+    app.get('/*', function(req, res) {
+        res.render(path.join(__dirname + '/views/dist/index.html'));
+        //__dirname : It will resolve to your project folder.
+    });
+})
 
 // app.use(function (req, res, next) {
     app.get('/*', function (req, res) {
