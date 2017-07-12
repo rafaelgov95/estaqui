@@ -32,7 +32,7 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
     next();
 });
-
+  app.post('/api/autentica', login) // autentica
 
 app.use('/api*', function (req, res, next) {
 
