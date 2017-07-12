@@ -34,8 +34,8 @@ app.use(function (req, res, next) {
 });
 
 
-app.use('/api*', function (req, res, next) {
-
+// app.use('/api*', function (req, res, next) {
+    console.log('entro aqui ufa')
     app.post('autentica', login) // autentica
     app.use('usuario', usuario)
     app.use(require('./routes/verifica-toke')) // verifica o token 
@@ -47,7 +47,7 @@ app.use('/api*', function (req, res, next) {
     //     //__dirname : It will resolve to your project folder.
     // });
     // next()
-})
+// })
 
 // app.use(function (req, res, next) {
     app.get('/*', function (req, res) {
