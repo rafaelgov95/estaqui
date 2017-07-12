@@ -14,7 +14,7 @@ export class LoginService {
        urlSearchParams.append('email', email);
         urlSearchParams.append('senha', senha);
         let body = urlSearchParams.toString()
-        return this.http.post('http://104.197.122.39:3000/autentica', body, { headers: headers })
+        return this.http.post('/autentica', body, { headers: headers })
             .map((response: Response) => {
 
                 let body = response.json();
@@ -28,7 +28,7 @@ export class LoginService {
 
     create(user: User) {
         console.log("AQUI PORA", user);
-        return this.http.post('http://104.197.122.39:3000/api/usuario/save', user).map((response: Response) => response.json());
+        return this.http.post('/api/usuario/save', user).map((response: Response) => response.json());
     }
 
 
