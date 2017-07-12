@@ -32,13 +32,13 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
     next();
 });
-  app.post('/api/autentica', login) // autentica
+
 
 app.use('/api*', function (req, res, next) {
 
     app.post('autentica', login) // autentica
     app.use('usuario', usuario)
-    // app.use(require('./routes/verifica-toke')) // verifica o token 
+    app.use(require('./routes/verifica-toke')) // verifica o token 
     app.use('funcioario', funcionario)
     app.use('estacionamento', estacionamento);
     app.use('gerente', gerencia);
