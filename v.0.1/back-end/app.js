@@ -36,18 +36,17 @@ app.use(function (req, res, next) {
 
 app.use('/api*', function (req, res, next) {
 
-    app.use('/api/usuario', usuario)
-    app.post('/autentica', login) // autentica
-    app.use('/api/usuario', usuario)
-    // app.use(require('./routes/verifica-toke')) // verifica o token 
-    app.use('/api/funcioario', funcionario)
-    app.use('/api/estacionamento', estacionamento);
-    app.use('/api/gerente', gerencia);
+    app.post('autentica', login) // autentica
+    app.use('usuario', usuario)
+    app.use(require('./routes/verifica-toke')) // verifica o token 
+    app.use('funcioario', funcionario)
+    app.use('estacionamento', estacionamento);
+    app.use('gerente', gerencia);
     // app.get('/*', function(req, res) {
     //     res.render(path.join(__dirname + '/views/dist/index.html'));
     //     //__dirname : It will resolve to your project folder.
     // });
-    next()
+    // next()
 })
 
 // app.use(function (req, res, next) {
@@ -55,7 +54,7 @@ app.use('/api*', function (req, res, next) {
         res.render(path.join(__dirname + '/views/dist/index.html'));
         //__dirname : It will resolve to your project folder.
          // next()
-            next()
+            // next()
     });
     // next()
 // })
