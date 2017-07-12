@@ -34,9 +34,9 @@ app.use(function (req, res, next) {
 });
 
 
-// app.use('/api*', function (req, res, next) {
+app.use('/api*', function (req, res, next) {
     console.log('entro aqui ufa')
-    app.post('autentica', login) // autentica
+    app.post('/api/autentica', login) // autentica
     app.use('usuario', usuario)
     app.use(require('./routes/verifica-toke')) // verifica o token 
     app.use('funcioario', funcionario)
@@ -46,8 +46,8 @@ app.use(function (req, res, next) {
     //     res.render(path.join(__dirname + '/views/dist/index.html'));
     //     //__dirname : It will resolve to your project folder.
     // });
-    // next()
-// })
+    next()
+})
 
 // app.use(function (req, res, next) {
     app.get('/*', function (req, res) {
