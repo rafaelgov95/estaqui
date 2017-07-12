@@ -46,7 +46,7 @@ app.use('/api/*', function (req, res, next) {
     //     res.render(path.join(__dirname + '/views/dist/index.html'));
     //     //__dirname : It will resolve to your project folder.
     // });
-    next()
+    // next()
 })
 
 // app.use(function (req, res, next) {
