@@ -34,7 +34,7 @@ app.use(function (req, res, next) {
 });
 
 
-app.use('/api/*', function (req, res, next) {
+app.use('/api/*',()=>{
     console.log('entro aqui ufa')
     app.post('autentica', login) // autentica
     app.use('usuario', usuario)
@@ -46,8 +46,7 @@ app.use('/api/*', function (req, res, next) {
     //     res.render(path.join(__dirname + '/views/dist/index.html'));
     //     //__dirname : It will resolve to your project folder.
     // });
-    next()
-})
+});
 
 // app.use(function (req, res, next) {
     app.get('/*', function (req, res) {
