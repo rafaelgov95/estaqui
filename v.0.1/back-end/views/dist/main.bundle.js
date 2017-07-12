@@ -1240,7 +1240,7 @@ var LoginService = (function () {
         urlSearchParams.append('email', email);
         urlSearchParams.append('senha', senha);
         var body = urlSearchParams.toString();
-        return this.http.post('/autentica', body, { headers: headers })
+        return this.http.post('/api/autentica', body, { headers: headers })
             .map(function (response) {
             var body = response.json();
             if (body) {
