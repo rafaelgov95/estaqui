@@ -34,9 +34,9 @@ app.use(function (req, res, next) {
 });
 
 
-app.use('/api*', function (req, res, next) {
+app.use('/api/*', function (req, res, next) {
     console.log('entro aqui ufa')
-    app.post('/api/autentica', login) // autentica
+    app.post('autentica', login) // autentica
     app.use('usuario', usuario)
     app.use(require('./routes/verifica-toke')) // verifica o token 
     app.use('funcioario', funcionario)
