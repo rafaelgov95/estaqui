@@ -14,7 +14,7 @@ export class LoginService {
        urlSearchParams.append('email', email);
         urlSearchParams.append('senha', senha);
         let body = urlSearchParams.toString()
-        return this.http.post('/autentica', body, { headers: headers })
+        return this.http.post('/api/autentica', body, { headers: headers })
             .map((response: Response) => {
 
                 let body = response.json();
