@@ -25,21 +25,19 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, path.join('views','dist'))));
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
     next();
 });
-app.get('/', function(req, res) {
-    res.render(path.join(__dirname + '/views/index.html'));
-    //__dirname : It will resolve to your project folder.
-});
 
-// console.log(path.join(__dirname + '/views/index.html'))
 app.use(function(req, res, next) {
-    console.log(req.body) // populated!
+    app.get('/', function(req, res) {
+        res.render(path.join(__dirname + '/views/dist/index.html'));
+        //__dirname : It will resolve to your project folder.
+    });
     next()
 })
 
