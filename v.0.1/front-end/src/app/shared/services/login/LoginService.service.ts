@@ -16,7 +16,6 @@ export class LoginService {
         let body = urlSearchParams.toString()
         return this.http.post('/api/autentica', body, { headers: headers })
             .map((response: Response) => {
-
                 let body = response.json();
                 if (body) {
                     if (body.user && body.user.accessToken) {
