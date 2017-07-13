@@ -16,16 +16,18 @@ var router = express.Router();
 
 var app = express();
 
-app.set('views', path.join(__dirname, 'views'));
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'ejs')
+// app.set('views', path.join(__dirname, 'views'));
+// app.engine('html', require('ejs').renderFile);
+// app.set('view engine', 'ejs')
 
 
-app.use(logger('dev'));
+// app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use('/',express.static(path.join(__dirname, path.join('views', 'dist'))));
+// app.use('/',express.static(path.join(__dirname, path.join('views', 'dist'))));
+app.use(express.static(path.join(__dirname, 'dist')));
+
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
@@ -34,23 +36,36 @@ app.use(function (req, res, next) {
 });
 
 
+app.post('/api/autentica', login) // autentica
+app.use('/api/usuario', usuario)
+app.use(require('./routes/verifica-toke')) // verifica o token 
+app.use('/api/funcioario', funcionario)
+app.use('/api/estacionamento', estacionamento);
+app.use('/api/gerente', gerencia);
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist/index.html'));
+});
+
+
+
 // app.use(function (req, res, next) {
 // app.get('/*', function (req, res) {
 //     res.render(path.join(__dirname + '/views/dist/index.html'));
-    //__dirname : It will resolve to your project folder.
-    // next()
-    // next()
+//__dirn    ame : It will resolve to your project folder.
+// next()
+// next()
 // });
 
-app.use('/api/*',(req, res)=>{
-    console.log('entro aqui ufa')
-    app.post('autentica', login) // autentica
-    app.use('/api/usuario', usuario)
-    app.use(require('./routes/verifica-toke')) // verifica o token 
-    app.use('/api/funcioario', funcionario)
-    app.use('/api/estacionamento', estacionamento);
-    app.use('/api/gerente', gerencia);
-});
+// app.use('/api/*',(req, res)=>{
+//     console.log('entro aqui ufa')
+//     app.post('autentica', login) // autentica
+//     app.use('/api/usuario', usuario)
+//     app.use(require('./routes/verifica-toke')) // verifica o token 
+//     app.use('/api/funcioario', funcionario)
+//     app.use('/api/estacionamento', estacionamento);
+//     app.use('/api/gerente', gerencia);
+// });
 
 // app.get('/*', function (req, res) {
 //     res.render(path.join(__dirname + '/views/dist/index.html'));
