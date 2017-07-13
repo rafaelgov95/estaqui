@@ -36,7 +36,7 @@ app.use(function (req, res, next) {
 });
 
 app.use('/api/*', (req, res) => {
-
+    console.log('teset')
     app.post('/api/autentica', login) // autentica
     app.use('/api/usuario', usuario)
     app.use(require('./routes/verifica-toke')) // verifica o token 
