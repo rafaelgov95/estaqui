@@ -35,18 +35,18 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use('/api/*', (req, res) => {
+// app.use('/api/*', (req, res) => {
     console.log('teset')
-    app.post('autentica', login) // autentica
+    app.post('/api/autentica', login) // autentica
     app.use('/api/usuario', usuario)
-    app.use(require('./routes/verifica-toke')) // verifica o token 
+    // app.use(require('./routes/verifica-toke')) // verifica o token 
     app.use('/api/funcioario', funcionario)
     app.use('/api/estacionamento', estacionamento);
     app.use('/api/gerente', gerencia);
-});
+// });
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist/index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 
