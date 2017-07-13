@@ -37,7 +37,7 @@ app.use(function (req, res, next) {
 
 app.use('/api/*', (req, res) => {
     console.log('teset')
-    app.post('/api/autentica', login) // autentica
+    app.post('autentica', login) // autentica
     app.use('/api/usuario', usuario)
     app.use(require('./routes/verifica-toke')) // verifica o token 
     app.use('/api/funcioario', funcionario)
@@ -48,7 +48,7 @@ app.use('/api/*', (req, res) => {
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
-
+path.join('views', 'dist'))
 
 
 // app.use(function (req, res, next) {
