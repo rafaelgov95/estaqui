@@ -42,7 +42,7 @@ app.use(function (req, res, next) {
     // next()
 // });
 
-app.use('/api*',(req, res)=>{
+app.use('/api/*',(req, res)=>{
     console.log('entro aqui ufa')
     app.post('/api/autentica', login) // autentica
     app.use('/api/usuario', usuario)
