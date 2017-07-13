@@ -35,12 +35,12 @@ app.use(function (req, res, next) {
 
 
 // app.use(function (req, res, next) {
-app.get('/*', function (req, res) {
+// app.get('/*', function (req, res) {
     res.render(path.join(__dirname + '/views/dist/index.html'));
     //__dirname : It will resolve to your project folder.
     // next()
     next()
-});
+// });
 
 app.use('/api*',(req, res)=>{
     console.log('entro aqui ufa')
