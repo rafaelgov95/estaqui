@@ -78,7 +78,7 @@ app.get('*', (req, res) => {
 // })
 
 app.use(function (req, res) {
-    res.status(404).send({ url: req.originalUrl + ' not found' })
+    res.status(404).sendFile(path.join(__dirname, 'index.html'))
 });
 app.use(function (err, req, res, next) {
     // set locals, only providing error in development
