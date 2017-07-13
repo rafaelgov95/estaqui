@@ -35,7 +35,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.user('/api/*', () => {
+app.user('/api/*', (req, res) => {
 
     app.post('/api/autentica', login) // autentica
     app.use('/api/usuario', usuario)
