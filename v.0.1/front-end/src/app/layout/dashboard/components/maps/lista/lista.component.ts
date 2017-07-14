@@ -32,7 +32,7 @@ const lista: EstacionamentoGeo[] = [
     <br>
     <br>
     <br>
-    // <app-maps [est]="selectedEstacionamento"></app-maps>
+    <app-maps ></app-maps>
   `,
   styles: [`
     .selected {
