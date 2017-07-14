@@ -3,11 +3,11 @@ import { NgForm } from '@angular/forms';
 import { EstacionamentoGeo } from './../../../../_modelos/estacionamentogeo'
 
 const lista: EstacionamentoGeo[] = [
-  { id: 1, name: 'Rua dos amor', lat: 12.321, lng: 31231231 },
-  { id: 2, name: 'Salvina Maria Do Carmo', lat: -18.5087727, lng:-54.7453306  },
-  { id: 3, name: 'Centro', lat: 12.321, lng: 31231231 },
-  { id: 4, name: 'Pedro Mendes', lat: -18.5056868, lng:-54.7469895 },
-  { id: 5, name: 'Centro 2', lat: 12.321, lng: 31231231 }
+  { id: 1, name: 'Casa do Higor',label: 'Casa do Higor', lat: -18.5005715, lng:-54.7453306 },
+  { id: 2, name: 'Salvina Maria Do Carmo',label: 'Salvina Maria Do Carmo', lat: -18.5087727, lng:-54.7453306  },
+  { id: 3, name: 'Casa do Ramon',label: 'Casa do Ramon',lat: -18.4986773, lng: -54.7455217 },
+  { id: 4, name: 'Pedro Mendes',label: 'Pedro MendesA' ,lat: -18.5056868, lng:-54.7469895 },
+  { id: 5, name: 'Faculdade',label: 'Faculdade', lat: -18.4863752,lng:-54.7550554}
 ];
 
 @Component({
@@ -20,7 +20,7 @@ export class ListaComponent {
   estacinamentos = lista;
   selectedEstacionamento: EstacionamentoGeo;
   constructor(){
-     this.selectedEstacionamento ={ id: 11, name: 'Rua dos amor', lat: 12.321, lng: 31231231 };
+     this.selectedEstacionamento = lista[0]
   }  
   onSelect(estacinamento: EstacionamentoGeo): void {
     this.selectedEstacionamento = estacinamento;
