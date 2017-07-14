@@ -1,38 +1,54 @@
 import { Component } from '@angular/core';
-import {NgForm} from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { EstacionamentoGeo } from './../../../../../_modelos/estacionamentogeo'
 
 const lista: EstacionamentoGeo[] = [
-  { id: 11, name: 'Mr. Nice',lat:12.321,lng:31231231 },
-  { id: 12, name: 'Narco', lat:12.321,lng:31231231 },
-  { id: 13, name: 'Bombasto' ,lat:12.321,lng:31231231 },
-  { id: 14, name: 'Celeritas',lat:12.321,lng:3123123 },
-  { id: 15, name: 'Magneta' ,lat:12.321,lng:31231231 },
-  { id: 16, name: 'RubberMan' ,lat:12.321,lng:31231231 },
-  { id: 17, name: 'Dynama' ,lat:12.321,lng:31231231 },
-  { id: 18, name: 'Dr IQ' ,lat:12.321,lng:31231231 },
-  { id: 19, name: 'Magma' ,lat:2.321,lng:31231231 },
-  { id: 20, name: 'Tornado',lat:2.321,lng:31231231 },
+  { id: 11, name: 'Rua dos amor', lat: 12.321, lng: 31231231 },
+  { id: 12, name: 'Salvina Maria Do Carmo', lat: 12.321, lng: 31231231 },
+  { id: 13, name: 'Centro', lat: 12.321, lng: 31231231 },
+  { id: 14, name: 'Pedro Mendes', lat: 12.321, lng: 3123123 },
+  { id: 15, name: 'Centro 2', lat: 12.321, lng: 31231231 },
+  // { id: 16, name: 'RubberMan' ,lat:12.321,lng:31231231 },
+  // { id: 17, name: 'Dynama' ,lat:12.321,lng:31231231 },
+  // { id: 18, name: 'Dr IQ' ,lat:12.321,lng:31231231 },
+  // { id: 19, name: 'Magma' ,lat:2.321,lng:31231231 },
+  // { id: 20, name: 'Tornado',lat:2.321,lng:31231231 },
+  // [class.selected]="estacinamento === selectedEstacionamento"
+  // (click)="onSelect(estacinamento)"
 ];
 
 @Component({
   selector: 'lista',
   template: `
-    <h1>{{title}}</h1>
-    
+  
+<div class="row">
+    <div class="col-xl-3 text-xs-center">
+        <div class="card card-default">
+            <div class="card-block">
+
+                 <h1>{{title}}</h1>
     <ul class="heroes">
-      <li *ngFor="let estacinamento of estacinamentos"
-        [class.selected]="estacinamento === selectedEstacionamento"
-        (click)="onSelect(estacinamento)">
+      <li *ngFor="let estacinamento of estacinamentos">  
        <span class="badge">{{estacinamento.id}}</span> {{estacinamento.name}}
       </li>
     </ul>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <app-maps ></app-maps>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-9 text-xs-center">
+        <div class="card card-default">
+            <div class="card-block">
+
+                   <app-maps ></app-maps>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
   `,
   styles: [`
     .selected {
@@ -86,7 +102,7 @@ const lista: EstacionamentoGeo[] = [
 })
 export class ListaComponent {
   title = 'Estacionamentos';
-  // estacinamentos = lista;
+  estacinamentos = lista;
   // selectedEstacionamento: EstacionamentoGeo;
 
   // onSelect(estacinamento: EstacionamentoGeo): void {
