@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 // import { AuthService } from './../auth/auth.service';
-
+import { Router, NavigationEnd } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+s
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -10,9 +12,9 @@ export class ProfileComponent implements OnInit {
 
   profile: any;
 
-  constructor(
-    // public auth: AuthService
-    ) { }
+    constructor() {
+        this.profile = JSON.parse(localStorage.getItem("currentUser"));
+    }
 
   ngOnInit() {
     // if (this.auth.userProfile) {
