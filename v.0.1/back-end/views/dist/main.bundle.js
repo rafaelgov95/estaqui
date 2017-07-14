@@ -10,7 +10,7 @@ var map = {
 	],
 	"./bs-component/bs-component.module": [
 		"../../../../../src/app/layout/bs-component/bs-component.module.ts",
-		1
+		2
 	],
 	"./bs-element/bs-element.module": [
 		"../../../../../src/app/layout/bs-element/bs-element.module.ts",
@@ -26,7 +26,7 @@ var map = {
 	],
 	"./dashboard/dashboard.module": [
 		"../../../../../src/app/layout/dashboard/dashboard.module.ts",
-		2
+		1
 	],
 	"./form/form.module": [
 		"../../../../../src/app/layout/form/form.module.ts",

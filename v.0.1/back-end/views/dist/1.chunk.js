@@ -1,13 +1,419 @@
 webpackJsonp([1],{
 
-/***/ "../../../../../src/app/layout/bs-component/bs-component-routing.module.ts":
+/***/ "../../../../../src/app/layout/dashboard/components/chat/chat.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"chat-panel card card-default\">\n    <div class=\"card-header\">\n        <i class=\"fa fa-comments fa-fw\"></i>\n        Chat\n        <div class=\" pull-right\" ngbDropdown>\n            <button class=\"btn btn-secondary btn-sm\" ngbDropdownToggle>\n                <span class=\"caret\"></span>\n            </button>\n            <ul class=\"dropdown-menu dropdown-menu-right\">\n                <li role=\"menuitem\"><a class=\"dropdown-item\" href=\"#\">\n                    <i class=\"fa fa-refresh fa-fw\"></i> Refresh</a>\n                </li>\n                <li role=\"menuitem\"><a class=\"dropdown-item\" href=\"#\">\n                    <i class=\"fa fa-check-circle fa-fw\"></i> Available</a>\n                </li>\n                <li role=\"menuitem\"><a class=\"dropdown-item\" href=\"#\">\n                    <i class=\"fa fa-times fa-fw\"></i> Busy</a>\n                </li>\n                <li class=\"divider dropdown-divider\"></li>\n                <li role=\"menuitem\">\n                    <a href=\"#\" class=\"dropdown-item\">\n                        <i class=\"fa fa-times fa-fw\"></i> Busy\n                    </a>\n                </li>\n                <li>\n                    <a href=\"#\" class=\"dropdown-item\">\n                        <i class=\"fa fa-clock-o fa-fw\"></i> Away\n                    </a>\n                </li>\n                <li class=\"divider\"></li>\n                <li>\n                  <a href=\"#\" class=\"dropdown-item\">\n                    <i class=\"fa fa-sign-out fa-fw\"></i> Sign Out\n                  </a>\n                </li>\n            </ul>\n        </div>\n    </div>\n    <!-- /.panel-heading -->\n    <div class=\"card-block\">\n        <ul class=\"chat\">\n            <li class=\"left clearfix\">\n                <span class=\"chat-img pull-left\">\n                    <img src=\"http://placehold.it/50/55C1E7/fff\" alt=\"User Avatar\" class=\"img-circle\">\n                </span>\n                <div class=\"chat-body clearfix\">\n                    <div class=\"header\">\n                        <strong class=\"primary-font\">Jack Sparrow</strong>\n                        <small class=\"pull-right text-muted\">\n                            <i class=\"fa fa-clock-o fa-fw\"></i> 12 mins ago\n                        </small>\n                    </div>\n                    <p>\n                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.\n                    </p>\n                </div>\n            </li>\n            <li class=\"right clearfix\">\n                <span class=\"chat-img pull-right\">\n                    <img src=\"http://placehold.it/50/FA6F57/fff\" alt=\"User Avatar\" class=\"img-circle\">\n                </span>\n                <div class=\"chat-body clearfix\">\n                    <div class=\"header\">\n                        <small class=\" text-muted\">\n                            <i class=\"fa fa-clock-o fa-fw\"></i> 13 mins ago\n                        </small>\n                        <strong class=\"pull-right primary-font\">Bhaumik Patel</strong>\n                    </div>\n                    <p>\n                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.\n                    </p>\n                </div>\n            </li>\n            <li class=\"left clearfix\">\n                <span class=\"chat-img pull-left\">\n                    <img src=\"http://placehold.it/50/55C1E7/fff\" alt=\"User Avatar\" class=\"img-circle\">\n                </span>\n                <div class=\"chat-body clearfix\">\n                    <div class=\"header\">\n                        <strong class=\"primary-font\">Jack Sparrow</strong>\n                        <small class=\"pull-right text-muted\">\n                            <i class=\"fa fa-clock-o fa-fw\"></i> 14 mins ago\n                        </small>\n                    </div>\n                    <p>\n                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.\n                    </p>\n                </div>\n            </li>\n            <li class=\"right clearfix\">\n                <span class=\"chat-img pull-right\">\n                    <img src=\"http://placehold.it/50/FA6F57/fff\" alt=\"User Avatar\" class=\"img-circle\">\n                </span>\n                <div class=\"chat-body clearfix\">\n                    <div class=\"header\">\n                        <small class=\" text-muted\">\n                            <i class=\"fa fa-clock-o fa-fw\"></i> 15 mins ago\n                        </small>\n                        <strong class=\"pull-right primary-font\">Bhaumik Patel</strong>\n                    </div>\n                    <p>\n                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.\n                    </p>\n                </div>\n            </li>\n        </ul>\n    </div>\n    <!-- /.card-body -->\n    <div class=\"card-footer\">\n        <div class=\"input-group\">\n            <input id=\"btn-input\" type=\"text\" class=\"form-control input-sm\" placeholder=\"Type your message here...\">\n            <span class=\"input-group-btn\">\n                <button class=\"btn btn-warning btn-sm\" id=\"btn-chat\">\n                    Send\n                </button>\n            </span>\n        </div>\n    </div>\n    <!-- /.card-footer -->\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/layout/dashboard/components/chat/chat.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".chat-panel .chat-dropdown {\n  margin-top: -3px; }\n\n.chat-panel .chat {\n  height: 350px;\n  overflow-y: scroll;\n  margin: 0;\n  padding: 0;\n  list-style: none; }\n  .chat-panel .chat .left img {\n    margin-right: 15px; }\n  .chat-panel .chat .right img {\n    margin-left: 15px; }\n  .chat-panel .chat li {\n    margin-bottom: 10px;\n    margin-right: 15px;\n    padding-bottom: 5px;\n    border-bottom: 1px dotted #999; }\n\n.chat-panel .card-footer input {\n  padding: 3px; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/layout/dashboard/components/chat/chat.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ChatComponent = (function () {
+    function ChatComponent() {
+    }
+    ChatComponent.prototype.ngOnInit = function () { };
+    return ChatComponent;
+}());
+ChatComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-chat',
+        template: __webpack_require__("../../../../../src/app/layout/dashboard/components/chat/chat.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/layout/dashboard/components/chat/chat.component.scss")]
+    }),
+    __metadata("design:paramtypes", [])
+], ChatComponent);
+
+//# sourceMappingURL=chat.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/layout/dashboard/components/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__timeline_timeline_component__ = __webpack_require__("../../../../../src/app/layout/dashboard/components/timeline/timeline.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__timeline_timeline_component__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__notification_notification_component__ = __webpack_require__("../../../../../src/app/layout/dashboard/components/notification/notification.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__notification_notification_component__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat_chat_component__ = __webpack_require__("../../../../../src/app/layout/dashboard/components/chat/chat.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__chat_chat_component__["a"]; });
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/layout/dashboard/components/maps/lista/lista.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListaComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var lista = [
+    { id: 11, name: 'Mr. Nice', lat: 12.321, lng: 31231231 },
+    { id: 12, name: 'Narco', lat: 12.321, lng: 31231231 },
+    { id: 13, name: 'Bombasto', lat: 12.321, lng: 31231231 },
+    { id: 14, name: 'Celeritas', lat: 12.321, lng: 3123123 },
+    { id: 15, name: 'Magneta', lat: 12.321, lng: 31231231 },
+    { id: 16, name: 'RubberMan', lat: 12.321, lng: 31231231 },
+    { id: 17, name: 'Dynama', lat: 12.321, lng: 31231231 },
+    { id: 18, name: 'Dr IQ', lat: 12.321, lng: 31231231 },
+    { id: 19, name: 'Magma', lat: 2.321, lng: 31231231 },
+    { id: 20, name: 'Tornado', lat: 2.321, lng: 31231231 },
+];
+var ListaComponent = (function () {
+    function ListaComponent() {
+        this.title = 'Estacionamentos';
+        // estacinamentos = lista;
+        // selectedEstacionamento: EstacionamentoGeo;
+        // onSelect(estacinamento: EstacionamentoGeo): void {
+        //   this.selectedEstacionamento = estacinamento;
+        //   console.log(this.selectedEstacionamento);
+        // }
+    }
+    return ListaComponent;
+}());
+ListaComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'lista',
+        template: "\n    <h1>{{title}}</h1>\n    \n    <ul class=\"heroes\">\n      <li *ngFor=\"let estacinamento of estacinamentos\"\n        [class.selected]=\"estacinamento === selectedEstacionamento\"\n        (click)=\"onSelect(estacinamento)\">\n       <span class=\"badge\">{{estacinamento.id}}</span> {{estacinamento.name}}\n      </li>\n    </ul>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <app-maps ></app-maps>\n  ",
+        styles: ["\n    .selected {\n      background-color: #CFD8DC !important;\n      color: white;\n    }\n    .heroes {\n      margin: 0 0 2em 0;\n      list-style-type: none;\n      padding: 0;\n      width: 15em;\n    }\n    .heroes li {\n      cursor: pointer;\n      position: relative;\n      left: 0;\n      background-color: #EEE;\n      margin: .5em;\n      padding: .3em 0;\n      height: 1.6em;\n      border-radius: 4px;\n    }\n    .heroes li.selected:hover {\n      background-color: #BBD8DC !important;\n      color: white;\n    }\n    .heroes li:hover {\n      color: #607D8B;\n      background-color: #DDD;\n      left: .1em;\n    }\n    .heroes .text {\n      position: relative;\n      top: -3px;\n    }\n    .heroes .badge {\n      display: inline-block;\n      font-size: small;\n      color: white;\n      padding: 0.8em 0.7em 0 0.7em;\n      background-color: #607D8B;\n      line-height: 1em;\n      position: relative;\n      left: -1px;\n      top: -4px;\n      height: 1.8em;\n      margin-right: .8em;\n      border-radius: 4px 0 0 4px;\n    }\n  "]
+    })
+], ListaComponent);
+
+/*
+Copyright 2017 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/ 
+//# sourceMappingURL=lista.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/layout/dashboard/components/maps/lista/lista.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lista_component__ = __webpack_require__("../../../../../src/app/layout/dashboard/components/maps/lista/lista.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__maps_module__ = __webpack_require__("../../../../../src/app/layout/dashboard/components/maps/maps.module.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListaModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var ListaModule = (function () {
+    function ListaModule() {
+    }
+    return ListaModule;
+}());
+ListaModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_common__["h" /* CommonModule */],
+            __WEBPACK_IMPORTED_MODULE_3__maps_module__["a" /* MapsModule */],
+        ],
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_2__lista_component__["a" /* ListaComponent */]
+        ], exports: [__WEBPACK_IMPORTED_MODULE_2__lista_component__["a" /* ListaComponent */]]
+    })
+], ListaModule);
+
+//# sourceMappingURL=lista.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/layout/dashboard/components/maps/maps.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "agm-map {\n    height: 455px;\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/layout/dashboard/components/maps/maps.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!--<h1>{{ title }}</h1>-->\n\n<!-- this creates a google map on the page with the given lat/lng from -->\n<!-- the component as the initial center of the map: -->\n<agm-map [latitude]=\"lat\" [longitude]=\"lng\">\n    <agm-marker [latitude]=\"lat\" [longitude]=\"lng\"></agm-marker>\n</agm-map>\n\n\n<!--<div *ngIf=\"estacionamento\">\n    <h2>{{estacionamento.name}} details!</h2>\n    <div><label>id: </label>{{hero.id}}</div>\n    <div>\n        <label>name: </label>\n        <input [(ngModel)]=\"estacionamento.name\" placeholder=\"name\" />\n    </div>\n</div>-->"
+
+/***/ }),
+
+/***/ "../../../../../src/app/layout/dashboard/components/maps/maps.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapsComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MapsComponent = (function () {
+    // lat = 100000;
+    // lng = 13123123;
+    // lat ;
+    // lng ;
+    function MapsComponent() {
+        //  @Input() est: EstacionamentoGeo;
+        // est  = new EstacionamentoGeo;
+        this.title = 'Mapa ';
+        // this.lat = this.est.lat;
+        // this.lng = this.est.lng;
+    }
+    MapsComponent.prototype.ngOnInit = function () {
+        //  this.estacionamento.lat = 1;
+        // this.estacionamento.lng = 1;
+    };
+    return MapsComponent;
+}());
+MapsComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-maps',
+        template: __webpack_require__("../../../../../src/app/layout/dashboard/components/maps/maps.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/layout/dashboard/components/maps/maps.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], MapsComponent);
+
+//# sourceMappingURL=maps.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/layout/dashboard/components/maps/maps.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__agm_core__ = __webpack_require__("../../../../@agm/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__maps_component__ = __webpack_require__("../../../../../src/app/layout/dashboard/components/maps/maps.component.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapsModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var MapsModule = (function () {
+    function MapsModule() {
+    }
+    return MapsModule;
+}());
+MapsModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_common__["h" /* CommonModule */],
+            __WEBPACK_IMPORTED_MODULE_2__agm_core__["a" /* AgmCoreModule */].forRoot({
+                apiKey: 'AIzaSyDYeNFzbOHKshPnZ11jefzhIlvUmufvr5w'
+            })
+        ],
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_3__maps_component__["a" /* MapsComponent */],
+        ], exports: [__WEBPACK_IMPORTED_MODULE_3__maps_component__["a" /* MapsComponent */]]
+    })
+], MapsModule);
+
+//# sourceMappingURL=maps.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/layout/dashboard/components/notification/notification.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"card-block\">\n    <div class=\"list-group\">\n        <a href=\"#\" class=\"list-group-item clearfix d-block\">\n            <i class=\"fa fa-comment fa-fw\"></i> New Comment\n            <span class=\"float-right text-muted small\"><em>4 minutes ago</em></span>\n        </a>\n        <a href=\"#\" class=\"list-group-item clearfix d-block\">\n            <i class=\"fa fa-twitter fa-fw\"></i> 3 New Followers\n            <span class=\"float-right text-muted small\"><em>12 minutes ago</em></span>\n        </a>\n        <a href=\"#\" class=\"list-group-item clearfix d-block\">\n            <i class=\"fa fa-envelope fa-fw\"></i> Message Sent\n            <span class=\"float-right text-muted small\"><em>27 minutes ago</em></span>\n        </a>\n        <a href=\"#\" class=\"list-group-item clearfix d-block\">\n            <i class=\"fa fa-tasks fa-fw\"></i> New Task\n            <span class=\"float-right text-muted small\"><em>43 minutes ago</em></span>\n        </a>\n        <a href=\"#\" class=\"list-group-item clearfix d-block\">\n            <i class=\"fa fa-upload fa-fw\"></i> Server Rebooted\n            <span class=\"float-right text-muted small\"><em>11:32 AM</em></span>\n        </a>\n        <a href=\"#\" class=\"list-group-item clearfix d-block\">\n            <i class=\"fa fa-bolt fa-fw\"></i> Server Crashed!\n            <span class=\"float-right text-muted small\"><em>11:13 AM</em></span>\n        </a>\n        <a href=\"#\" class=\"list-group-item clearfix d-block\">\n            <i class=\"fa fa-warning fa-fw\"></i> Server Not Responding\n            <span class=\"float-right text-muted small\"><em>10:57 AM</em></span>\n        </a>\n        <a href=\"#\" class=\"list-group-item clearfix d-block\">\n            <i class=\"fa fa-shopping-cart fa-fw\"></i> New Order Placed\n            <span class=\"float-right text-muted small\"><em>9:49 AM</em></span>\n        </a>\n        <a href=\"#\" class=\"list-group-item clearfix d-block\">\n            <i class=\"fa fa-money fa-fw\"></i> Payment Received\n            <span class=\"float-right text-muted small\"><em>Yesterday</em></span>\n        </a>\n    </div>\n    <!-- /.list-group -->\n    <a href=\"#\" class=\"btn btn-default btn-block\">View All Alerts</a>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/layout/dashboard/components/notification/notification.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/layout/dashboard/components/notification/notification.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var NotificationComponent = (function () {
+    function NotificationComponent() {
+    }
+    NotificationComponent.prototype.ngOnInit = function () { };
+    return NotificationComponent;
+}());
+NotificationComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-notification',
+        template: __webpack_require__("../../../../../src/app/layout/dashboard/components/notification/notification.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/layout/dashboard/components/notification/notification.component.scss")]
+    }),
+    __metadata("design:paramtypes", [])
+], NotificationComponent);
+
+//# sourceMappingURL=notification.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/layout/dashboard/components/timeline/timeline.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"card-block\">\n    <ul class=\"timeline\">\n        <li>\n            <div class=\"timeline-badge\"><i class=\"fa fa-check\"></i>\n            </div>\n            <div class=\"timeline-panel\">\n                <div class=\"timeline-heading\">\n                    <h4 class=\"timeline-title\">Lorem ipsum dolor</h4>\n                    <p><small class=\"text-muted\"><i class=\"fa fa-clock-o\"></i> 11 hours ago via Twitter</small>\n                    </p>\n                </div>\n                <div class=\"timeline-body\">\n                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero laboriosam dolor perspiciatis omnis exercitationem. Beatae, officia pariatur? Est cum veniam excepturi. Maiores praesentium, porro voluptas suscipit facere rem dicta, debitis.</p>\n                </div>\n            </div>\n        </li>\n        <li class=\"timeline-inverted\">\n            <div class=\"timeline-badge warning\"><i class=\"fa fa-credit-card\"></i>\n            </div>\n            <div class=\"timeline-panel\">\n                <div class=\"timeline-heading\">\n                    <h4 class=\"timeline-title\">Lorem ipsum dolor</h4>\n                </div>\n                <div class=\"timeline-body\">\n                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorem quibusdam, tenetur commodi provident cumque magni voluptatem libero, quis rerum. Fugiat esse debitis optio, tempore. Animi officiis alias, officia repellendus.</p>\n                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maiores odit qui est tempora eos, nostrum provident explicabo dignissimos debitis vel! Adipisci eius voluptates, ad aut recusandae minus eaque facere.</p>\n                </div>\n            </div>\n        </li>\n        <li>\n            <div class=\"timeline-badge danger\"><i class=\"fa fa-bomb\"></i>\n            </div>\n            <div class=\"timeline-panel\">\n                <div class=\"timeline-heading\">\n                    <h4 class=\"timeline-title\">Lorem ipsum dolor</h4>\n                </div>\n                <div class=\"timeline-body\">\n                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus numquam facilis enim eaque, tenetur nam id qui vel velit similique nihil iure molestias aliquam, voluptatem totam quaerat, magni commodi quisquam.</p>\n                </div>\n            </div>\n        </li>\n        <li class=\"timeline-inverted\">\n            <div class=\"timeline-panel\">\n                <div class=\"timeline-heading\">\n                    <h4 class=\"timeline-title\">Lorem ipsum dolor</h4>\n                </div>\n                <div class=\"timeline-body\">\n                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates est quaerat asperiores sapiente, eligendi, nihil. Itaque quos, alias sapiente rerum quas odit! Aperiam officiis quidem delectus libero, omnis ut debitis!</p>\n                </div>\n            </div>\n        </li>\n        <li>\n            <div class=\"timeline-badge info\"><i class=\"fa fa-save\"></i>\n            </div>\n            <div class=\"timeline-panel\">\n                <div class=\"timeline-heading\">\n                    <h4 class=\"timeline-title\">Lorem ipsum dolor</h4>\n                </div>\n                <div class=\"timeline-body\">\n                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus modi quam ipsum alias at est molestiae excepturi delectus nesciunt, quibusdam debitis amet, beatae consequuntur impedit nulla qui! Laborum, atque.</p>\n                    <hr>\n                    <div class=\"btn-group\">\n                        <button type=\"button\" class=\"btn btn-primary btn-sm dropdown-toggle\" data-toggle=\"dropdown\">\n                            <i class=\"fa fa-gear\"></i>  <span class=\"caret\"></span>\n                        </button>\n                        <ul class=\"dropdown-menu\" role=\"menu\">\n                            <li><a href=\"#\">Action</a>\n                            </li>\n                            <li><a href=\"#\">Another action</a>\n                            </li>\n                            <li><a href=\"#\">Something else here</a>\n                            </li>\n                            <li class=\"divider\"></li>\n                            <li><a href=\"#\">Separated link</a>\n                            </li>\n                        </ul>\n                    </div>\n                </div>\n            </div>\n        </li>\n        <li>\n            <div class=\"timeline-panel\">\n                <div class=\"timeline-heading\">\n                    <h4 class=\"timeline-title\">Lorem ipsum dolor</h4>\n                </div>\n                <div class=\"timeline-body\">\n                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi fuga odio quibusdam. Iure expedita, incidunt unde quis nam! Quod, quisquam. Officia quam qui adipisci quas consequuntur nostrum sequi. Consequuntur, commodi.</p>\n                </div>\n            </div>\n        </li>\n        <li class=\"timeline-inverted\">\n            <div class=\"timeline-badge success\"><i class=\"fa fa-graduation-cap\"></i>\n            </div>\n            <div class=\"timeline-panel\">\n                <div class=\"timeline-heading\">\n                    <h4 class=\"timeline-title\">Lorem ipsum dolor</h4>\n                </div>\n                <div class=\"timeline-body\">\n                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt obcaecati, quaerat tempore officia voluptas debitis consectetur culpa amet, accusamus dolorum fugiat, animi dicta aperiam, enim incidunt quisquam maxime neque eaque.</p>\n                </div>\n            </div>\n        </li>\n    </ul>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/layout/dashboard/components/timeline/timeline.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".timeline {\n  position: relative;\n  padding: 20px 0 20px;\n  list-style: none; }\n\n.timeline:before {\n  content: \" \";\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 50%;\n  width: 3px;\n  margin-left: -1.5px;\n  background-color: #eeeeee; }\n\n.timeline > li {\n  position: relative;\n  margin-bottom: 20px; }\n\n.timeline > li:before,\n.timeline > li:after {\n  content: \" \";\n  display: table; }\n\n.timeline > li:after {\n  clear: both; }\n\n.timeline > li:before,\n.timeline > li:after {\n  content: \" \";\n  display: table; }\n\n.timeline > li:after {\n  clear: both; }\n\n.timeline > li > .timeline-panel {\n  float: left;\n  position: relative;\n  width: 46%;\n  padding: 20px;\n  border: 1px solid #d4d4d4;\n  border-radius: 2px;\n  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175); }\n\n.timeline > li > .timeline-panel:before {\n  content: \" \";\n  display: inline-block;\n  position: absolute;\n  top: 26px;\n  right: -15px;\n  border-top: 15px solid transparent;\n  border-right: 0 solid #ccc;\n  border-bottom: 15px solid transparent;\n  border-left: 15px solid #ccc; }\n\n.timeline > li > .timeline-panel:after {\n  content: \" \";\n  display: inline-block;\n  position: absolute;\n  top: 27px;\n  right: -14px;\n  border-top: 14px solid transparent;\n  border-right: 0 solid #fff;\n  border-bottom: 14px solid transparent;\n  border-left: 14px solid #fff; }\n\n.timeline > li > .timeline-badge {\n  z-index: 100;\n  position: absolute;\n  top: 16px;\n  left: 50%;\n  width: 50px;\n  height: 50px;\n  margin-left: -25px;\n  border-radius: 50% 50% 50% 50%;\n  text-align: center;\n  font-size: 1.4em;\n  line-height: 50px;\n  color: #fff;\n  background-color: #999999; }\n\n.timeline > li.timeline-inverted > .timeline-panel {\n  float: right; }\n\n.timeline > li.timeline-inverted > .timeline-panel:before {\n  right: auto;\n  left: -15px;\n  border-right-width: 15px;\n  border-left-width: 0; }\n\n.timeline > li.timeline-inverted > .timeline-panel:after {\n  right: auto;\n  left: -14px;\n  border-right-width: 14px;\n  border-left-width: 0; }\n\n.timeline-badge.primary {\n  background-color: #2e6da4 !important; }\n\n.timeline-badge.success {\n  background-color: #3f903f !important; }\n\n.timeline-badge.warning {\n  background-color: #f0ad4e !important; }\n\n.timeline-badge.danger {\n  background-color: #d9534f !important; }\n\n.timeline-badge.info {\n  background-color: #5bc0de !important; }\n\n.timeline-title {\n  margin-top: 0;\n  color: inherit; }\n\n.timeline-body > p,\n.timeline-body > ul {\n  margin-bottom: 0; }\n\n.timeline-body > p + p {\n  margin-top: 5px; }\n\n@media (max-width: 767px) {\n  ul.timeline:before {\n    left: 40px; }\n  ul.timeline > li > .timeline-panel {\n    width: calc(100% - 90px);\n    width: -webkit-calc(100% - 90px); }\n  ul.timeline > li > .timeline-badge {\n    top: 16px;\n    left: 15px;\n    margin-left: 0; }\n  ul.timeline > li > .timeline-panel {\n    float: right; }\n  ul.timeline > li > .timeline-panel:before {\n    right: auto;\n    left: -15px;\n    border-right-width: 15px;\n    border-left-width: 0; }\n  ul.timeline > li > .timeline-panel:after {\n    right: auto;\n    left: -14px;\n    border-right-width: 14px;\n    border-left-width: 0; } }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/layout/dashboard/components/timeline/timeline.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimelineComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TimelineComponent = (function () {
+    function TimelineComponent() {
+    }
+    TimelineComponent.prototype.ngOnInit = function () {
+    };
+    return TimelineComponent;
+}());
+TimelineComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-timeline',
+        template: __webpack_require__("../../../../../src/app/layout/dashboard/components/timeline/timeline.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/layout/dashboard/components/timeline/timeline.component.scss")]
+    }),
+    __metadata("design:paramtypes", [])
+], TimelineComponent);
+
+//# sourceMappingURL=timeline.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/layout/dashboard/dashboard-routing.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bs_component_component__ = __webpack_require__("../../../../../src/app/layout/bs-component/bs-component.component.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BsComponentRoutingModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dashboard_component__ = __webpack_require__("../../../../../src/app/layout/dashboard/dashboard.component.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,32 +424,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var routes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_2__bs_component_component__["a" /* BsComponentComponent */] }
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_2__dashboard_component__["a" /* DashboardComponent */] }
 ];
-var BsComponentRoutingModule = (function () {
-    function BsComponentRoutingModule() {
+var DashboardRoutingModule = (function () {
+    function DashboardRoutingModule() {
     }
-    return BsComponentRoutingModule;
+    return DashboardRoutingModule;
 }());
-BsComponentRoutingModule = __decorate([
+DashboardRoutingModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forChild(routes)],
         exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]]
     })
-], BsComponentRoutingModule);
+], DashboardRoutingModule);
 
-//# sourceMappingURL=bs-component-routing.module.js.map
+//# sourceMappingURL=dashboard-routing.module.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/layout/bs-component/bs-component.component.html":
+/***/ "../../../../../src/app/layout/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-page-header [heading]=\"'Bootstrap Component'\" [icon]=\"'fa-th-list'\"></app-page-header>\n<app-modal></app-modal>\n<app-alert></app-alert>\n<app-buttons></app-buttons>\n<app-collapse></app-collapse>\n<app-date-picker></app-date-picker>\n<app-dropdown></app-dropdown>\n<app-pagination></app-pagination>\n<app-pop-over></app-pop-over>\n<app-progressbar></app-progressbar>\n<app-tabs></app-tabs>\n<app-tooltip></app-tooltip>\n<app-timepicker></app-timepicker>"
+module.exports = "<app-page-header [heading]=\"'Nevegação'\" [icon]=\"'fa-bar-chart-o'\"></app-page-header>\n\n<!--<lista></lista>-->\n<div class=\"row\">\n    <div class=\"col-xl-3 text-xs-center\">\n        <div class=\"card card-default\">\n            <div class=\"card-block\">\n\n\n            </div>\n        </div>\n    </div>\n    <div class=\"col-xl-9 text-xs-center\">\n        <div class=\"card card-default\">\n            <div class=\"card-block\">\n                <!--<app-maps></app-maps>-->\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"row\">\n    <div class=\"col-xl-3 text-xs-center\">\n        <div class=\"card card-default\">\n            <div class=\"card-block\">\n                <div class=\"col-xl-6 text-xs-center\">\n                    <button type=\"button\" class=\"btn btn-success centralizado\">Encontre a vaga mais próxima</button>\n                    <button type=\"button\" class=\"btn btn-info\">Ir para o último local estacionado</button>\n\n\n                    <div class=\"form-group\">\n                        <label>Filtro</label>\n                        <div class=\"checkbox\">\n                            <label>\n                        <input type=\"checkbox\" value=\"\"> Coberta\n                    </label>\n                        </div>\n                        <div class=\"checkbox\">\n                            <label>\n                        <input type=\"checkbox\" value=\"\"> Preferencial\n                    </label>\n                        </div>\n\n                    </div>\n\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-xl-9 text-xs-center\">\n        <div class=\"card card-default\">\n            <div class=\"card-block\">\n                <input type=\"text\">\n            </div>\n        </div>\n    </div>\n</div>\n\n\n\n<!--<hr>\n<div class=\"row\">\n    <div class=\"col-xl-3 col-lg-6\">\n        <app-stat [bgClass]=\"'card-primary'\" [icon]=\"'fa-comments'\" [count]=\"26\" [label]=\"'New Comments!'\"></app-stat>\n    </div>\n    <div class=\"col-xl-3 col-lg-6\">\n        <app-stat [bgClass]=\"'card-info'\" [icon]=\"'fa-tasks'\" [count]=\"12\" [label]=\"'New task!'\"></app-stat>\n    </div>\n    <div class=\"col-xl-3 col-lg-6\">\n        <app-stat [bgClass]=\"'card-success'\" [icon]=\"'fa-shopping-cart'\" [count]=\"124\" [label]=\"'New Orders!'\"></app-stat>\n    </div>\n    <div class=\"col-xl-3 col-lg-6\">\n        <app-stat [bgClass]=\"'card-danger'\" [icon]=\"'fa-support'\" [count]=\"13\" [label]=\"'New Tickets!'\"></app-stat>\n    </div>\n</div>\n<hr />\n<ngb-alert [type]=\"alert.type\" (close)=\"closeAlert(alert)\" *ngFor=\"let alert of alerts\">{{ alert.message }}</ngb-alert>\n<hr />\n<div class=\"row\">\n    <div class=\"col-lg-8\">\n        <div class=\"card card-default\">\n            <div class=\"card-header\">\n                <i class=\"fa fa-clock-o fa-fw\"></i> Responsive Timeline\n            </div>\n            /.card-header\n            <app-timeline></app-timeline>\n            /.card-body\n        </div>\n        -- /.card\n    </div>\n    /.col-lg-8\n    <div class=\"col-lg-4\">\n        <div class=\"card card-default\">\n            <div class=\"card-header\">\n                <i class=\"fa fa-bell fa-fw\"></i> Notifications card\n            </div>\n            /.card-header\n            <app-notification></app-notification>\n            /.card-body\n        </div>\n        /.card\n\n        <app-chat></app-chat>\n        /.card .chat-card\n    </div>\n    /.col-lg-4\n</div>-->"
 
 /***/ }),
 
-/***/ "../../../../../src/app/layout/bs-component/bs-component.component.scss":
+/***/ "../../../../../src/app/layout/dashboard/dashboard.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -51,7 +457,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "button {\n  padding: 10px 50px;\n  margin-bottom: 5px; }\n", ""]);
 
 // exports
 
@@ -61,37 +467,70 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/layout/bs-component/bs-component.component.ts":
+/***/ "../../../../../src/app/layout/dashboard/dashboard.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BsComponentComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
-var BsComponentComponent = (function () {
-    function BsComponentComponent() {
+var DashboardComponent = (function () {
+    function DashboardComponent() {
+        this.alerts = [];
+        this.sliders = [];
+        this.sliders.push({
+            imagePath: 'assets/images/slider1.jpg',
+            label: 'First slide label',
+            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+        }, {
+            imagePath: 'assets/images/slider2.jpg',
+            label: 'Second slide label',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        }, {
+            imagePath: 'assets/images/slider3.jpg',
+            label: 'Third slide label',
+            text: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'
+        });
+        this.alerts.push({
+            id: 1,
+            type: 'success',
+            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                Voluptates est animi quibusdam praesentium quam, et perspiciatis,\n                consectetur velit culpa molestias dignissimos\n                voluptatum veritatis quod aliquam! Rerum placeat necessitatibus, vitae dolorum",
+        }, {
+            id: 2,
+            type: 'warning',
+            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                Voluptates est animi quibusdam praesentium quam, et perspiciatis,\n                consectetur velit culpa molestias dignissimos\n                voluptatum veritatis quod aliquam! Rerum placeat necessitatibus, vitae dolorum",
+        });
     }
-    return BsComponentComponent;
+    DashboardComponent.prototype.ngOnInit = function () { };
+    DashboardComponent.prototype.closeAlert = function (alert) {
+        var index = this.alerts.indexOf(alert);
+        this.alerts.splice(index, 1);
+    };
+    return DashboardComponent;
 }());
-BsComponentComponent = __decorate([
+DashboardComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-bs-component',
-        template: __webpack_require__("../../../../../src/app/layout/bs-component/bs-component.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/layout/bs-component/bs-component.component.scss")]
-    })
-], BsComponentComponent);
+        selector: 'app-dashboard',
+        template: __webpack_require__("../../../../../src/app/layout/dashboard/dashboard.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/layout/dashboard/dashboard.component.scss")]
+    }),
+    __metadata("design:paramtypes", [])
+], DashboardComponent);
 
-//# sourceMappingURL=bs-component.component.js.map
+//# sourceMappingURL=dashboard.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/layout/bs-component/bs-component.module.ts":
+/***/ "../../../../../src/app/layout/dashboard/dashboard.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -99,12 +538,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__bs_component_routing_module__ = __webpack_require__("../../../../../src/app/layout/bs-component/bs-component-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__bs_component_component__ = __webpack_require__("../../../../../src/app/layout/bs-component/bs-component.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components__ = __webpack_require__("../../../../../src/app/layout/bs-component/components/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dashboard_routing_module__ = __webpack_require__("../../../../../src/app/layout/dashboard/dashboard-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dashboard_component__ = __webpack_require__("../../../../../src/app/layout/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components__ = __webpack_require__("../../../../../src/app/layout/dashboard/components/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared__ = __webpack_require__("../../../../../src/app/shared/index.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared__ = __webpack_require__("../../../../../src/app/shared/index.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BsComponentModule", function() { return BsComponentModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_maps_lista_lista_module__ = __webpack_require__("../../../../../src/app/layout/dashboard/components/maps/lista/lista.module.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardModule", function() { return DashboardModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -115,405 +555,899 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-// relative import
 
 
 
 
-var BsComponentModule = (function () {
-    function BsComponentModule() {
+
+var DashboardModule = (function () {
+    function DashboardModule() {
     }
-    return BsComponentModule;
+    return DashboardModule;
 }());
-BsComponentModule = __decorate([
+DashboardModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         imports: [
             __WEBPACK_IMPORTED_MODULE_1__angular_common__["h" /* CommonModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* ReactiveFormsModule */],
-            __WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__["a" /* NgbModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_7__shared__["b" /* PageHeaderModule */],
-            __WEBPACK_IMPORTED_MODULE_4__bs_component_routing_module__["a" /* BsComponentRoutingModule */],
+            __WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__["d" /* NgbCarouselModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__["e" /* NgbAlertModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_3__dashboard_routing_module__["a" /* DashboardRoutingModule */],
+            __WEBPACK_IMPORTED_MODULE_6__shared__["c" /* StatModule */],
+            __WEBPACK_IMPORTED_MODULE_8__components_maps_lista_lista_module__["a" /* ListaModule */],
+            __WEBPACK_IMPORTED_MODULE_7__shared__["b" /* PageHeaderModule */]
         ],
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_5__bs_component_component__["a" /* BsComponentComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__components__["a" /* ButtonsComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__components__["b" /* AlertComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__components__["c" /* ModalComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__components__["d" /* CollapseComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__components__["e" /* DatePickerComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__components__["f" /* DropdownComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__components__["g" /* PaginationComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__components__["h" /* PopOverComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__components__["i" /* ProgressbarComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__components__["j" /* TabsComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__components__["k" /* TooltipComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__components__["l" /* TimepickerComponent */]
+            __WEBPACK_IMPORTED_MODULE_4__dashboard_component__["a" /* DashboardComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__components__["a" /* TimelineComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__components__["b" /* NotificationComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__components__["c" /* ChatComponent */]
         ]
     })
-], BsComponentModule);
+], DashboardModule);
 
-//# sourceMappingURL=bs-component.module.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/alert/alert.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-lg-12\">\n        <div class=\"card mb-3\">\n            <div class=\"card-header\">Buttons</div>\n            <div class=\"card-block\">\n                <p *ngFor=\"let alert of alerts\">\n                    <ngb-alert [type]=\"alert.type\" (close)=\"closeAlert(alert)\">{{ alert.message }}</ngb-alert>\n                </p>\n            </div>\n        </div>\n    </div>\n</div>\n"
+//# sourceMappingURL=dashboard.module.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/layout/bs-component/components/alert/alert.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/alert/alert.component.ts":
+/***/ "../../../../@agm/core/core.module.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlertComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_map__ = __webpack_require__("../../../../@agm/core/directives/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_circle__ = __webpack_require__("../../../../@agm/core/directives/circle.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_info_window__ = __webpack_require__("../../../../@agm/core/directives/info-window.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_marker__ = __webpack_require__("../../../../@agm/core/directives/marker.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_polygon__ = __webpack_require__("../../../../@agm/core/directives/polygon.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__directives_polyline__ = __webpack_require__("../../../../@agm/core/directives/polyline.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_polyline_point__ = __webpack_require__("../../../../@agm/core/directives/polyline-point.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__directives_kml_layer__ = __webpack_require__("../../../../@agm/core/directives/kml-layer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__directives_data_layer__ = __webpack_require__("../../../../@agm/core/directives/data-layer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_maps_api_loader_lazy_maps_api_loader__ = __webpack_require__("../../../../@agm/core/services/maps-api-loader/lazy-maps-api-loader.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_maps_api_loader_maps_api_loader__ = __webpack_require__("../../../../@agm/core/services/maps-api-loader/maps-api-loader.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__utils_browser_globals__ = __webpack_require__("../../../../@agm/core/utils/browser-globals.js");
+/* unused harmony export coreDirectives */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmCoreModule; });
 
-var AlertComponent = (function () {
-    function AlertComponent() {
-        this.alerts = [];
-        this.alerts.push({
-            id: 1,
-            type: 'success',
-            message: 'This is an success alert',
-        }, {
-            id: 2,
-            type: 'info',
-            message: 'This is an info alert',
-        }, {
-            id: 3,
-            type: 'warning',
-            message: 'This is a warning alert',
-        }, {
-            id: 4,
-            type: 'danger',
-            message: 'This is a danger alert',
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * @internal
+ */
+function coreDirectives() {
+    return [
+        __WEBPACK_IMPORTED_MODULE_1__directives_map__["a" /* AgmMap */], __WEBPACK_IMPORTED_MODULE_4__directives_marker__["a" /* AgmMarker */], __WEBPACK_IMPORTED_MODULE_3__directives_info_window__["a" /* AgmInfoWindow */], __WEBPACK_IMPORTED_MODULE_2__directives_circle__["a" /* AgmCircle */],
+        __WEBPACK_IMPORTED_MODULE_5__directives_polygon__["a" /* AgmPolygon */], __WEBPACK_IMPORTED_MODULE_6__directives_polyline__["a" /* AgmPolyline */], __WEBPACK_IMPORTED_MODULE_7__directives_polyline_point__["a" /* AgmPolylinePoint */], __WEBPACK_IMPORTED_MODULE_8__directives_kml_layer__["a" /* AgmKmlLayer */],
+        __WEBPACK_IMPORTED_MODULE_9__directives_data_layer__["a" /* AgmDataLayer */]
+    ];
+}
+;
+/**
+ * The angular-google-maps core module. Contains all Directives/Services/Pipes
+ * of the core module. Please use `AgmCoreModule.forRoot()` in your app module.
+ */
+var AgmCoreModule = (function () {
+    function AgmCoreModule() {
+    }
+    /**
+     * Please use this method when you register the module at the root level.
+     */
+    AgmCoreModule.forRoot = function (lazyMapsAPILoaderConfig) {
+        return {
+            ngModule: AgmCoreModule,
+            providers: __WEBPACK_IMPORTED_MODULE_12__utils_browser_globals__["a" /* BROWSER_GLOBALS_PROVIDERS */].concat([
+                { provide: __WEBPACK_IMPORTED_MODULE_11__services_maps_api_loader_maps_api_loader__["a" /* MapsAPILoader */], useClass: __WEBPACK_IMPORTED_MODULE_10__services_maps_api_loader_lazy_maps_api_loader__["a" /* LazyMapsAPILoader */] },
+                { provide: __WEBPACK_IMPORTED_MODULE_10__services_maps_api_loader_lazy_maps_api_loader__["b" /* LAZY_MAPS_API_CONFIG */], useValue: lazyMapsAPILoaderConfig }
+            ]),
+        };
+    };
+    return AgmCoreModule;
+}());
+
+AgmCoreModule.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{ declarations: coreDirectives(), exports: coreDirectives() },] },
+];
+/** @nocollapse */
+AgmCoreModule.ctorParameters = function () { return []; };
+//# sourceMappingURL=core.module.js.map
+
+/***/ }),
+
+/***/ "../../../../@agm/core/directives.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__directives_map__ = __webpack_require__("../../../../@agm/core/directives/map.js");
+/* unused harmony reexport AgmMap */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_circle__ = __webpack_require__("../../../../@agm/core/directives/circle.js");
+/* unused harmony reexport AgmCircle */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_info_window__ = __webpack_require__("../../../../@agm/core/directives/info-window.js");
+/* unused harmony reexport AgmInfoWindow */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_kml_layer__ = __webpack_require__("../../../../@agm/core/directives/kml-layer.js");
+/* unused harmony reexport AgmKmlLayer */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_data_layer__ = __webpack_require__("../../../../@agm/core/directives/data-layer.js");
+/* unused harmony reexport AgmDataLayer */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_marker__ = __webpack_require__("../../../../@agm/core/directives/marker.js");
+/* unused harmony reexport AgmMarker */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__directives_polygon__ = __webpack_require__("../../../../@agm/core/directives/polygon.js");
+/* unused harmony reexport AgmPolygon */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_polyline__ = __webpack_require__("../../../../@agm/core/directives/polyline.js");
+/* unused harmony reexport AgmPolyline */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__directives_polyline_point__ = __webpack_require__("../../../../@agm/core/directives/polyline-point.js");
+/* unused harmony reexport AgmPolylinePoint */
+
+
+
+
+
+
+
+
+
+//# sourceMappingURL=directives.js.map
+
+/***/ }),
+
+/***/ "../../../../@agm/core/directives/circle.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_circle_manager__ = __webpack_require__("../../../../@agm/core/services/managers/circle-manager.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmCircle; });
+
+
+var AgmCircle = (function () {
+    function AgmCircle(_manager) {
+        this._manager = _manager;
+        /**
+         * Indicates whether this Circle handles mouse events. Defaults to true.
+         */
+        this.clickable = true;
+        /**
+         * If set to true, the user can drag this circle over the map. Defaults to false.
+         */
+        this.draggable = false;
+        /**
+         * If set to true, the user can edit this circle by dragging the control points shown at
+         * the center and around the circumference of the circle. Defaults to false.
+         */
+        this.editable = false;
+        /**
+         * The radius in meters on the Earth's surface.
+         */
+        this.radius = 0;
+        /**
+         * The stroke position. Defaults to CENTER.
+         * This property is not supported on Internet Explorer 8 and earlier.
+         */
+        this.strokePosition = 'CENTER';
+        /**
+         * The stroke width in pixels.
+         */
+        this.strokeWeight = 0;
+        /**
+         * Whether this circle is visible on the map. Defaults to true.
+         */
+        this.visible = true;
+        /**
+         * This event is fired when the circle's center is changed.
+         */
+        this.centerChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event emitter gets emitted when the user clicks on the circle.
+         */
+        this.circleClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event emitter gets emitted when the user clicks on the circle.
+         */
+        this.circleDblClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is repeatedly fired while the user drags the circle.
+         */
+        this.drag = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the user stops dragging the circle.
+         */
+        this.dragEnd = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the user starts dragging the circle.
+         */
+        this.dragStart = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM mousedown event is fired on the circle.
+         */
+        this.mouseDown = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM mousemove event is fired on the circle.
+         */
+        this.mouseMove = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired on circle mouseout.
+         */
+        this.mouseOut = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired on circle mouseover.
+         */
+        this.mouseOver = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM mouseup event is fired on the circle.
+         */
+        this.mouseUp = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the circle's radius is changed.
+         */
+        this.radiusChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the circle is right-clicked on.
+         */
+        this.rightClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this._circleAddedToManager = false;
+        this._eventSubscriptions = [];
+    }
+    /** @internal */
+    AgmCircle.prototype.ngOnInit = function () {
+        this._manager.addCircle(this);
+        this._circleAddedToManager = true;
+        this._registerEventListeners();
+    };
+    /** @internal */
+    AgmCircle.prototype.ngOnChanges = function (changes) {
+        if (!this._circleAddedToManager) {
+            return;
+        }
+        if (changes['latitude'] || changes['longitude']) {
+            this._manager.setCenter(this);
+        }
+        if (changes['editable']) {
+            this._manager.setEditable(this);
+        }
+        if (changes['draggable']) {
+            this._manager.setDraggable(this);
+        }
+        if (changes['visible']) {
+            this._manager.setVisible(this);
+        }
+        if (changes['radius']) {
+            this._manager.setRadius(this);
+        }
+        this._updateCircleOptionsChanges(changes);
+    };
+    AgmCircle.prototype._updateCircleOptionsChanges = function (changes) {
+        var options = {};
+        var optionKeys = Object.keys(changes).filter(function (k) { return AgmCircle._mapOptions.indexOf(k) !== -1; });
+        optionKeys.forEach(function (k) { options[k] = changes[k].currentValue; });
+        if (optionKeys.length > 0) {
+            this._manager.setOptions(this, options);
+        }
+    };
+    AgmCircle.prototype._registerEventListeners = function () {
+        var _this = this;
+        var events = new Map();
+        events.set('center_changed', this.centerChange);
+        events.set('click', this.circleClick);
+        events.set('dblclick', this.circleDblClick);
+        events.set('drag', this.drag);
+        events.set('dragend', this.dragEnd);
+        events.set('dragStart', this.dragStart);
+        events.set('mousedown', this.mouseDown);
+        events.set('mousemove', this.mouseMove);
+        events.set('mouseout', this.mouseOut);
+        events.set('mouseover', this.mouseOver);
+        events.set('mouseup', this.mouseUp);
+        events.set('radius_changed', this.radiusChange);
+        events.set('rightclick', this.rightClick);
+        events.forEach(function (eventEmitter, eventName) {
+            _this._eventSubscriptions.push(_this._manager.createEventObservable(eventName, _this).subscribe(function (value) {
+                switch (eventName) {
+                    case 'radius_changed':
+                        _this._manager.getRadius(_this).then(function (radius) { return eventEmitter.emit(radius); });
+                        break;
+                    case 'center_changed':
+                        _this._manager.getCenter(_this).then(function (center) {
+                            return eventEmitter.emit({ lat: center.lat(), lng: center.lng() });
+                        });
+                        break;
+                    default:
+                        eventEmitter.emit({ coords: { lat: value.latLng.lat(), lng: value.latLng.lng() } });
+                }
+            }));
         });
-    }
-    AlertComponent.prototype.ngOnInit = function () { };
-    AlertComponent.prototype.closeAlert = function (alert) {
-        var index = this.alerts.indexOf(alert);
-        this.alerts.splice(index, 1);
     };
-    return AlertComponent;
+    /** @internal */
+    AgmCircle.prototype.ngOnDestroy = function () {
+        this._eventSubscriptions.forEach(function (s) { s.unsubscribe(); });
+        this._eventSubscriptions = null;
+        this._manager.removeCircle(this);
+    };
+    /**
+     * Gets the LatLngBounds of this Circle.
+     */
+    AgmCircle.prototype.getBounds = function () { return this._manager.getBounds(this); };
+    AgmCircle.prototype.getCenter = function () { return this._manager.getCenter(this); };
+    return AgmCircle;
 }());
-AlertComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-alert',
-        template: __webpack_require__("../../../../../src/app/layout/bs-component/components/alert/alert.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/layout/bs-component/components/alert/alert.component.scss")]
-    }),
-    __metadata("design:paramtypes", [])
-], AlertComponent);
 
-//# sourceMappingURL=alert.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/buttons/buttons.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row mb-3\">\n    <div class=\"col col-sm-6\">\n        <div class=\"card\">\n            <div class=\"card-header\">\n                Radio Button group (<strong>Using ngModel</strong>)\n            </div>\n            <div class=\"card-block\">\n                <div [(ngModel)]=\"model\" ngbRadioGroup name=\"radioBasic\">\n                    <label class=\"btn btn-primary\">\n                        <input type=\"radio\" [value]=\"1\"> Left (pre-checked)\n                    </label>\n                    <label class=\"btn btn-primary\">\n                        <input type=\"radio\" value=\"middle\"> Middle\n                    </label>\n                    <label class=\"btn btn-primary\">\n                        <input type=\"radio\" [value]=\"false\"> Right\n                    </label>\n                </div>\n                <div class=\"alert alert-info mb-0\">\n                    <strong>Selected Value: </strong>{{model}}\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"col col-sm-6\">\n        <div class=\"card\">\n            <div class=\"card-header\">\n                Radio Button group (<strong>Ractive Forms</strong>)\n            </div>\n            <div class=\"card-block\">\n                <form [formGroup]=\"radioGroupForm\">\n                    <div ngbRadioGroup name=\"radioBasic\" formControlName=\"model\">\n                        <label class=\"btn btn-primary\">\n                            <input type=\"radio\" [value]=\"1\"> Left (pre-checked)\n                        </label>\n                        <label class=\"btn btn-primary\">\n                            <input type=\"radio\" value=\"middle\"> Middle\n                        </label>\n                        <label class=\"btn btn-primary\">\n                            <input type=\"radio\" [value]=\"false\"> Right\n                        </label>\n                    </div>\n                    <div class=\"alert alert-info mb-0\">\n                        <strong>Selected Value: </strong>{{radioGroupForm.value.model}}\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/buttons/buttons.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
+AgmCircle._mapOptions = [
+    'fillColor', 'fillOpacity', 'strokeColor', 'strokeOpacity', 'strokePosition', 'strokeWeight',
+    'visible', 'zIndex'
+];
+AgmCircle.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
+                selector: 'agm-circle',
+                inputs: [
+                    'latitude', 'longitude', 'clickable', 'draggable: circleDraggable', 'editable', 'fillColor',
+                    'fillOpacity', 'radius', 'strokeColor', 'strokeOpacity', 'strokePosition', 'strokeWeight',
+                    'visible', 'zIndex'
+                ],
+                outputs: [
+                    'centerChange', 'circleClick', 'circleDblClick', 'drag', 'dragEnd', 'dragStart', 'mouseDown',
+                    'mouseMove', 'mouseOut', 'mouseOver', 'mouseUp', 'radiusChange', 'rightClick'
+                ]
+            },] },
+];
+/** @nocollapse */
+AgmCircle.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_1__services_managers_circle_manager__["a" /* CircleManager */], },
+]; };
+//# sourceMappingURL=circle.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/layout/bs-component/components/buttons/buttons.component.ts":
+/***/ "../../../../@agm/core/directives/data-layer.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ButtonsComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_data_layer_manager__ = __webpack_require__("../../../../@agm/core/services/managers/data-layer-manager.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmDataLayer; });
 
 
-var ButtonsComponent = (function () {
-    function ButtonsComponent(formBuilder) {
-        this.formBuilder = formBuilder;
-        this.model = 1;
+var layerId = 0;
+/**
+ * AgmDataLayer enables the user to add data layers to the map.
+ *
+ * ### Example
+ * ```typescript
+ * import { Component } from 'angular2/core';
+ * import { AgmMap, AgmDataLayer } from
+ * 'angular-google-maps/core';
+ *
+ * @Component({
+ *  selector: 'my-map-cmp',
+ *  directives: [AgmMap, AgmDataLayer],
+ *  styles: [`
+ *    .agm-container {
+ *      height: 300px;
+ *    }
+ * `],
+ *  template: `
+ * <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+ * 	  <agm-data-layer [geoJson]="geoJsonObject" (layerClick)="clicked($event)" [style]="styleFunc">
+ * 	  </agm-data-layer>
+ * </agm-map>
+ *  `
+ * })
+ * export class MyMapCmp {
+ *   lat: number = -25.274449;
+ *   lng: number = 133.775060;
+ *   zoom: number = 5;
+ *
+ * clicked(clickEvent) {
+ *    console.log(clickEvent);
+ *  }
+ *
+ *  styleFunc(feature) {
+ *    return ({
+ *      clickable: false,
+ *      fillColor: feature.getProperty('color'),
+ *      strokeWeight: 1
+ *    });
+ *  }
+ *
+ *  geoJsonObject: Object = {
+ *    "type": "FeatureCollection",
+ *    "features": [
+ *      {
+ *        "type": "Feature",
+ *        "properties": {
+ *          "letter": "G",
+ *          "color": "blue",
+ *          "rank": "7",
+ *          "ascii": "71"
+ *        },
+ *        "geometry": {
+ *          "type": "Polygon",
+ *          "coordinates": [
+ *            [
+ *              [123.61, -22.14], [122.38, -21.73], [121.06, -21.69], [119.66, -22.22], [119.00, -23.40],
+ *              [118.65, -24.76], [118.43, -26.07], [118.78, -27.56], [119.22, -28.57], [120.23, -29.49],
+ *              [121.77, -29.87], [123.57, -29.64], [124.45, -29.03], [124.71, -27.95], [124.80, -26.70],
+ *              [124.80, -25.60], [123.61, -25.64], [122.56, -25.64], [121.72, -25.72], [121.81, -26.62],
+ *              [121.86, -26.98], [122.60, -26.90], [123.57, -27.05], [123.57, -27.68], [123.35, -28.18],
+ *              [122.51, -28.38], [121.77, -28.26], [121.02, -27.91], [120.49, -27.21], [120.14, -26.50],
+ *              [120.10, -25.64], [120.27, -24.52], [120.67, -23.68], [121.72, -23.32], [122.43, -23.48],
+ *              [123.04, -24.04], [124.54, -24.28], [124.58, -23.20], [123.61, -22.14]
+ *            ]
+ *          ]
+ *        }
+ *      },
+ *      {
+ *        "type": "Feature",
+ *        "properties": {
+ *          "letter": "o",
+ *          "color": "red",
+ *          "rank": "15",
+ *          "ascii": "111"
+ *        },
+ *        "geometry": {
+ *          "type": "Polygon",
+ *          "coordinates": [
+ *            [
+ *              [128.84, -25.76], [128.18, -25.60], [127.96, -25.52], [127.88, -25.52], [127.70, -25.60],
+ *              [127.26, -25.79], [126.60, -26.11], [126.16, -26.78], [126.12, -27.68], [126.21, -28.42],
+ *              [126.69, -29.49], [127.74, -29.80], [128.80, -29.72], [129.41, -29.03], [129.72, -27.95],
+ *              [129.68, -27.21], [129.33, -26.23], [128.84, -25.76]
+ *            ],
+ *            [
+ *              [128.45, -27.44], [128.32, -26.94], [127.70, -26.82], [127.35, -27.05], [127.17, -27.80],
+ *              [127.57, -28.22], [128.10, -28.42], [128.49, -27.80], [128.45, -27.44]
+ *            ]
+ *          ]
+ *        }
+ *      },
+ *      {
+ *        "type": "Feature",
+ *        "properties": {
+ *          "letter": "o",
+ *          "color": "yellow",
+ *          "rank": "15",
+ *          "ascii": "111"
+ *        },
+ *        "geometry": {
+ *          "type": "Polygon",
+ *          "coordinates": [
+ *            [
+ *              [131.87, -25.76], [131.35, -26.07], [130.95, -26.78], [130.82, -27.64], [130.86, -28.53],
+ *              [131.26, -29.22], [131.92, -29.76], [132.45, -29.87], [133.06, -29.76], [133.72, -29.34],
+ *              [134.07, -28.80], [134.20, -27.91], [134.07, -27.21], [133.81, -26.31], [133.37, -25.83],
+ *              [132.71, -25.64], [131.87, -25.76]
+ *            ],
+ *            [
+ *              [133.15, -27.17], [132.71, -26.86], [132.09, -26.90], [131.74, -27.56], [131.79, -28.26],
+ *              [132.36, -28.45], [132.93, -28.34], [133.15, -27.76], [133.15, -27.17]
+ *            ]
+ *          ]
+ *        }
+ *      },
+ *      {
+ *        "type": "Feature",
+ *        "properties": {
+ *          "letter": "g",
+ *          "color": "blue",
+ *          "rank": "7",
+ *          "ascii": "103"
+ *        },
+ *        "geometry": {
+ *          "type": "Polygon",
+ *          "coordinates": [
+ *            [
+ *              [138.12, -25.04], [136.84, -25.16], [135.96, -25.36], [135.26, -25.99], [135, -26.90],
+ *              [135.04, -27.91], [135.26, -28.88], [136.05, -29.45], [137.02, -29.49], [137.81, -29.49],
+ *              [137.94, -29.99], [137.90, -31.20], [137.85, -32.24], [136.88, -32.69], [136.45, -32.36],
+ *              [136.27, -31.80], [134.95, -31.84], [135.17, -32.99], [135.52, -33.43], [136.14, -33.76],
+ *              [137.06, -33.83], [138.12, -33.65], [138.86, -33.21], [139.30, -32.28], [139.30, -31.24],
+ *              [139.30, -30.14], [139.21, -28.96], [139.17, -28.22], [139.08, -27.41], [139.08, -26.47],
+ *              [138.99, -25.40], [138.73, -25.00], [138.12, -25.04]
+ *            ],
+ *            [
+ *              [137.50, -26.54], [136.97, -26.47], [136.49, -26.58], [136.31, -27.13], [136.31, -27.72],
+ *              [136.58, -27.99], [137.50, -28.03], [137.68, -27.68], [137.59, -26.78], [137.50, -26.54]
+ *            ]
+ *          ]
+ *        }
+ *      },
+ *      {
+ *        "type": "Feature",
+ *        "properties": {
+ *          "letter": "l",
+ *          "color": "green",
+ *          "rank": "12",
+ *          "ascii": "108"
+ *        },
+ *        "geometry": {
+ *          "type": "Polygon",
+ *          "coordinates": [
+ *            [
+ *              [140.14, -21.04], [140.31, -29.42], [141.67, -29.49], [141.59, -20.92], [140.14, -21.04]
+ *            ]
+ *          ]
+ *        }
+ *      },
+ *      {
+ *        "type": "Feature",
+ *        "properties": {
+ *          "letter": "e",
+ *          "color": "red",
+ *          "rank": "5",
+ *          "ascii": "101"
+ *        },
+ *        "geometry": {
+ *          "type": "Polygon",
+ *          "coordinates": [
+ *            [
+ *              [144.14, -27.41], [145.67, -27.52], [146.86, -27.09], [146.82, -25.64], [146.25, -25.04],
+ *              [145.45, -24.68], [144.66, -24.60], [144.09, -24.76], [143.43, -25.08], [142.99, -25.40],
+ *              [142.64, -26.03], [142.64, -27.05], [142.64, -28.26], [143.30, -29.11], [144.18, -29.57],
+ *              [145.41, -29.64], [146.46, -29.19], [146.64, -28.72], [146.82, -28.14], [144.84, -28.42],
+ *              [144.31, -28.26], [144.14, -27.41]
+ *            ],
+ *            [
+ *              [144.18, -26.39], [144.53, -26.58], [145.19, -26.62], [145.72, -26.35], [145.81, -25.91],
+ *              [145.41, -25.68], [144.97, -25.68], [144.49, -25.64], [144, -25.99], [144.18, -26.39]
+ *            ]
+ *          ]
+ *        }
+ *      }
+ *    ]
+ *  };
+ * }
+ * ```
+ */
+var AgmDataLayer = (function () {
+    function AgmDataLayer(_manager) {
+        this._manager = _manager;
+        this._addedToManager = false;
+        this._id = (layerId++).toString();
+        this._subscriptions = [];
+        /**
+         * This event is fired when a feature in the layer is clicked.
+         */
+        this.layerClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * The geoJson to be displayed
+         */
+        this.geoJson = null;
     }
-    ButtonsComponent.prototype.ngOnInit = function () {
-        this.radioGroupForm = this.formBuilder.group({
-            model: 1
+    AgmDataLayer.prototype.ngOnInit = function () {
+        if (this._addedToManager) {
+            return;
+        }
+        this._manager.addDataLayer(this);
+        this._addedToManager = true;
+        this._addEventListeners();
+    };
+    AgmDataLayer.prototype._addEventListeners = function () {
+        var _this = this;
+        var listeners = [
+            { name: 'click', handler: function (ev) { return _this.layerClick.emit(ev); } },
+        ];
+        listeners.forEach(function (obj) {
+            var os = _this._manager.createEventObservable(obj.name, _this).subscribe(obj.handler);
+            _this._subscriptions.push(os);
         });
     };
-    return ButtonsComponent;
-}());
-ButtonsComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-buttons',
-        template: __webpack_require__("../../../../../src/app/layout/bs-component/components/buttons/buttons.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/layout/bs-component/components/buttons/buttons.component.scss")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormBuilder */]) === "function" && _a || Object])
-], ButtonsComponent);
-
-var _a;
-//# sourceMappingURL=buttons.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/collapse/collapse.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-lg-12\">\n        <div class=\"card mb-3\">\n            <div class=\"card-header\">Collapse</div>\n            <div class=\"card-block\">\n                <p>\n                    <button type=\"button\" class=\"btn btn-outline-primary\" (click)=\"isCollapsed = !isCollapsed\"\n                        [attr.aria-expanded]=\"!isCollapsed\" aria-controls=\"collapseExample\">\n                        Toggle\n                    </button>\n                </p>\n                <div id=\"collapseExample\" [ngbCollapse]=\"isCollapsed\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            You can collapse this card by clicking Toggle\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/collapse/collapse.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/collapse/collapse.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CollapseComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var CollapseComponent = (function () {
-    function CollapseComponent() {
-        this.isCollapsed = false;
-    }
-    return CollapseComponent;
-}());
-CollapseComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-collapse',
-        template: __webpack_require__("../../../../../src/app/layout/bs-component/components/collapse/collapse.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/layout/bs-component/components/collapse/collapse.component.scss")]
-    })
-], CollapseComponent);
-
-//# sourceMappingURL=collapse.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/date-picker/date-picker.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-lg-12\">\n        <div class=\"card mb-3\">\n            <div class=\"card-header\">Date Picker</div>\n            <div class=\"card-block\">\n                <form class=\"form-inline mb-3\">\n                    <div class=\"form-group\">\n                        <div class=\"input-group\">\n                            <input class=\"form-control\" placeholder=\"yyyy-mm-dd\"\n                                name=\"dp\" [(ngModel)]=\"model\" ngbDatepicker #d=\"ngbDatepicker\">\n                            <div class=\"input-group-addon\" (click)=\"d.toggle()\" >\n                                <span class=\"fa fa-calendar\"></span>\n                            </div>\n                        </div>\n                    </div>\n                </form>\n                <div class=\"alert alert-info mb-0\">\n                    <strong>Model: </strong> {{ model | json }}\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/date-picker/date-picker.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/date-picker/date-picker.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DatePickerComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var DatePickerComponent = (function () {
-    function DatePickerComponent() {
-    }
-    DatePickerComponent.prototype.ngOnInit = function () {
+    /** @internal */
+    AgmDataLayer.prototype.id = function () { return this._id; };
+    /** @internal */
+    AgmDataLayer.prototype.toString = function () { return "AgmDataLayer-" + this._id.toString(); };
+    /** @internal */
+    AgmDataLayer.prototype.ngOnDestroy = function () {
+        this._manager.deleteDataLayer(this);
+        // unsubscribe all registered observable subscriptions
+        this._subscriptions.forEach(function (s) { return s.unsubscribe(); });
     };
-    return DatePickerComponent;
+    /** @internal */
+    AgmDataLayer.prototype.ngOnChanges = function (changes) {
+        if (!this._addedToManager) {
+            return;
+        }
+        var geoJsonChange = changes['geoJson'];
+        if (geoJsonChange) {
+            this._manager.updateGeoJson(this, geoJsonChange.currentValue);
+        }
+        var dataOptions = {};
+        var optionKeys = Object.keys(changes).filter(function (k) { return AgmDataLayer._dataOptionsAttributes.indexOf(k) !== -1; });
+        optionKeys.forEach(function (k) { return dataOptions[k] = changes[k].currentValue; });
+        this._manager.setDataOptions(this, dataOptions);
+    };
+    return AgmDataLayer;
 }());
-DatePickerComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-date-picker',
-        template: __webpack_require__("../../../../../src/app/layout/bs-component/components/date-picker/date-picker.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/layout/bs-component/components/date-picker/date-picker.component.scss")]
-    }),
-    __metadata("design:paramtypes", [])
-], DatePickerComponent);
 
-//# sourceMappingURL=date-picker.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/dropdown/dropdown.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"card\">\n    <div class=\"card-header\">Dropdown</div>\n    <div class=\"card-block\">\n        <div class=\"row\">\n            <div class=\"col\">\n                <div ngbDropdown class=\"d-inline-block\">\n                    <button class=\"btn btn-outline-primary\" id=\"dropdownMenu1\" ngbDropdownToggle>Toggle dropdown</button>\n                    <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenu1\">\n                        <button class=\"dropdown-item\">Action - 1</button>\n                        <button class=\"dropdown-item\">Another Action</button>\n                        <button class=\"dropdown-item\">Something else is here</button>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col text-right\">\n                <div ngbDropdown [up]=\"true\" class=\"d-inline-block\">\n                    <button class=\"btn btn-outline-primary\" id=\"dropdownMenu2\" ngbDropdownToggle>Toggle dropup</button>\n                    <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"dropdownMenu2\">\n                        <button class=\"dropdown-item\">Action - 1</button>\n                        <button class=\"dropdown-item\">Another Action</button>\n                        <button class=\"dropdown-item\">Something else is here</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <hr>\n        <p class=\"mb-2\">You can easily control dropdowns programmatically using the exported dropdown instance.</p>\n        <div class=\"d-inline-block\" ngbDropdown #myDrop=\"ngbDropdown\">\n            <button class=\"btn btn-outline-primary\" id=\"dropdownMenu1\" ngbDropdownToggle>Toggle dropdown</button>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenu1\">\n                <button class=\"dropdown-item\">Action - 1</button>\n                <button class=\"dropdown-item\">Another Action</button>\n                <button class=\"dropdown-item\">Something else is here</button>\n            </div>\n\n            <button class=\"btn btn-outline-success\" (click)=\"$event.stopPropagation(); myDrop.open();\">Open from outside</button>\n            <button class=\"btn btn-outline-danger\" (click)=\"$event.stopPropagation(); myDrop.close();\">Close from outside</button>\n        </div>\n    </div>\n</div>\n"
+AgmDataLayer._dataOptionsAttributes = ['style'];
+AgmDataLayer.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
+                selector: 'agm-data-layer',
+                inputs: ['geoJson', 'style'],
+                outputs: ['layerClick']
+            },] },
+];
+/** @nocollapse */
+AgmDataLayer.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_1__services_managers_data_layer_manager__["a" /* DataLayerManager */], },
+]; };
+//# sourceMappingURL=data-layer.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/layout/bs-component/components/dropdown/dropdown.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/dropdown/dropdown.component.ts":
+/***/ "../../../../@agm/core/directives/info-window.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DropdownComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_info_window_manager__ = __webpack_require__("../../../../@agm/core/services/managers/info-window-manager.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmInfoWindow; });
 
-var DropdownComponent = (function () {
-    function DropdownComponent() {
+
+var infoWindowId = 0;
+/**
+ * AgmInfoWindow renders a info window inside a {@link AgmMarker} or standalone.
+ *
+ * ### Example
+ * ```typescript
+ * import { Component } from '@angular/core';
+ *
+ * @Component({
+ *  selector: 'my-map-cmp',
+ *  styles: [`
+ *    .agm-map-container {
+ *      height: 300px;
+ *    }
+ * `],
+ *  template: `
+ *    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+ *      <agm-marker [latitude]="lat" [longitude]="lng" [label]="'M'">
+ *        <agm-info-window [disableAutoPan]="true">
+ *          Hi, this is the content of the <strong>info window</strong>
+ *        </agm-info-window>
+ *      </agm-marker>
+ *    </agm-map>
+ *  `
+ * })
+ * ```
+ */
+var AgmInfoWindow = (function () {
+    function AgmInfoWindow(_infoWindowManager, _el) {
+        this._infoWindowManager = _infoWindowManager;
+        this._el = _el;
+        /**
+         * Sets the open state for the InfoWindow. You can also call the open() and close() methods.
+         */
+        this.isOpen = false;
+        /**
+         * Emits an event when the info window is closed.
+         */
+        this.infoWindowClose = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this._infoWindowAddedToManager = false;
+        this._id = (infoWindowId++).toString();
     }
-    DropdownComponent.prototype.ngOnInit = function () {
+    AgmInfoWindow.prototype.ngOnInit = function () {
+        this.content = this._el.nativeElement.querySelector('.agm-info-window-content');
+        this._infoWindowManager.addInfoWindow(this);
+        this._infoWindowAddedToManager = true;
+        this._updateOpenState();
+        this._registerEventListeners();
     };
-    return DropdownComponent;
+    /** @internal */
+    AgmInfoWindow.prototype.ngOnChanges = function (changes) {
+        if (!this._infoWindowAddedToManager) {
+            return;
+        }
+        if ((changes['latitude'] || changes['longitude']) && typeof this.latitude === 'number' &&
+            typeof this.longitude === 'number') {
+            this._infoWindowManager.setPosition(this);
+        }
+        if (changes['zIndex']) {
+            this._infoWindowManager.setZIndex(this);
+        }
+        if (changes['isOpen']) {
+            this._updateOpenState();
+        }
+        this._setInfoWindowOptions(changes);
+    };
+    AgmInfoWindow.prototype._registerEventListeners = function () {
+        var _this = this;
+        this._infoWindowManager.createEventObservable('closeclick', this).subscribe(function () {
+            _this.isOpen = false;
+            _this.infoWindowClose.emit();
+        });
+    };
+    AgmInfoWindow.prototype._updateOpenState = function () {
+        this.isOpen ? this.open() : this.close();
+    };
+    AgmInfoWindow.prototype._setInfoWindowOptions = function (changes) {
+        var options = {};
+        var optionKeys = Object.keys(changes).filter(function (k) { return AgmInfoWindow._infoWindowOptionsInputs.indexOf(k) !== -1; });
+        optionKeys.forEach(function (k) { options[k] = changes[k].currentValue; });
+        this._infoWindowManager.setOptions(this, options);
+    };
+    /**
+     * Opens the info window.
+     */
+    AgmInfoWindow.prototype.open = function () { return this._infoWindowManager.open(this); };
+    /**
+     * Closes the info window.
+     */
+    AgmInfoWindow.prototype.close = function () {
+        var _this = this;
+        return this._infoWindowManager.close(this).then(function () { _this.infoWindowClose.emit(); });
+    };
+    /** @internal */
+    AgmInfoWindow.prototype.id = function () { return this._id; };
+    /** @internal */
+    AgmInfoWindow.prototype.toString = function () { return 'AgmInfoWindow-' + this._id.toString(); };
+    /** @internal */
+    AgmInfoWindow.prototype.ngOnDestroy = function () { this._infoWindowManager.deleteInfoWindow(this); };
+    return AgmInfoWindow;
 }());
-DropdownComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-dropdown',
-        template: __webpack_require__("../../../../../src/app/layout/bs-component/components/dropdown/dropdown.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/layout/bs-component/components/dropdown/dropdown.component.scss")]
-    }),
-    __metadata("design:paramtypes", [])
-], DropdownComponent);
 
-//# sourceMappingURL=dropdown.component.js.map
+AgmInfoWindow._infoWindowOptionsInputs = ['disableAutoPan', 'maxWidth'];
+AgmInfoWindow.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
+                selector: 'agm-info-window',
+                inputs: ['latitude', 'longitude', 'disableAutoPan', 'isOpen', 'zIndex', 'maxWidth'],
+                outputs: ['infoWindowClose'],
+                template: "<div class='agm-info-window-content'>\n      <ng-content></ng-content>\n    </div>\n  "
+            },] },
+];
+/** @nocollapse */
+AgmInfoWindow.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_1__services_managers_info_window_manager__["a" /* InfoWindowManager */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+]; };
+//# sourceMappingURL=info-window.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/layout/bs-component/components/index.ts":
+/***/ "../../../../@agm/core/directives/kml-layer.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__buttons_buttons_component__ = __webpack_require__("../../../../../src/app/layout/bs-component/components/buttons/buttons.component.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__buttons_buttons_component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__alert_alert_component__ = __webpack_require__("../../../../../src/app/layout/bs-component/components/alert/alert.component.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__alert_alert_component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modal_modal_component__ = __webpack_require__("../../../../../src/app/layout/bs-component/components/modal/modal.component.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__modal_modal_component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__collapse_collapse_component__ = __webpack_require__("../../../../../src/app/layout/bs-component/components/collapse/collapse.component.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_3__collapse_collapse_component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__date_picker_date_picker_component__ = __webpack_require__("../../../../../src/app/layout/bs-component/components/date-picker/date-picker.component.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_4__date_picker_date_picker_component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__dropdown_dropdown_component__ = __webpack_require__("../../../../../src/app/layout/bs-component/components/dropdown/dropdown.component.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_5__dropdown_dropdown_component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pagination_pagination_component__ = __webpack_require__("../../../../../src/app/layout/bs-component/components/pagination/pagination.component.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_6__pagination_pagination_component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pop_over_pop_over_component__ = __webpack_require__("../../../../../src/app/layout/bs-component/components/pop-over/pop-over.component.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_7__pop_over_pop_over_component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__progressbar_progressbar_component__ = __webpack_require__("../../../../../src/app/layout/bs-component/components/progressbar/progressbar.component.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_8__progressbar_progressbar_component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__tabs_tabs_component__ = __webpack_require__("../../../../../src/app/layout/bs-component/components/tabs/tabs.component.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_9__tabs_tabs_component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__tooltip_tooltip_component__ = __webpack_require__("../../../../../src/app/layout/bs-component/components/tooltip/tooltip.component.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_10__tooltip_tooltip_component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__timepicker_timepicker_component__ = __webpack_require__("../../../../../src/app/layout/bs-component/components/timepicker/timepicker.component.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_11__timepicker_timepicker_component__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_kml_layer_manager__ = __webpack_require__("../../../../@agm/core/services/managers/kml-layer-manager.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmKmlLayer; });
+
+
+var layerId = 0;
+var AgmKmlLayer = (function () {
+    function AgmKmlLayer(_manager) {
+        this._manager = _manager;
+        this._addedToManager = false;
+        this._id = (layerId++).toString();
+        this._subscriptions = [];
+        /**
+         * If true, the layer receives mouse events. Default value is true.
+         */
+        this.clickable = true;
+        /**
+         * By default, the input map is centered and zoomed to the bounding box of the contents of the
+         * layer.
+         * If this option is set to true, the viewport is left unchanged, unless the map's center and zoom
+         * were never set.
+         */
+        this.preserveViewport = false;
+        /**
+         * Whether to render the screen overlays. Default true.
+         */
+        this.screenOverlays = true;
+        /**
+         * Suppress the rendering of info windows when layer features are clicked.
+         */
+        this.suppressInfoWindows = false;
+        /**
+         * The URL of the KML document to display.
+         */
+        this.url = null;
+        /**
+         * The z-index of the layer.
+         */
+        this.zIndex = null;
+        /**
+         * This event is fired when a feature in the layer is clicked.
+         */
+        this.layerClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the KML layers default viewport has changed.
+         */
+        this.defaultViewportChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the KML layer has finished loading.
+         * At this point it is safe to read the status property to determine if the layer loaded
+         * successfully.
+         */
+        this.statusChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    AgmKmlLayer.prototype.ngOnInit = function () {
+        if (this._addedToManager) {
+            return;
+        }
+        this._manager.addKmlLayer(this);
+        this._addedToManager = true;
+        this._addEventListeners();
+    };
+    AgmKmlLayer.prototype.ngOnChanges = function (changes) {
+        if (!this._addedToManager) {
+            return;
+        }
+        this._updatePolygonOptions(changes);
+    };
+    AgmKmlLayer.prototype._updatePolygonOptions = function (changes) {
+        var options = Object.keys(changes)
+            .filter(function (k) { return AgmKmlLayer._kmlLayerOptions.indexOf(k) !== -1; })
+            .reduce(function (obj, k) {
+            obj[k] = changes[k].currentValue;
+            return obj;
+        }, {});
+        if (Object.keys(options).length > 0) {
+            this._manager.setOptions(this, options);
+        }
+    };
+    AgmKmlLayer.prototype._addEventListeners = function () {
+        var _this = this;
+        var listeners = [
+            { name: 'click', handler: function (ev) { return _this.layerClick.emit(ev); } },
+            { name: 'defaultviewport_changed', handler: function () { return _this.defaultViewportChange.emit(); } },
+            { name: 'status_changed', handler: function () { return _this.statusChange.emit(); } },
+        ];
+        listeners.forEach(function (obj) {
+            var os = _this._manager.createEventObservable(obj.name, _this).subscribe(obj.handler);
+            _this._subscriptions.push(os);
+        });
+    };
+    /** @internal */
+    AgmKmlLayer.prototype.id = function () { return this._id; };
+    /** @internal */
+    AgmKmlLayer.prototype.toString = function () { return "AgmKmlLayer-" + this._id.toString(); };
+    /** @internal */
+    AgmKmlLayer.prototype.ngOnDestroy = function () {
+        this._manager.deleteKmlLayer(this);
+        // unsubscribe all registered observable subscriptions
+        this._subscriptions.forEach(function (s) { return s.unsubscribe(); });
+    };
+    return AgmKmlLayer;
+}());
+
+AgmKmlLayer._kmlLayerOptions = ['clickable', 'preserveViewport', 'screenOverlays', 'suppressInfoWindows', 'url', 'zIndex'];
+AgmKmlLayer.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
+                selector: 'agm-kml-layer',
+                inputs: ['clickable', 'preserveViewport', 'screenOverlays', 'suppressInfoWindows', 'url', 'zIndex'],
+                outputs: ['layerClick', 'defaultViewportChange', 'statusChange']
+            },] },
+];
+/** @nocollapse */
+AgmKmlLayer.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_1__services_managers_kml_layer_manager__["a" /* KmlLayerManager */], },
+]; };
+//# sourceMappingURL=kml-layer.js.map
+
+/***/ }),
+
+/***/ "../../../../@agm/core/directives/map.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_google_maps_api_wrapper__ = __webpack_require__("../../../../@agm/core/services/google-maps-api-wrapper.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_managers_circle_manager__ = __webpack_require__("../../../../@agm/core/services/managers/circle-manager.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_managers_info_window_manager__ = __webpack_require__("../../../../@agm/core/services/managers/info-window-manager.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_managers_marker_manager__ = __webpack_require__("../../../../@agm/core/services/managers/marker-manager.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_managers_polygon_manager__ = __webpack_require__("../../../../@agm/core/services/managers/polygon-manager.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_managers_polyline_manager__ = __webpack_require__("../../../../@agm/core/services/managers/polyline-manager.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_managers_kml_layer_manager__ = __webpack_require__("../../../../@agm/core/services/managers/kml-layer-manager.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_managers_data_layer_manager__ = __webpack_require__("../../../../@agm/core/services/managers/data-layer-manager.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmMap; });
 
 
 
@@ -523,473 +1457,2090 @@ DropdownComponent = __decorate([
 
 
 
+/**
+ * AgmMap renders a Google Map.
+ * **Important note**: To be able see a map in the browser, you have to define a height for the
+ * element `agm-map`.
+ *
+ * ### Example
+ * ```typescript
+ * import { Component } from '@angular/core';
+ *
+ * @Component({
+ *  selector: 'my-map-cmp',
+ *  styles: [`
+ *    agm-map {
+ *      height: 300px;
+ *    }
+ * `],
+ *  template: `
+ *    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+ *    </agm-map>
+ *  `
+ * })
+ * ```
+ */
+var AgmMap = (function () {
+    function AgmMap(_elem, _mapsWrapper) {
+        this._elem = _elem;
+        this._mapsWrapper = _mapsWrapper;
+        /**
+         * The longitude that defines the center of the map.
+         */
+        this.longitude = 0;
+        /**
+         * The latitude that defines the center of the map.
+         */
+        this.latitude = 0;
+        /**
+         * The zoom level of the map. The default zoom level is 8.
+         */
+        this.zoom = 8;
+        /**
+         * Enables/disables if map is draggable.
+         */
+        this.draggable = true;
+        /**
+         * Enables/disables zoom and center on double click. Enabled by default.
+         */
+        this.disableDoubleClickZoom = false;
+        /**
+         * Enables/disables all default UI of the Google map. Please note: When the map is created, this
+         * value cannot get updated.
+         */
+        this.disableDefaultUI = false;
+        /**
+         * If false, disables scrollwheel zooming on the map. The scrollwheel is enabled by default.
+         */
+        this.scrollwheel = true;
+        /**
+         * If false, prevents the map from being controlled by the keyboard. Keyboard shortcuts are
+         * enabled by default.
+         */
+        this.keyboardShortcuts = true;
+        /**
+         * The enabled/disabled state of the Zoom control.
+         */
+        this.zoomControl = true;
+        /**
+         * Styles to apply to each of the default map types. Note that for Satellite/Hybrid and Terrain
+         * modes, these styles will only apply to labels and geometry.
+         */
+        this.styles = [];
+        /**
+         * When true and the latitude and/or longitude values changes, the Google Maps panTo method is
+         * used to
+         * center the map. See: https://developers.google.com/maps/documentation/javascript/reference#Map
+         */
+        this.usePanning = false;
+        /**
+         * The initial enabled/disabled state of the Street View Pegman control.
+         * This control is part of the default UI, and should be set to false when displaying a map type
+         * on which the Street View road overlay should not appear (e.g. a non-Earth map type).
+         */
+        this.streetViewControl = true;
+        /**
+         * Sets the viewport to contain the given bounds.
+         */
+        this.fitBounds = null;
+        /**
+         * The initial enabled/disabled state of the Scale control. This is disabled by default.
+         */
+        this.scaleControl = false;
+        /**
+         * The initial enabled/disabled state of the Map type control.
+         */
+        this.mapTypeControl = false;
+        /**
+         * The initial enabled/disabled state of the Pan control.
+         */
+        this.panControl = false;
+        /**
+         * The initial enabled/disabled state of the Rotate control.
+         */
+        this.rotateControl = false;
+        /**
+         * The initial enabled/disabled state of the Fullscreen control.
+         */
+        this.fullscreenControl = false;
+        /**
+         * The map mapTypeId. Defaults to 'roadmap'.
+         */
+        this.mapTypeId = 'roadmap';
+        /**
+         * When false, map icons are not clickable. A map icon represents a point of interest,
+         * also known as a POI. By default map icons are clickable.
+         */
+        this.clickableIcons = true;
+        /**
+         * This setting controls how gestures on the map are handled.
+         * Allowed values:
+         * - 'cooperative' (Two-finger touch gestures pan and zoom the map. One-finger touch gestures are not handled by the map.)
+         * - 'greedy'      (All touch gestures pan or zoom the map.)
+         * - 'none'        (The map cannot be panned or zoomed by user gestures.)
+         * - 'auto'        [default] (Gesture handling is either cooperative or greedy, depending on whether the page is scrollable or not.
+         */
+        this.gestureHandling = 'auto';
+        this._observableSubscriptions = [];
+        /**
+         * This event emitter gets emitted when the user clicks on the map (but not when they click on a
+         * marker or infoWindow).
+         */
+        this.mapClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event emitter gets emitted when the user right-clicks on the map (but not when they click
+         * on a marker or infoWindow).
+         */
+        this.mapRightClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event emitter gets emitted when the user double-clicks on the map (but not when they click
+         * on a marker or infoWindow).
+         */
+        this.mapDblClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event emitter is fired when the map center changes.
+         */
+        this.centerChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the viewport bounds have changed.
+         */
+        this.boundsChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the map becomes idle after panning or zooming.
+         */
+        this.idle = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the zoom level has changed.
+         */
+        this.zoomChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the google map is fully initialized.
+         * You get the google.maps.Map instance as a result of this EventEmitter.
+         */
+        this.mapReady = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    /** @internal */
+    AgmMap.prototype.ngOnInit = function () {
+        // todo: this should be solved with a new component and a viewChild decorator
+        var container = this._elem.nativeElement.querySelector('.agm-map-container-inner');
+        this._initMapInstance(container);
+    };
+    AgmMap.prototype._initMapInstance = function (el) {
+        var _this = this;
+        this._mapsWrapper.createMap(el, {
+            center: { lat: this.latitude || 0, lng: this.longitude || 0 },
+            zoom: this.zoom,
+            minZoom: this.minZoom,
+            maxZoom: this.maxZoom,
+            disableDefaultUI: this.disableDefaultUI,
+            disableDoubleClickZoom: this.disableDoubleClickZoom,
+            scrollwheel: this.scrollwheel,
+            backgroundColor: this.backgroundColor,
+            draggable: this.draggable,
+            draggableCursor: this.draggableCursor,
+            draggingCursor: this.draggingCursor,
+            keyboardShortcuts: this.keyboardShortcuts,
+            styles: this.styles,
+            zoomControl: this.zoomControl,
+            zoomControlOptions: this.zoomControlOptions,
+            streetViewControl: this.streetViewControl,
+            streetViewControlOptions: this.streetViewControlOptions,
+            scaleControl: this.scaleControl,
+            scaleControlOptions: this.scaleControlOptions,
+            mapTypeControl: this.mapTypeControl,
+            mapTypeControlOptions: this.mapTypeControlOptions,
+            panControl: this.panControl,
+            panControlOptions: this.panControlOptions,
+            rotateControl: this.rotateControl,
+            rotateControlOptions: this.rotateControlOptions,
+            fullscreenControl: this.fullscreenControl,
+            fullscreenControlOptions: this.fullscreenControlOptions,
+            mapTypeId: this.mapTypeId,
+            clickableIcons: this.clickableIcons,
+            gestureHandling: this.gestureHandling
+        })
+            .then(function () { return _this._mapsWrapper.getNativeMap(); })
+            .then(function (map) { return _this.mapReady.emit(map); });
+        // register event listeners
+        this._handleMapCenterChange();
+        this._handleMapZoomChange();
+        this._handleMapMouseEvents();
+        this._handleBoundsChange();
+        this._handleIdleEvent();
+    };
+    /** @internal */
+    AgmMap.prototype.ngOnDestroy = function () {
+        // unsubscribe all registered observable subscriptions
+        this._observableSubscriptions.forEach(function (s) { return s.unsubscribe(); });
+    };
+    /* @internal */
+    AgmMap.prototype.ngOnChanges = function (changes) {
+        this._updateMapOptionsChanges(changes);
+        this._updatePosition(changes);
+    };
+    AgmMap.prototype._updateMapOptionsChanges = function (changes) {
+        var options = {};
+        var optionKeys = Object.keys(changes).filter(function (k) { return AgmMap._mapOptionsAttributes.indexOf(k) !== -1; });
+        optionKeys.forEach(function (k) { options[k] = changes[k].currentValue; });
+        this._mapsWrapper.setMapOptions(options);
+    };
+    /**
+     * Triggers a resize event on the google map instance.
+     * Returns a promise that gets resolved after the event was triggered.
+     */
+    AgmMap.prototype.triggerResize = function () {
+        var _this = this;
+        // Note: When we would trigger the resize event and show the map in the same turn (which is a
+        // common case for triggering a resize event), then the resize event would not
+        // work (to show the map), so we trigger the event in a timeout.
+        return new Promise(function (resolve) {
+            setTimeout(function () { return _this._mapsWrapper.triggerMapEvent('resize').then(function () { return resolve(); }); });
+        });
+    };
+    AgmMap.prototype._updatePosition = function (changes) {
+        if (changes['latitude'] == null && changes['longitude'] == null &&
+            changes['fitBounds'] == null) {
+            // no position update needed
+            return;
+        }
+        // we prefer fitBounds in changes
+        if (changes['fitBounds'] && this.fitBounds != null) {
+            this._fitBounds();
+            return;
+        }
+        if (typeof this.latitude !== 'number' || typeof this.longitude !== 'number') {
+            return;
+        }
+        var newCenter = {
+            lat: this.latitude,
+            lng: this.longitude,
+        };
+        if (this.usePanning) {
+            this._mapsWrapper.panTo(newCenter);
+        }
+        else {
+            this._mapsWrapper.setCenter(newCenter);
+        }
+    };
+    AgmMap.prototype._fitBounds = function () {
+        if (this.usePanning) {
+            this._mapsWrapper.panToBounds(this.fitBounds);
+            return;
+        }
+        this._mapsWrapper.fitBounds(this.fitBounds);
+    };
+    AgmMap.prototype._handleMapCenterChange = function () {
+        var _this = this;
+        var s = this._mapsWrapper.subscribeToMapEvent('center_changed').subscribe(function () {
+            _this._mapsWrapper.getCenter().then(function (center) {
+                _this.latitude = center.lat();
+                _this.longitude = center.lng();
+                _this.centerChange.emit({ lat: _this.latitude, lng: _this.longitude });
+            });
+        });
+        this._observableSubscriptions.push(s);
+    };
+    AgmMap.prototype._handleBoundsChange = function () {
+        var _this = this;
+        var s = this._mapsWrapper.subscribeToMapEvent('bounds_changed').subscribe(function () {
+            _this._mapsWrapper.getBounds().then(function (bounds) { _this.boundsChange.emit(bounds); });
+        });
+        this._observableSubscriptions.push(s);
+    };
+    AgmMap.prototype._handleMapZoomChange = function () {
+        var _this = this;
+        var s = this._mapsWrapper.subscribeToMapEvent('zoom_changed').subscribe(function () {
+            _this._mapsWrapper.getZoom().then(function (z) {
+                _this.zoom = z;
+                _this.zoomChange.emit(z);
+            });
+        });
+        this._observableSubscriptions.push(s);
+    };
+    AgmMap.prototype._handleIdleEvent = function () {
+        var _this = this;
+        var s = this._mapsWrapper.subscribeToMapEvent('idle').subscribe(function () { _this.idle.emit(void 0); });
+        this._observableSubscriptions.push(s);
+    };
+    AgmMap.prototype._handleMapMouseEvents = function () {
+        var _this = this;
+        var events = [
+            { name: 'click', emitter: this.mapClick },
+            { name: 'rightclick', emitter: this.mapRightClick },
+            { name: 'dblclick', emitter: this.mapDblClick },
+        ];
+        events.forEach(function (e) {
+            var s = _this._mapsWrapper.subscribeToMapEvent(e.name).subscribe(function (event) {
+                var value = { coords: { lat: event.latLng.lat(), lng: event.latLng.lng() } };
+                e.emitter.emit(value);
+            });
+            _this._observableSubscriptions.push(s);
+        });
+    };
+    return AgmMap;
+}());
+
+/**
+ * Map option attributes that can change over time
+ */
+AgmMap._mapOptionsAttributes = [
+    'disableDoubleClickZoom', 'scrollwheel', 'draggable', 'draggableCursor', 'draggingCursor',
+    'keyboardShortcuts', 'zoomControl', 'zoomControlOptions', 'styles', 'streetViewControl',
+    'streetViewControlOptions', 'zoom', 'mapTypeControl', 'mapTypeControlOptions', 'minZoom',
+    'maxZoom', 'panControl', 'panControlOptions', 'rotateControl', 'rotateControlOptions',
+    'fullscreenControl', 'fullscreenControlOptions', 'scaleControl', 'scaleControlOptions',
+    'mapTypeId', 'clickableIcons', 'gestureHandling'
+];
+AgmMap.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
+                selector: 'agm-map',
+                providers: [
+                    __WEBPACK_IMPORTED_MODULE_1__services_google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], __WEBPACK_IMPORTED_MODULE_4__services_managers_marker_manager__["a" /* MarkerManager */], __WEBPACK_IMPORTED_MODULE_3__services_managers_info_window_manager__["a" /* InfoWindowManager */], __WEBPACK_IMPORTED_MODULE_2__services_managers_circle_manager__["a" /* CircleManager */], __WEBPACK_IMPORTED_MODULE_6__services_managers_polyline_manager__["a" /* PolylineManager */],
+                    __WEBPACK_IMPORTED_MODULE_5__services_managers_polygon_manager__["a" /* PolygonManager */], __WEBPACK_IMPORTED_MODULE_7__services_managers_kml_layer_manager__["a" /* KmlLayerManager */], __WEBPACK_IMPORTED_MODULE_8__services_managers_data_layer_manager__["a" /* DataLayerManager */]
+                ],
+                inputs: [
+                    'longitude', 'latitude', 'zoom', 'minZoom', 'maxZoom', 'draggable: mapDraggable',
+                    'disableDoubleClickZoom', 'disableDefaultUI', 'scrollwheel', 'backgroundColor', 'draggableCursor',
+                    'draggingCursor', 'keyboardShortcuts', 'zoomControl', 'zoomControlOptions', 'styles', 'usePanning',
+                    'streetViewControl', 'streetViewControlOptions', 'fitBounds', 'mapTypeControl', 'mapTypeControlOptions',
+                    'panControlOptions', 'rotateControl', 'rotateControlOptions', 'fullscreenControl', 'fullscreenControlOptions',
+                    'scaleControl', 'scaleControlOptions', 'mapTypeId', 'clickableIcons', 'gestureHandling'
+                ],
+                outputs: [
+                    'mapClick', 'mapRightClick', 'mapDblClick', 'centerChange', 'idle', 'boundsChange', 'zoomChange', 'mapReady'
+                ],
+                host: {
+                    // todo: deprecated - we will remove it with the next version
+                    '[class.sebm-google-map-container]': 'true'
+                },
+                styles: ["\n    .agm-map-container-inner {\n      width: inherit;\n      height: inherit;\n    }\n    .agm-map-content {\n      display:none;\n    }\n  "],
+                template: "\n    <div class='agm-map-container-inner sebm-google-map-container-inner'></div>\n    <div class='agm-map-content'>\n      <ng-content></ng-content>\n    </div>\n  "
+            },] },
+];
+/** @nocollapse */
+AgmMap.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+    { type: __WEBPACK_IMPORTED_MODULE_1__services_google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], },
+]; };
+//# sourceMappingURL=map.js.map
+
+/***/ }),
+
+/***/ "../../../../@agm/core/directives/marker.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_marker_manager__ = __webpack_require__("../../../../@agm/core/services/managers/marker-manager.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__info_window__ = __webpack_require__("../../../../@agm/core/directives/info-window.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmMarker; });
 
 
+
+var markerId = 0;
+/**
+ * AgmMarker renders a map marker inside a {@link AgmMap}.
+ *
+ * ### Example
+ * ```typescript
+ * import { Component } from '@angular/core';
+ *
+ * @Component({
+ *  selector: 'my-map-cmp',
+ *  styles: [`
+ *    .agm-map-container {
+ *      height: 300px;
+ *    }
+ * `],
+ *  template: `
+ *    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+ *      <agm-marker [latitude]="lat" [longitude]="lng" [label]="'M'">
+ *      </agm-marker>
+ *    </agm-map>
+ *  `
+ * })
+ * ```
+ */
+var AgmMarker = (function () {
+    function AgmMarker(_markerManager) {
+        this._markerManager = _markerManager;
+        /**
+         * If true, the marker can be dragged. Default value is false.
+         */
+        this.draggable = false;
+        /**
+         * If true, the marker is visible
+         */
+        this.visible = true;
+        /**
+         * Whether to automatically open the child info window when the marker is clicked.
+         */
+        this.openInfoWindow = true;
+        /**
+         * The marker's opacity between 0.0 and 1.0.
+         */
+        this.opacity = 1;
+        /**
+         * All markers are displayed on the map in order of their zIndex, with higher values displaying in
+         * front of markers with lower values. By default, markers are displayed according to their
+         * vertical position on screen, with lower markers appearing in front of markers further up the
+         * screen.
+         */
+        this.zIndex = 1;
+        /**
+         * This event emitter gets emitted when the user clicks on the marker.
+         */
+        this.markerClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the user stops dragging the marker.
+         */
+        this.dragEnd = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the user mouses over the marker.
+         */
+        this.mouseOver = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the user mouses outside the marker.
+         */
+        this.mouseOut = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * @internal
+         */
+        this.infoWindow = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"]();
+        this._markerAddedToManger = false;
+        this._observableSubscriptions = [];
+        this._id = (markerId++).toString();
+    }
+    /* @internal */
+    AgmMarker.prototype.ngAfterContentInit = function () {
+        var _this = this;
+        this.handleInfoWindowUpdate();
+        this.infoWindow.changes.subscribe(function () { return _this.handleInfoWindowUpdate(); });
+    };
+    AgmMarker.prototype.handleInfoWindowUpdate = function () {
+        var _this = this;
+        if (this.infoWindow.length > 1) {
+            throw new Error('Expected no more than one info window.');
+        }
+        this.infoWindow.forEach(function (marker) {
+            marker.hostMarker = _this;
+        });
+    };
+    /** @internal */
+    AgmMarker.prototype.ngOnChanges = function (changes) {
+        if (typeof this.latitude !== 'number' || typeof this.longitude !== 'number') {
+            return;
+        }
+        if (!this._markerAddedToManger) {
+            this._markerManager.addMarker(this);
+            this._markerAddedToManger = true;
+            this._addEventListeners();
+            return;
+        }
+        if (changes['latitude'] || changes['longitude']) {
+            this._markerManager.updateMarkerPosition(this);
+        }
+        if (changes['title']) {
+            this._markerManager.updateTitle(this);
+        }
+        if (changes['label']) {
+            this._markerManager.updateLabel(this);
+        }
+        if (changes['draggable']) {
+            this._markerManager.updateDraggable(this);
+        }
+        if (changes['iconUrl']) {
+            this._markerManager.updateIcon(this);
+        }
+        if (changes['opacity']) {
+            this._markerManager.updateOpacity(this);
+        }
+        if (changes['visible']) {
+            this._markerManager.updateVisible(this);
+        }
+        if (changes['zIndex']) {
+            this._markerManager.updateZIndex(this);
+        }
+    };
+    AgmMarker.prototype._addEventListeners = function () {
+        var _this = this;
+        var cs = this._markerManager.createEventObservable('click', this).subscribe(function () {
+            if (_this.openInfoWindow) {
+                _this.infoWindow.forEach(function (infoWindow) { return infoWindow.open(); });
+            }
+            _this.markerClick.emit(null);
+        });
+        this._observableSubscriptions.push(cs);
+        var ds = this._markerManager.createEventObservable('dragend', this)
+            .subscribe(function (e) {
+            _this.dragEnd.emit({ coords: { lat: e.latLng.lat(), lng: e.latLng.lng() } });
+        });
+        this._observableSubscriptions.push(ds);
+        var mover = this._markerManager.createEventObservable('mouseover', this)
+            .subscribe(function (e) {
+            _this.mouseOver.emit({ coords: { lat: e.latLng.lat(), lng: e.latLng.lng() } });
+        });
+        this._observableSubscriptions.push(mover);
+        var mout = this._markerManager.createEventObservable('mouseout', this)
+            .subscribe(function (e) {
+            _this.mouseOut.emit({ coords: { lat: e.latLng.lat(), lng: e.latLng.lng() } });
+        });
+        this._observableSubscriptions.push(mout);
+    };
+    /** @internal */
+    AgmMarker.prototype.id = function () { return this._id; };
+    /** @internal */
+    AgmMarker.prototype.toString = function () { return 'AgmMarker-' + this._id.toString(); };
+    /** @internal */
+    AgmMarker.prototype.ngOnDestroy = function () {
+        this._markerManager.deleteMarker(this);
+        // unsubscribe all registered observable subscriptions
+        this._observableSubscriptions.forEach(function (s) { return s.unsubscribe(); });
+    };
+    return AgmMarker;
+}());
+
+AgmMarker.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
+                selector: 'agm-marker',
+                inputs: [
+                    'latitude', 'longitude', 'title', 'label', 'draggable: markerDraggable', 'iconUrl',
+                    'openInfoWindow', 'opacity', 'visible', 'zIndex'
+                ],
+                outputs: ['markerClick', 'dragEnd', 'mouseOver', 'mouseOut']
+            },] },
+];
+/** @nocollapse */
+AgmMarker.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_1__services_managers_marker_manager__["a" /* MarkerManager */], },
+]; };
+AgmMarker.propDecorators = {
+    'infoWindow': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ContentChildren"], args: [__WEBPACK_IMPORTED_MODULE_2__info_window__["a" /* AgmInfoWindow */],] },],
+};
+//# sourceMappingURL=marker.js.map
+
+/***/ }),
+
+/***/ "../../../../@agm/core/directives/polygon.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_polygon_manager__ = __webpack_require__("../../../../@agm/core/services/managers/polygon-manager.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmPolygon; });
+
+
+/**
+ * AgmPolygon renders a polygon on a {@link AgmMap}
+ *
+ * ### Example
+ * ```typescript
+ * import { Component } from '@angular/core';
+ *
+ * @Component({
+ *  selector: 'my-map-cmp',
+ *  styles: [`
+ *    agm-map {
+ *      height: 300px;
+ *    }
+ * `],
+ *  template: `
+ *    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+ *      <agm-polygon [paths]="paths">
+ *      </agm-polygon>
+ *    </agm-map>
+ *  `
+ * })
+ * export class MyMapCmp {
+ *   lat: number = 0;
+ *   lng: number = 0;
+ *   zoom: number = 10;
+ *   paths: Array<LatLngLiteral> = [
+ *     { lat: 0,  lng: 10 },
+ *     { lat: 0,  lng: 20 },
+ *     { lat: 10, lng: 20 },
+ *     { lat: 10, lng: 10 },
+ *     { lat: 0,  lng: 10 }
+ *   ]
+ *   // Nesting paths will create a hole where they overlap;
+ *   nestedPaths: Array<Array<LatLngLiteral>> = [[
+ *     { lat: 0,  lng: 10 },
+ *     { lat: 0,  lng: 20 },
+ *     { lat: 10, lng: 20 },
+ *     { lat: 10, lng: 10 },
+ *     { lat: 0,  lng: 10 }
+ *   ], [
+ *     { lat: 0, lng: 15 },
+ *     { lat: 0, lng: 20 },
+ *     { lat: 5, lng: 20 },
+ *     { lat: 5, lng: 15 },
+ *     { lat: 0, lng: 15 }
+ *   ]]
+ * }
+ * ```
+ */
+var AgmPolygon = (function () {
+    function AgmPolygon(_polygonManager) {
+        this._polygonManager = _polygonManager;
+        /**
+         * Indicates whether this Polygon handles mouse events. Defaults to true.
+         */
+        this.clickable = true;
+        /**
+         * If set to true, the user can drag this shape over the map. The geodesic
+         * property defines the mode of dragging. Defaults to false.
+         */
+        this.draggable = false;
+        /**
+         * If set to true, the user can edit this shape by dragging the control
+         * points shown at the vertices and on each segment. Defaults to false.
+         */
+        this.editable = false;
+        /**
+         * When true, edges of the polygon are interpreted as geodesic and will
+         * follow the curvature of the Earth. When false, edges of the polygon are
+         * rendered as straight lines in screen space. Note that the shape of a
+         * geodesic polygon may appear to change when dragged, as the dimensions
+         * are maintained relative to the surface of the earth. Defaults to false.
+         */
+        this.geodesic = false;
+        /**
+         * The ordered sequence of coordinates that designates a closed loop.
+         * Unlike polylines, a polygon may consist of one or more paths.
+         *  As a result, the paths property may specify one or more arrays of
+         * LatLng coordinates. Paths are closed automatically; do not repeat the
+         * first vertex of the path as the last vertex. Simple polygons may be
+         * defined using a single array of LatLngs. More complex polygons may
+         * specify an array of arrays. Any simple arrays are converted into Arrays.
+         * Inserting or removing LatLngs from the Array will automatically update
+         * the polygon on the map.
+         */
+        this.paths = [];
+        /**
+         * This event is fired when the DOM click event is fired on the Polygon.
+         */
+        this.polyClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM dblclick event is fired on the Polygon.
+         */
+        this.polyDblClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is repeatedly fired while the user drags the polygon.
+         */
+        this.polyDrag = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the user stops dragging the polygon.
+         */
+        this.polyDragEnd = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the user starts dragging the polygon.
+         */
+        this.polyDragStart = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM mousedown event is fired on the Polygon.
+         */
+        this.polyMouseDown = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM mousemove event is fired on the Polygon.
+         */
+        this.polyMouseMove = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired on Polygon mouseout.
+         */
+        this.polyMouseOut = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired on Polygon mouseover.
+         */
+        this.polyMouseOver = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired whe the DOM mouseup event is fired on the Polygon
+         */
+        this.polyMouseUp = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This even is fired when the Polygon is right-clicked on.
+         */
+        this.polyRightClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this._polygonAddedToManager = false;
+        this._subscriptions = [];
+    }
+    /** @internal */
+    AgmPolygon.prototype.ngAfterContentInit = function () {
+        if (!this._polygonAddedToManager) {
+            this._init();
+        }
+    };
+    AgmPolygon.prototype.ngOnChanges = function (changes) {
+        if (!this._polygonAddedToManager) {
+            this._init();
+            return;
+        }
+        this._polygonManager.setPolygonOptions(this, this._updatePolygonOptions(changes));
+    };
+    AgmPolygon.prototype._init = function () {
+        this._polygonManager.addPolygon(this);
+        this._polygonAddedToManager = true;
+        this._addEventListeners();
+    };
+    AgmPolygon.prototype._addEventListeners = function () {
+        var _this = this;
+        var handlers = [
+            { name: 'click', handler: function (ev) { return _this.polyClick.emit(ev); } },
+            { name: 'dbclick', handler: function (ev) { return _this.polyDblClick.emit(ev); } },
+            { name: 'drag', handler: function (ev) { return _this.polyDrag.emit(ev); } },
+            { name: 'dragend', handler: function (ev) { return _this.polyDragEnd.emit(ev); } },
+            { name: 'dragstart', handler: function (ev) { return _this.polyDragStart.emit(ev); } },
+            { name: 'mousedown', handler: function (ev) { return _this.polyMouseDown.emit(ev); } },
+            { name: 'mousemove', handler: function (ev) { return _this.polyMouseMove.emit(ev); } },
+            { name: 'mouseout', handler: function (ev) { return _this.polyMouseOut.emit(ev); } },
+            { name: 'mouseover', handler: function (ev) { return _this.polyMouseOver.emit(ev); } },
+            { name: 'mouseup', handler: function (ev) { return _this.polyMouseUp.emit(ev); } },
+            { name: 'rightclick', handler: function (ev) { return _this.polyRightClick.emit(ev); } },
+        ];
+        handlers.forEach(function (obj) {
+            var os = _this._polygonManager.createEventObservable(obj.name, _this).subscribe(obj.handler);
+            _this._subscriptions.push(os);
+        });
+    };
+    AgmPolygon.prototype._updatePolygonOptions = function (changes) {
+        return Object.keys(changes)
+            .filter(function (k) { return AgmPolygon._polygonOptionsAttributes.indexOf(k) !== -1; })
+            .reduce(function (obj, k) {
+            obj[k] = changes[k].currentValue;
+            return obj;
+        }, {});
+    };
+    /** @internal */
+    AgmPolygon.prototype.id = function () { return this._id; };
+    /** @internal */
+    AgmPolygon.prototype.ngOnDestroy = function () {
+        this._polygonManager.deletePolygon(this);
+        // unsubscribe all registered observable subscriptions
+        this._subscriptions.forEach(function (s) { return s.unsubscribe(); });
+    };
+    return AgmPolygon;
+}());
+
+AgmPolygon._polygonOptionsAttributes = [
+    'clickable', 'draggable', 'editable', 'fillColor', 'fillOpacity', 'geodesic', 'icon', 'map',
+    'paths', 'strokeColor', 'strokeOpacity', 'strokeWeight', 'visible', 'zIndex', 'draggable',
+    'editable', 'visible'
+];
+AgmPolygon.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
+                selector: 'agm-polygon',
+                inputs: [
+                    'clickable',
+                    'draggable: polyDraggable',
+                    'editable',
+                    'fillColor',
+                    'fillOpacity',
+                    'geodesic',
+                    'paths',
+                    'strokeColor',
+                    'strokeOpacity',
+                    'strokeWeight',
+                    'visible',
+                    'zIndex',
+                ],
+                outputs: [
+                    'polyClick', 'polyDblClick', 'polyDrag', 'polyDragEnd', 'polyMouseDown', 'polyMouseMove',
+                    'polyMouseOut', 'polyMouseOver', 'polyMouseUp', 'polyRightClick'
+                ]
+            },] },
+];
+/** @nocollapse */
+AgmPolygon.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_1__services_managers_polygon_manager__["a" /* PolygonManager */], },
+]; };
+//# sourceMappingURL=polygon.js.map
+
+/***/ }),
+
+/***/ "../../../../@agm/core/directives/polyline-point.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmPolylinePoint; });
+
+/**
+ * AgmPolylinePoint represents one element of a polyline within a  {@link
+ * SembGoogleMapPolyline}
+ */
+var AgmPolylinePoint = (function () {
+    function AgmPolylinePoint() {
+        /**
+         * This event emitter gets emitted when the position of the point changed.
+         */
+        this.positionChanged = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    AgmPolylinePoint.prototype.ngOnChanges = function (changes) {
+        if (changes['latitude'] || changes['longitude']) {
+            var position = {
+                lat: changes['latitude'].currentValue,
+                lng: changes['longitude'].currentValue
+            };
+            this.positionChanged.emit(position);
+        }
+    };
+    return AgmPolylinePoint;
+}());
+
+AgmPolylinePoint.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{ selector: 'agm-polyline-point' },] },
+];
+/** @nocollapse */
+AgmPolylinePoint.ctorParameters = function () { return []; };
+AgmPolylinePoint.propDecorators = {
+    'latitude': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'longitude': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'positionChanged': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+};
+//# sourceMappingURL=polyline-point.js.map
+
+/***/ }),
+
+/***/ "../../../../@agm/core/directives/polyline.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_polyline_manager__ = __webpack_require__("../../../../@agm/core/services/managers/polyline-manager.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__polyline_point__ = __webpack_require__("../../../../@agm/core/directives/polyline-point.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmPolyline; });
+
+
+
+var polylineId = 0;
+/**
+ * AgmPolyline renders a polyline on a {@link AgmMap}
+ *
+ * ### Example
+ * ```typescript
+ * import { Component } from '@angular/core';
+ *
+ * @Component({
+ *  selector: 'my-map-cmp',
+ *  styles: [`
+ *    .agm-map-container {
+ *      height: 300px;
+ *    }
+ * `],
+ *  template: `
+ *    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+ *      <agm-polyline>
+ *          <agm-polyline-point [latitude]="latA" [longitude]="lngA">
+ *          </agm-polyline-point>
+ *          <agm-polyline-point [latitude]="latB" [longitude]="lngB">
+ *          </agm-polyline-point>
+ *      </agm-polyline>
+ *    </agm-map>
+ *  `
+ * })
+ * ```
+ */
+var AgmPolyline = (function () {
+    function AgmPolyline(_polylineManager) {
+        this._polylineManager = _polylineManager;
+        /**
+         * Indicates whether this Polyline handles mouse events. Defaults to true.
+         */
+        this.clickable = true;
+        /**
+         * If set to true, the user can drag this shape over the map. The geodesic property defines the
+         * mode of dragging. Defaults to false.
+         */
+        this.draggable = false;
+        /**
+         * If set to true, the user can edit this shape by dragging the control points shown at the
+         * vertices and on each segment. Defaults to false.
+         */
+        this.editable = false;
+        /**
+         * When true, edges of the polygon are interpreted as geodesic and will follow the curvature of
+         * the Earth. When false, edges of the polygon are rendered as straight lines in screen space.
+         * Note that the shape of a geodesic polygon may appear to change when dragged, as the dimensions
+         * are maintained relative to the surface of the earth. Defaults to false.
+         */
+        this.geodesic = false;
+        /**
+         * Whether this polyline is visible on the map. Defaults to true.
+         */
+        this.visible = true;
+        /**
+         * This event is fired when the DOM click event is fired on the Polyline.
+         */
+        this.lineClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM dblclick event is fired on the Polyline.
+         */
+        this.lineDblClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is repeatedly fired while the user drags the polyline.
+         */
+        this.lineDrag = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the user stops dragging the polyline.
+         */
+        this.lineDragEnd = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the user starts dragging the polyline.
+         */
+        this.lineDragStart = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM mousedown event is fired on the Polyline.
+         */
+        this.lineMouseDown = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM mousemove event is fired on the Polyline.
+         */
+        this.lineMouseMove = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired on Polyline mouseout.
+         */
+        this.lineMouseOut = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired on Polyline mouseover.
+         */
+        this.lineMouseOver = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This event is fired whe the DOM mouseup event is fired on the Polyline
+         */
+        this.lineMouseUp = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * This even is fired when the Polyline is right-clicked on.
+         */
+        this.lineRightClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this._polylineAddedToManager = false;
+        this._subscriptions = [];
+        this._id = (polylineId++).toString();
+    }
+    /** @internal */
+    AgmPolyline.prototype.ngAfterContentInit = function () {
+        var _this = this;
+        if (this.points.length) {
+            this.points.forEach(function (point) {
+                var s = point.positionChanged.subscribe(function () { _this._polylineManager.updatePolylinePoints(_this); });
+                _this._subscriptions.push(s);
+            });
+        }
+        if (!this._polylineAddedToManager) {
+            this._init();
+        }
+        var s = this.points.changes.subscribe(function () { return _this._polylineManager.updatePolylinePoints(_this); });
+        this._subscriptions.push(s);
+        this._polylineManager.updatePolylinePoints(this);
+    };
+    AgmPolyline.prototype.ngOnChanges = function (changes) {
+        if (!this._polylineAddedToManager) {
+            this._init();
+            return;
+        }
+        var options = {};
+        var optionKeys = Object.keys(changes).filter(function (k) { return AgmPolyline._polylineOptionsAttributes.indexOf(k) !== -1; });
+        optionKeys.forEach(function (k) { return options[k] = changes[k].currentValue; });
+        this._polylineManager.setPolylineOptions(this, options);
+    };
+    AgmPolyline.prototype._init = function () {
+        this._polylineManager.addPolyline(this);
+        this._polylineAddedToManager = true;
+        this._addEventListeners();
+    };
+    AgmPolyline.prototype._addEventListeners = function () {
+        var _this = this;
+        var handlers = [
+            { name: 'click', handler: function (ev) { return _this.lineClick.emit(ev); } },
+            { name: 'dbclick', handler: function (ev) { return _this.lineDblClick.emit(ev); } },
+            { name: 'drag', handler: function (ev) { return _this.lineDrag.emit(ev); } },
+            { name: 'dragend', handler: function (ev) { return _this.lineDragEnd.emit(ev); } },
+            { name: 'dragstart', handler: function (ev) { return _this.lineDragStart.emit(ev); } },
+            { name: 'mousedown', handler: function (ev) { return _this.lineMouseDown.emit(ev); } },
+            { name: 'mousemove', handler: function (ev) { return _this.lineMouseMove.emit(ev); } },
+            { name: 'mouseout', handler: function (ev) { return _this.lineMouseOut.emit(ev); } },
+            { name: 'mouseover', handler: function (ev) { return _this.lineMouseOver.emit(ev); } },
+            { name: 'mouseup', handler: function (ev) { return _this.lineMouseUp.emit(ev); } },
+            { name: 'rightclick', handler: function (ev) { return _this.lineRightClick.emit(ev); } },
+        ];
+        handlers.forEach(function (obj) {
+            var os = _this._polylineManager.createEventObservable(obj.name, _this).subscribe(obj.handler);
+            _this._subscriptions.push(os);
+        });
+    };
+    /** @internal */
+    AgmPolyline.prototype._getPoints = function () {
+        if (this.points) {
+            return this.points.toArray();
+        }
+        return [];
+    };
+    /** @internal */
+    AgmPolyline.prototype.id = function () { return this._id; };
+    /** @internal */
+    AgmPolyline.prototype.ngOnDestroy = function () {
+        this._polylineManager.deletePolyline(this);
+        // unsubscribe all registered observable subscriptions
+        this._subscriptions.forEach(function (s) { return s.unsubscribe(); });
+    };
+    return AgmPolyline;
+}());
+
+AgmPolyline._polylineOptionsAttributes = [
+    'draggable', 'editable', 'visible', 'geodesic', 'strokeColor', 'strokeOpacity', 'strokeWeight',
+    'zIndex'
+];
+AgmPolyline.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
+                selector: 'agm-polyline',
+                inputs: [
+                    'clickable', 'draggable: polylineDraggable', 'editable', 'geodesic', 'strokeColor',
+                    'strokeWeight', 'strokeOpacity', 'visible', 'zIndex'
+                ],
+                outputs: [
+                    'lineClick', 'lineDblClick', 'lineDrag', 'lineDragEnd', 'lineMouseDown', 'lineMouseMove',
+                    'lineMouseOut', 'lineMouseOver', 'lineMouseUp', 'lineRightClick'
+                ]
+            },] },
+];
+/** @nocollapse */
+AgmPolyline.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_1__services_managers_polyline_manager__["a" /* PolylineManager */], },
+]; };
+AgmPolyline.propDecorators = {
+    'points': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ContentChildren"], args: [__WEBPACK_IMPORTED_MODULE_2__polyline_point__["a" /* AgmPolylinePoint */],] },],
+};
+//# sourceMappingURL=polyline.js.map
+
+/***/ }),
+
+/***/ "../../../../@agm/core/index.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__directives__ = __webpack_require__("../../../../@agm/core/directives.js");
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services__ = __webpack_require__("../../../../@agm/core/services.js");
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_module__ = __webpack_require__("../../../../@agm/core/core.module.js");
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__core_module__["a"]; });
+// main modules
+
+
+// core module
+// we explicitly export the module here to prevent this Ionic 2 bug:
+// http://stevemichelotti.com/integrate-angular-2-google-maps-into-ionic-2/
 
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/layout/bs-component/components/modal/modal.component.html":
-/***/ (function(module, exports) {
+/***/ "../../../../@agm/core/services.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-12\">\n        <div class=\"card mb-3\">\n            <div class=\"card-header\">Modal</div>\n            <!-- Large modal -->\n            <div class=\"card-block\">\n                <button class=\"btn btn-primary\" (click)=\"open(content)\">Large modal</button>\n                <ng-template #content let-c=\"close\" let-d=\"dismiss\">\n                    <div class=\"modal-header\">\n                        <h4 class=\"modal-title\">Modal title</h4>\n                        <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\n                            <span aria-hidden=\"true\">&times;</span>\n                        </button>\n                    </div>\n                    <div class=\"modal-body\">\n                        <p>One fine body&hellip;</p>\n                    </div>\n                    <div class=\"modal-footer\">\n                        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"c('Close click')\">Close</button>\n                    </div>\n                </ng-template>\n            </div>\n        </div>\n    </div>\n</div>\n"
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_google_maps_api_wrapper__ = __webpack_require__("../../../../@agm/core/services/google-maps-api-wrapper.js");
+/* unused harmony reexport GoogleMapsAPIWrapper */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_circle_manager__ = __webpack_require__("../../../../@agm/core/services/managers/circle-manager.js");
+/* unused harmony reexport CircleManager */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_managers_info_window_manager__ = __webpack_require__("../../../../@agm/core/services/managers/info-window-manager.js");
+/* unused harmony reexport InfoWindowManager */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_managers_marker_manager__ = __webpack_require__("../../../../@agm/core/services/managers/marker-manager.js");
+/* unused harmony reexport MarkerManager */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_managers_polygon_manager__ = __webpack_require__("../../../../@agm/core/services/managers/polygon-manager.js");
+/* unused harmony reexport PolygonManager */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_managers_polyline_manager__ = __webpack_require__("../../../../@agm/core/services/managers/polyline-manager.js");
+/* unused harmony reexport PolylineManager */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_managers_kml_layer_manager__ = __webpack_require__("../../../../@agm/core/services/managers/kml-layer-manager.js");
+/* unused harmony reexport KmlLayerManager */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_managers_data_layer_manager__ = __webpack_require__("../../../../@agm/core/services/managers/data-layer-manager.js");
+/* unused harmony reexport DataLayerManager */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_maps_api_loader_lazy_maps_api_loader__ = __webpack_require__("../../../../@agm/core/services/maps-api-loader/lazy-maps-api-loader.js");
+/* unused harmony reexport GoogleMapsScriptProtocol */
+/* unused harmony reexport LAZY_MAPS_API_CONFIG */
+/* unused harmony reexport LazyMapsAPILoader */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_maps_api_loader_maps_api_loader__ = __webpack_require__("../../../../@agm/core/services/maps-api-loader/maps-api-loader.js");
+/* unused harmony reexport MapsAPILoader */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_maps_api_loader_noop_maps_api_loader__ = __webpack_require__("../../../../@agm/core/services/maps-api-loader/noop-maps-api-loader.js");
+/* unused harmony reexport NoOpMapsAPILoader */
+
+
+
+
+
+
+
+
+
+
+
+//# sourceMappingURL=services.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/layout/bs-component/components/modal/modal.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/modal/modal.component.ts":
+/***/ "../../../../@agm/core/services/google-maps-api-wrapper.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ng_bootstrap_ng_bootstrap__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ModalComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__maps_api_loader_maps_api_loader__ = __webpack_require__("../../../../@agm/core/services/maps-api-loader/maps-api-loader.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoogleMapsAPIWrapper; });
 
 
-var ModalComponent = (function () {
-    function ModalComponent(modalService) {
-        this.modalService = modalService;
-    }
-    ModalComponent.prototype.open = function (content) {
+
+/**
+ * Wrapper class that handles the communication with the Google Maps Javascript
+ * API v3
+ */
+var GoogleMapsAPIWrapper = (function () {
+    function GoogleMapsAPIWrapper(_loader, _zone) {
         var _this = this;
-        this.modalService.open(content).result.then(function (result) {
-            _this.closeResult = "Closed with: " + result;
-        }, function (reason) {
-            _this.closeResult = "Dismissed " + _this.getDismissReason(reason);
+        this._loader = _loader;
+        this._zone = _zone;
+        this._map =
+            new Promise(function (resolve) { _this._mapResolver = resolve; });
+    }
+    GoogleMapsAPIWrapper.prototype.createMap = function (el, mapOptions) {
+        var _this = this;
+        return this._loader.load().then(function () {
+            var map = new google.maps.Map(el, mapOptions);
+            _this._mapResolver(map);
+            return;
         });
     };
-    ModalComponent.prototype.getDismissReason = function (reason) {
-        if (reason === __WEBPACK_IMPORTED_MODULE_1__ng_bootstrap_ng_bootstrap__["b" /* ModalDismissReasons */].ESC) {
-            return 'by pressing ESC';
+    GoogleMapsAPIWrapper.prototype.setMapOptions = function (options) {
+        this._map.then(function (m) { m.setOptions(options); });
+    };
+    /**
+     * Creates a google map marker with the map context
+     */
+    GoogleMapsAPIWrapper.prototype.createMarker = function (options) {
+        if (options === void 0) { options = {}; }
+        return this._map.then(function (map) {
+            options.map = map;
+            return new google.maps.Marker(options);
+        });
+    };
+    GoogleMapsAPIWrapper.prototype.createInfoWindow = function (options) {
+        return this._map.then(function () { return new google.maps.InfoWindow(options); });
+    };
+    /**
+     * Creates a google.map.Circle for the current map.
+     */
+    GoogleMapsAPIWrapper.prototype.createCircle = function (options) {
+        return this._map.then(function (map) {
+            options.map = map;
+            return new google.maps.Circle(options);
+        });
+    };
+    GoogleMapsAPIWrapper.prototype.createPolyline = function (options) {
+        return this.getNativeMap().then(function (map) {
+            var line = new google.maps.Polyline(options);
+            line.setMap(map);
+            return line;
+        });
+    };
+    GoogleMapsAPIWrapper.prototype.createPolygon = function (options) {
+        return this.getNativeMap().then(function (map) {
+            var polygon = new google.maps.Polygon(options);
+            polygon.setMap(map);
+            return polygon;
+        });
+    };
+    /**
+     * Determines if given coordinates are insite a Polygon path.
+     */
+    GoogleMapsAPIWrapper.prototype.containsLocation = function (latLng, polygon) {
+        return google.maps.geometry.poly.containsLocation(latLng, polygon);
+    };
+    GoogleMapsAPIWrapper.prototype.subscribeToMapEvent = function (eventName) {
+        var _this = this;
+        return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].create(function (observer) {
+            _this._map.then(function (m) {
+                m.addListener(eventName, function (arg) { _this._zone.run(function () { return observer.next(arg); }); });
+            });
+        });
+    };
+    GoogleMapsAPIWrapper.prototype.setCenter = function (latLng) {
+        return this._map.then(function (map) { return map.setCenter(latLng); });
+    };
+    GoogleMapsAPIWrapper.prototype.getZoom = function () { return this._map.then(function (map) { return map.getZoom(); }); };
+    GoogleMapsAPIWrapper.prototype.getBounds = function () {
+        return this._map.then(function (map) { return map.getBounds(); });
+    };
+    GoogleMapsAPIWrapper.prototype.setZoom = function (zoom) {
+        return this._map.then(function (map) { return map.setZoom(zoom); });
+    };
+    GoogleMapsAPIWrapper.prototype.getCenter = function () {
+        return this._map.then(function (map) { return map.getCenter(); });
+    };
+    GoogleMapsAPIWrapper.prototype.panTo = function (latLng) {
+        return this._map.then(function (map) { return map.panTo(latLng); });
+    };
+    GoogleMapsAPIWrapper.prototype.fitBounds = function (latLng) {
+        return this._map.then(function (map) { return map.fitBounds(latLng); });
+    };
+    GoogleMapsAPIWrapper.prototype.panToBounds = function (latLng) {
+        return this._map.then(function (map) { return map.panToBounds(latLng); });
+    };
+    /**
+     * Returns the native Google Maps Map instance. Be careful when using this instance directly.
+     */
+    GoogleMapsAPIWrapper.prototype.getNativeMap = function () { return this._map; };
+    /**
+     * Triggers the given event name on the map instance.
+     */
+    GoogleMapsAPIWrapper.prototype.triggerMapEvent = function (eventName) {
+        return this._map.then(function (m) { return google.maps.event.trigger(m, eventName); });
+    };
+    return GoogleMapsAPIWrapper;
+}());
+
+GoogleMapsAPIWrapper.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/** @nocollapse */
+GoogleMapsAPIWrapper.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_2__maps_api_loader_maps_api_loader__["a" /* MapsAPILoader */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], },
+]; };
+//# sourceMappingURL=google-maps-api-wrapper.js.map
+
+/***/ }),
+
+/***/ "../../../../@agm/core/services/managers/circle-manager.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__("../../../../@agm/core/services/google-maps-api-wrapper.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CircleManager; });
+
+
+
+var CircleManager = (function () {
+    function CircleManager(_apiWrapper, _zone) {
+        this._apiWrapper = _apiWrapper;
+        this._zone = _zone;
+        this._circles = new Map();
+    }
+    CircleManager.prototype.addCircle = function (circle) {
+        this._circles.set(circle, this._apiWrapper.createCircle({
+            center: { lat: circle.latitude, lng: circle.longitude },
+            clickable: circle.clickable,
+            draggable: circle.draggable,
+            editable: circle.editable,
+            fillColor: circle.fillColor,
+            fillOpacity: circle.fillOpacity,
+            radius: circle.radius,
+            strokeColor: circle.strokeColor,
+            strokeOpacity: circle.strokeOpacity,
+            strokePosition: circle.strokePosition,
+            strokeWeight: circle.strokeWeight,
+            visible: circle.visible,
+            zIndex: circle.zIndex
+        }));
+    };
+    ;
+    /**
+     * Removes the given circle from the map.
+     */
+    CircleManager.prototype.removeCircle = function (circle) {
+        var _this = this;
+        return this._circles.get(circle).then(function (c) {
+            c.setMap(null);
+            _this._circles.delete(circle);
+        });
+    };
+    CircleManager.prototype.setOptions = function (circle, options) {
+        return this._circles.get(circle).then(function (c) { return c.setOptions(options); });
+    };
+    ;
+    CircleManager.prototype.getBounds = function (circle) {
+        return this._circles.get(circle).then(function (c) { return c.getBounds(); });
+    };
+    ;
+    CircleManager.prototype.getCenter = function (circle) {
+        return this._circles.get(circle).then(function (c) { return c.getCenter(); });
+    };
+    ;
+    CircleManager.prototype.getRadius = function (circle) {
+        return this._circles.get(circle).then(function (c) { return c.getRadius(); });
+    };
+    CircleManager.prototype.setCenter = function (circle) {
+        return this._circles.get(circle).then(function (c) { return c.setCenter({ lat: circle.latitude, lng: circle.longitude }); });
+    };
+    ;
+    CircleManager.prototype.setEditable = function (circle) {
+        return this._circles.get(circle).then(function (c) { return c.setEditable(circle.editable); });
+    };
+    ;
+    CircleManager.prototype.setDraggable = function (circle) {
+        return this._circles.get(circle).then(function (c) { return c.setDraggable(circle.draggable); });
+    };
+    ;
+    CircleManager.prototype.setVisible = function (circle) {
+        return this._circles.get(circle).then(function (c) { return c.setVisible(circle.visible); });
+    };
+    ;
+    CircleManager.prototype.setRadius = function (circle) {
+        return this._circles.get(circle).then(function (c) { return c.setRadius(circle.radius); });
+    };
+    ;
+    CircleManager.prototype.createEventObservable = function (eventName, circle) {
+        var _this = this;
+        return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].create(function (observer) {
+            var listener = null;
+            _this._circles.get(circle).then(function (c) {
+                listener = c.addListener(eventName, function (e) { return _this._zone.run(function () { return observer.next(e); }); });
+            });
+            return function () {
+                if (listener !== null) {
+                    listener.remove();
+                }
+            };
+        });
+    };
+    return CircleManager;
+}());
+
+CircleManager.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/** @nocollapse */
+CircleManager.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], },
+]; };
+//# sourceMappingURL=circle-manager.js.map
+
+/***/ }),
+
+/***/ "../../../../@agm/core/services/managers/data-layer-manager.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__("../../../../@agm/core/services/google-maps-api-wrapper.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataLayerManager; });
+
+
+
+/**
+ * Manages all Data Layers for a Google Map instance.
+ */
+var DataLayerManager = (function () {
+    function DataLayerManager(_wrapper, _zone) {
+        this._wrapper = _wrapper;
+        this._zone = _zone;
+        this._layers = new Map();
+    }
+    /**
+     * Adds a new Data Layer to the map.
+     */
+    DataLayerManager.prototype.addDataLayer = function (layer) {
+        var newLayer = this._wrapper.getNativeMap().then(function (m) {
+            var dataLayer = new google.maps.Data({
+                map: m,
+                style: layer.style
+            });
+            if (layer.geoJson) {
+                dataLayer.features = dataLayer.addGeoJson(layer.geoJson);
+            }
+            return dataLayer;
+        });
+        this._layers.set(layer, newLayer);
+    };
+    DataLayerManager.prototype.deleteDataLayer = function (layer) {
+        var _this = this;
+        this._layers.get(layer).then(function (l) {
+            l.setMap(null);
+            _this._layers.delete(layer);
+        });
+    };
+    DataLayerManager.prototype.updateGeoJson = function (layer, geoJson) {
+        this._layers.get(layer).then(function (l) {
+            l.forEach(function (feature) {
+                l.remove(feature);
+                var index = l.features.indexOf(feature, 0);
+                if (index > -1) {
+                    l.features.splice(index, 1);
+                }
+            });
+            l.features = l.addGeoJson(geoJson);
+        });
+    };
+    DataLayerManager.prototype.setDataOptions = function (layer, options) {
+        this._layers.get(layer).then(function (l) {
+            l.setControlPosition(options.controlPosition);
+            l.setControls(options.controls);
+            l.setDrawingMode(options.drawingMode);
+            l.setStyle(options.style);
+        });
+    };
+    /**
+     * Creates a Google Maps event listener for the given DataLayer as an Observable
+     */
+    DataLayerManager.prototype.createEventObservable = function (eventName, layer) {
+        var _this = this;
+        return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].create(function (observer) {
+            _this._layers.get(layer).then(function (d) {
+                d.addListener(eventName, function (e) { return _this._zone.run(function () { return observer.next(e); }); });
+            });
+        });
+    };
+    return DataLayerManager;
+}());
+
+DataLayerManager.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/** @nocollapse */
+DataLayerManager.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], },
+]; };
+//# sourceMappingURL=data-layer-manager.js.map
+
+/***/ }),
+
+/***/ "../../../../@agm/core/services/managers/info-window-manager.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__("../../../../@agm/core/services/google-maps-api-wrapper.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__marker_manager__ = __webpack_require__("../../../../@agm/core/services/managers/marker-manager.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InfoWindowManager; });
+
+
+
+
+var InfoWindowManager = (function () {
+    function InfoWindowManager(_mapsWrapper, _zone, _markerManager) {
+        this._mapsWrapper = _mapsWrapper;
+        this._zone = _zone;
+        this._markerManager = _markerManager;
+        this._infoWindows = new Map();
+    }
+    InfoWindowManager.prototype.deleteInfoWindow = function (infoWindow) {
+        var _this = this;
+        var iWindow = this._infoWindows.get(infoWindow);
+        if (iWindow == null) {
+            // info window already deleted
+            return Promise.resolve();
         }
-        else if (reason === __WEBPACK_IMPORTED_MODULE_1__ng_bootstrap_ng_bootstrap__["b" /* ModalDismissReasons */].BACKDROP_CLICK) {
-            return 'by clicking on a backdrop';
+        return iWindow.then(function (i) {
+            return _this._zone.run(function () {
+                i.close();
+                _this._infoWindows.delete(infoWindow);
+            });
+        });
+    };
+    InfoWindowManager.prototype.setPosition = function (infoWindow) {
+        return this._infoWindows.get(infoWindow).then(function (i) { return i.setPosition({
+            lat: infoWindow.latitude,
+            lng: infoWindow.longitude
+        }); });
+    };
+    InfoWindowManager.prototype.setZIndex = function (infoWindow) {
+        return this._infoWindows.get(infoWindow)
+            .then(function (i) { return i.setZIndex(infoWindow.zIndex); });
+    };
+    InfoWindowManager.prototype.open = function (infoWindow) {
+        var _this = this;
+        return this._infoWindows.get(infoWindow).then(function (w) {
+            if (infoWindow.hostMarker != null) {
+                return _this._markerManager.getNativeMarker(infoWindow.hostMarker).then(function (marker) {
+                    return _this._mapsWrapper.getNativeMap().then(function (map) { return w.open(map, marker); });
+                });
+            }
+            return _this._mapsWrapper.getNativeMap().then(function (map) { return w.open(map); });
+        });
+    };
+    InfoWindowManager.prototype.close = function (infoWindow) {
+        return this._infoWindows.get(infoWindow).then(function (w) { return w.close(); });
+    };
+    InfoWindowManager.prototype.setOptions = function (infoWindow, options) {
+        return this._infoWindows.get(infoWindow).then(function (i) { return i.setOptions(options); });
+    };
+    InfoWindowManager.prototype.addInfoWindow = function (infoWindow) {
+        var options = {
+            content: infoWindow.content,
+            maxWidth: infoWindow.maxWidth,
+            zIndex: infoWindow.zIndex,
+        };
+        if (typeof infoWindow.latitude === 'number' && typeof infoWindow.longitude === 'number') {
+            options.position = { lat: infoWindow.latitude, lng: infoWindow.longitude };
         }
-        else {
-            return "with: " + reason;
+        var infoWindowPromise = this._mapsWrapper.createInfoWindow(options);
+        this._infoWindows.set(infoWindow, infoWindowPromise);
+    };
+    /**
+     * Creates a Google Maps event listener for the given InfoWindow as an Observable
+     */
+    InfoWindowManager.prototype.createEventObservable = function (eventName, infoWindow) {
+        var _this = this;
+        return __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].create(function (observer) {
+            _this._infoWindows.get(infoWindow).then(function (i) {
+                i.addListener(eventName, function (e) { return _this._zone.run(function () { return observer.next(e); }); });
+            });
+        });
+    };
+    return InfoWindowManager;
+}());
+
+InfoWindowManager.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
+];
+/** @nocollapse */
+InfoWindowManager.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], },
+    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgZone"], },
+    { type: __WEBPACK_IMPORTED_MODULE_3__marker_manager__["a" /* MarkerManager */], },
+]; };
+//# sourceMappingURL=info-window-manager.js.map
+
+/***/ }),
+
+/***/ "../../../../@agm/core/services/managers/kml-layer-manager.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__("../../../../@agm/core/services/google-maps-api-wrapper.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KmlLayerManager; });
+
+
+
+/**
+ * Manages all KML Layers for a Google Map instance.
+ */
+var KmlLayerManager = (function () {
+    function KmlLayerManager(_wrapper, _zone) {
+        this._wrapper = _wrapper;
+        this._zone = _zone;
+        this._layers = new Map();
+    }
+    /**
+     * Adds a new KML Layer to the map.
+     */
+    KmlLayerManager.prototype.addKmlLayer = function (layer) {
+        var newLayer = this._wrapper.getNativeMap().then(function (m) {
+            return new google.maps.KmlLayer({
+                clickable: layer.clickable,
+                map: m,
+                preserveViewport: layer.preserveViewport,
+                screenOverlays: layer.screenOverlays,
+                suppressInfoWindows: layer.suppressInfoWindows,
+                url: layer.url,
+                zIndex: layer.zIndex
+            });
+        });
+        this._layers.set(layer, newLayer);
+    };
+    KmlLayerManager.prototype.setOptions = function (layer, options) {
+        this._layers.get(layer).then(function (l) { return l.setOptions(options); });
+    };
+    KmlLayerManager.prototype.deleteKmlLayer = function (layer) {
+        var _this = this;
+        this._layers.get(layer).then(function (l) {
+            l.setMap(null);
+            _this._layers.delete(layer);
+        });
+    };
+    /**
+     * Creates a Google Maps event listener for the given KmlLayer as an Observable
+     */
+    KmlLayerManager.prototype.createEventObservable = function (eventName, layer) {
+        var _this = this;
+        return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].create(function (observer) {
+            _this._layers.get(layer).then(function (m) {
+                m.addListener(eventName, function (e) { return _this._zone.run(function () { return observer.next(e); }); });
+            });
+        });
+    };
+    return KmlLayerManager;
+}());
+
+KmlLayerManager.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/** @nocollapse */
+KmlLayerManager.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], },
+]; };
+//# sourceMappingURL=kml-layer-manager.js.map
+
+/***/ }),
+
+/***/ "../../../../@agm/core/services/managers/marker-manager.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__("../../../../@agm/core/services/google-maps-api-wrapper.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MarkerManager; });
+
+
+
+var MarkerManager = (function () {
+    function MarkerManager(_mapsWrapper, _zone) {
+        this._mapsWrapper = _mapsWrapper;
+        this._zone = _zone;
+        this._markers = new Map();
+    }
+    MarkerManager.prototype.deleteMarker = function (marker) {
+        var _this = this;
+        var m = this._markers.get(marker);
+        if (m == null) {
+            // marker already deleted
+            return Promise.resolve();
         }
+        return m.then(function (m) {
+            return _this._zone.run(function () {
+                m.setMap(null);
+                _this._markers.delete(marker);
+            });
+        });
     };
-    return ModalComponent;
+    MarkerManager.prototype.updateMarkerPosition = function (marker) {
+        return this._markers.get(marker).then(function (m) { return m.setPosition({ lat: marker.latitude, lng: marker.longitude }); });
+    };
+    MarkerManager.prototype.updateTitle = function (marker) {
+        return this._markers.get(marker).then(function (m) { return m.setTitle(marker.title); });
+    };
+    MarkerManager.prototype.updateLabel = function (marker) {
+        return this._markers.get(marker).then(function (m) { m.setLabel(marker.label); });
+    };
+    MarkerManager.prototype.updateDraggable = function (marker) {
+        return this._markers.get(marker).then(function (m) { return m.setDraggable(marker.draggable); });
+    };
+    MarkerManager.prototype.updateIcon = function (marker) {
+        return this._markers.get(marker).then(function (m) { return m.setIcon(marker.iconUrl); });
+    };
+    MarkerManager.prototype.updateOpacity = function (marker) {
+        return this._markers.get(marker).then(function (m) { return m.setOpacity(marker.opacity); });
+    };
+    MarkerManager.prototype.updateVisible = function (marker) {
+        return this._markers.get(marker).then(function (m) { return m.setVisible(marker.visible); });
+    };
+    MarkerManager.prototype.updateZIndex = function (marker) {
+        return this._markers.get(marker).then(function (m) { return m.setZIndex(marker.zIndex); });
+    };
+    MarkerManager.prototype.addMarker = function (marker) {
+        var markerPromise = this._mapsWrapper.createMarker({
+            position: { lat: marker.latitude, lng: marker.longitude },
+            label: marker.label,
+            draggable: marker.draggable,
+            icon: marker.iconUrl,
+            opacity: marker.opacity,
+            visible: marker.visible,
+            zIndex: marker.zIndex,
+            title: marker.title
+        });
+        this._markers.set(marker, markerPromise);
+    };
+    MarkerManager.prototype.getNativeMarker = function (marker) {
+        return this._markers.get(marker);
+    };
+    MarkerManager.prototype.createEventObservable = function (eventName, marker) {
+        var _this = this;
+        return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].create(function (observer) {
+            _this._markers.get(marker).then(function (m) {
+                m.addListener(eventName, function (e) { return _this._zone.run(function () { return observer.next(e); }); });
+            });
+        });
+    };
+    return MarkerManager;
 }());
-ModalComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-modal',
-        template: __webpack_require__("../../../../../src/app/layout/bs-component/components/modal/modal.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/layout/bs-component/components/modal/modal.component.scss")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__ng_bootstrap_ng_bootstrap__["c" /* NgbModal */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ng_bootstrap_ng_bootstrap__["c" /* NgbModal */]) === "function" && _a || Object])
-], ModalComponent);
 
-var _a;
-//# sourceMappingURL=modal.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/pagination/pagination.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col col-sm-6\">\n        <div class=\"card mt-3\">\n            <div class=\"card-header\">Basic Pagination</div>\n            <div class=\"card-block\">\n                <div class=\"text-uppercase text-muted fs-12\">Default pagination</div>\n                <ngb-pagination [collectionSize]=\"70\" [(page)]=\"defaultPagination\"></ngb-pagination>\n                <div class=\"text-uppercase text-muted fs-12\">directionLinks = false</div>\n                <ngb-pagination [collectionSize]=\"70\" [(page)]=\"defaultPagination\" [directionLinks]=\"false\"></ngb-pagination>\n                <div class=\"text-uppercase text-muted fs-12\">boundaryLinks = true</div>\n                <ngb-pagination [collectionSize]=\"70\" [(page)]=\"defaultPagination\" [boundaryLinks]=\"true\"></ngb-pagination>\n                <div class=\"alert alert-info\">\n                    <b>Current page: </b>{{defaultPagination}}\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"col col-sm-6\">\n        <div class=\"card mt-3\">\n            <div class=\"card-header\">Advanced Pagination</div>\n            <div class=\"card-block\">\n                <div class=\"text-uppercase text-muted fs-12\">maxSize = 5, rotate = false</div>\n                <ngb-pagination [collectionSize]=\"120\" [(page)]=\"advancedPagination\" [maxSize]=\"5\" [boundaryLinks]=\"true\"></ngb-pagination>\n\n                <div class=\"text-uppercase text-muted fs-12\">maxSize = 5, rotate = true</div>\n                <ngb-pagination [collectionSize]=\"120\" [(page)]=\"advancedPagination\" [maxSize]=\"5\" [rotate]=\"true\" [boundaryLinks]=\"true\"></ngb-pagination>\n\n                <div class=\"text-uppercase text-muted fs-12\">maxSize = 5, rotate = true, ellipses = false</div>\n                <ngb-pagination [collectionSize]=\"120\" [(page)]=\"advancedPagination\" [maxSize]=\"5\" [rotate]=\"true\" [ellipses]=\"false\" [boundaryLinks]=\"true\"></ngb-pagination>\n                <div class=\"alert alert-info\">\n                    <b>Current page: </b>{{advancedPagination}}\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"row\">\n    <div class=\"col col-sm-6\">\n        <div class=\"card mt-3\">\n            <div class=\"card-header\">Pagination size</div>\n            <div class=\"card-block\">\n                <ngb-pagination [collectionSize]=\"50\" [(page)]=\"paginationSize\" size=\"lg\"></ngb-pagination>\n                <ngb-pagination [collectionSize]=\"50\" [(page)]=\"paginationSize\"></ngb-pagination>\n                <ngb-pagination [collectionSize]=\"50\" [(page)]=\"paginationSize\" size=\"sm\"></ngb-pagination>\n            </div>\n        </div>\n    </div>\n    <div class=\"col col-sm-6\">\n        <div class=\"card mt-3\">\n            <div class=\"card-header\">Disabled pagination</div>\n            <div class=\"card-block\">\n                <p>Pagination control can be disabled:</p>\n                <ngb-pagination [collectionSize]=\"70\" [(page)]=\"disabledPagination\" [disabled]='isDisabled'></ngb-pagination>\n                <hr>\n                <button class=\"btn btn-outline-primary\" (click)=\"toggleDisabled()\">\n                    Toggle disabled\n                </button>\n            </div>\n        </div>\n    </div>\n</div>\n"
+MarkerManager.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/** @nocollapse */
+MarkerManager.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], },
+]; };
+//# sourceMappingURL=marker-manager.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/layout/bs-component/components/pagination/pagination.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/pagination/pagination.component.ts":
+/***/ "../../../../@agm/core/services/managers/polygon-manager.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PaginationComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__("../../../../@agm/core/services/google-maps-api-wrapper.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PolygonManager; });
 
-var PaginationComponent = (function () {
-    function PaginationComponent() {
-        this.defaultPagination = 1;
-        this.advancedPagination = 1;
-        this.paginationSize = 1;
-        this.disabledPagination = 1;
-        this.isDisabled = true;
+
+
+var PolygonManager = (function () {
+    function PolygonManager(_mapsWrapper, _zone) {
+        this._mapsWrapper = _mapsWrapper;
+        this._zone = _zone;
+        this._polygons = new Map();
     }
-    PaginationComponent.prototype.toggleDisabled = function () {
-        this.isDisabled = !this.isDisabled;
+    PolygonManager.prototype.addPolygon = function (path) {
+        var polygonPromise = this._mapsWrapper.createPolygon({
+            clickable: path.clickable,
+            draggable: path.draggable,
+            editable: path.editable,
+            fillColor: path.fillColor,
+            fillOpacity: path.fillOpacity,
+            geodesic: path.geodesic,
+            paths: path.paths,
+            strokeColor: path.strokeColor,
+            strokeOpacity: path.strokeOpacity,
+            strokeWeight: path.strokeWeight,
+            visible: path.visible,
+            zIndex: path.zIndex,
+        });
+        this._polygons.set(path, polygonPromise);
     };
-    return PaginationComponent;
+    PolygonManager.prototype.updatePolygon = function (polygon) {
+        var _this = this;
+        var m = this._polygons.get(polygon);
+        if (m == null) {
+            return Promise.resolve();
+        }
+        return m.then(function (l) { return _this._zone.run(function () { l.setPaths(polygon.paths); }); });
+    };
+    PolygonManager.prototype.setPolygonOptions = function (path, options) {
+        return this._polygons.get(path).then(function (l) { l.setOptions(options); });
+    };
+    PolygonManager.prototype.deletePolygon = function (paths) {
+        var _this = this;
+        var m = this._polygons.get(paths);
+        if (m == null) {
+            return Promise.resolve();
+        }
+        return m.then(function (l) {
+            return _this._zone.run(function () {
+                l.setMap(null);
+                _this._polygons.delete(paths);
+            });
+        });
+    };
+    PolygonManager.prototype.createEventObservable = function (eventName, path) {
+        var _this = this;
+        return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].create(function (observer) {
+            _this._polygons.get(path).then(function (l) {
+                l.addListener(eventName, function (e) { return _this._zone.run(function () { return observer.next(e); }); });
+            });
+        });
+    };
+    return PolygonManager;
 }());
-PaginationComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-pagination',
-        template: __webpack_require__("../../../../../src/app/layout/bs-component/components/pagination/pagination.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/layout/bs-component/components/pagination/pagination.component.scss")]
-    }),
-    __metadata("design:paramtypes", [])
-], PaginationComponent);
 
-//# sourceMappingURL=pagination.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/pop-over/pop-over.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"card mt-3\">\n    <div class=\"card-header\">\n        Pop over\n    </div>\n    <div class=\"card-block\">\n        <button type=\"button\" class=\"btn btn-secondary\" placement=\"top\"\n                ngbPopover=\"Vivamus sagittis lacus vel augue laoreet rutrum faucibus.\" popoverTitle=\"Popover on top\">\n          Popover on top\n        </button>\n\n        <button type=\"button\" class=\"btn btn-secondary\" placement=\"right\"\n                ngbPopover=\"Vivamus sagittis lacus vel augue laoreet rutrum faucibus.\" popoverTitle=\"Popover on right\">\n          Popover on right\n        </button>\n\n        <button type=\"button\" class=\"btn btn-secondary\" placement=\"bottom\"\n                ngbPopover=\"Vivamus sagittis lacus vel augue laoreet rutrum faucibus.\" popoverTitle=\"Popover on bottom\">\n          Popover on bottom\n        </button>\n\n        <button type=\"button\" class=\"btn btn-secondary\" placement=\"left\"\n                ngbPopover=\"Vivamus sagittis lacus vel augue laoreet rutrum faucibus.\" popoverTitle=\"Popover on left\">\n          Popover on left\n        </button>\n    </div>\n</div>\n"
+PolygonManager.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/** @nocollapse */
+PolygonManager.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], },
+]; };
+//# sourceMappingURL=polygon-manager.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/layout/bs-component/components/pop-over/pop-over.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/pop-over/pop-over.component.ts":
+/***/ "../../../../@agm/core/services/managers/polyline-manager.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PopOverComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__("../../../../@agm/core/services/google-maps-api-wrapper.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PolylineManager; });
 
-var PopOverComponent = (function () {
-    function PopOverComponent() {
+
+
+var PolylineManager = (function () {
+    function PolylineManager(_mapsWrapper, _zone) {
+        this._mapsWrapper = _mapsWrapper;
+        this._zone = _zone;
+        this._polylines = new Map();
     }
-    PopOverComponent.prototype.ngOnInit = function () {
+    PolylineManager._convertPoints = function (line) {
+        var path = line._getPoints().map(function (point) {
+            return { lat: point.latitude, lng: point.longitude };
+        });
+        return path;
     };
-    return PopOverComponent;
+    PolylineManager.prototype.addPolyline = function (line) {
+        var path = PolylineManager._convertPoints(line);
+        var polylinePromise = this._mapsWrapper.createPolyline({
+            clickable: line.clickable,
+            draggable: line.draggable,
+            editable: line.editable,
+            geodesic: line.geodesic,
+            strokeColor: line.strokeColor,
+            strokeOpacity: line.strokeOpacity,
+            strokeWeight: line.strokeWeight,
+            visible: line.visible,
+            zIndex: line.zIndex,
+            path: path
+        });
+        this._polylines.set(line, polylinePromise);
+    };
+    PolylineManager.prototype.updatePolylinePoints = function (line) {
+        var _this = this;
+        var path = PolylineManager._convertPoints(line);
+        var m = this._polylines.get(line);
+        if (m == null) {
+            return Promise.resolve();
+        }
+        return m.then(function (l) { return _this._zone.run(function () { l.setPath(path); }); });
+    };
+    PolylineManager.prototype.setPolylineOptions = function (line, options) {
+        return this._polylines.get(line).then(function (l) { l.setOptions(options); });
+    };
+    PolylineManager.prototype.deletePolyline = function (line) {
+        var _this = this;
+        var m = this._polylines.get(line);
+        if (m == null) {
+            return Promise.resolve();
+        }
+        return m.then(function (l) {
+            return _this._zone.run(function () {
+                l.setMap(null);
+                _this._polylines.delete(line);
+            });
+        });
+    };
+    PolylineManager.prototype.createEventObservable = function (eventName, line) {
+        var _this = this;
+        return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].create(function (observer) {
+            _this._polylines.get(line).then(function (l) {
+                l.addListener(eventName, function (e) { return _this._zone.run(function () { return observer.next(e); }); });
+            });
+        });
+    };
+    return PolylineManager;
 }());
-PopOverComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-pop-over',
-        template: __webpack_require__("../../../../../src/app/layout/bs-component/components/pop-over/pop-over.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/layout/bs-component/components/pop-over/pop-over.component.scss")]
-    }),
-    __metadata("design:paramtypes", [])
-], PopOverComponent);
 
-//# sourceMappingURL=pop-over.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/progressbar/progressbar.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"card mt-3\">\n    <div class=\"card-header\">Progressbar</div>\n    <div class=\"card-block\">\n        <p><ngb-progressbar type=\"info\" [value]=\"50\"></ngb-progressbar></p>\n        <p><ngb-progressbar showValue=\"true\" type=\"warning\" [value]=\"150\" [max]=\"200\"></ngb-progressbar></p>\n        <p><ngb-progressbar type=\"danger\" [value]=\"100\" [striped]=\"true\"></ngb-progressbar></p>\n        <p><ngb-progressbar type=\"success\" [value]=\"25\">25</ngb-progressbar></p>\n        <p><ngb-progressbar type=\"info\" [value]=\"50\">Copying file <b>2 of 4</b>...</ngb-progressbar></p>\n        <p><ngb-progressbar type=\"warning\" [value]=\"75\" [striped]=\"true\" [animated]=\"true\"><i>50%</i></ngb-progressbar></p>\n        <p class=\"mb-0\"><ngb-progressbar type=\"danger\" [value]=\"100\" [striped]=\"true\">Completed!</ngb-progressbar></p>\n    </div>\n</div>\n"
+PolylineManager.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/** @nocollapse */
+PolylineManager.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], },
+]; };
+//# sourceMappingURL=polyline-manager.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/layout/bs-component/components/progressbar/progressbar.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/progressbar/progressbar.component.ts":
+/***/ "../../../../@agm/core/services/maps-api-loader/lazy-maps-api-loader.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProgressbarComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ProgressbarComponent = (function () {
-    function ProgressbarComponent() {
-    }
-    ProgressbarComponent.prototype.ngOnInit = function () {
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_browser_globals__ = __webpack_require__("../../../../@agm/core/utils/browser-globals.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__maps_api_loader__ = __webpack_require__("../../../../@agm/core/services/maps-api-loader/maps-api-loader.js");
+/* unused harmony export GoogleMapsScriptProtocol */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return LAZY_MAPS_API_CONFIG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LazyMapsAPILoader; });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
-    return ProgressbarComponent;
-}());
-ProgressbarComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-progressbar',
-        template: __webpack_require__("../../../../../src/app/layout/bs-component/components/progressbar/progressbar.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/layout/bs-component/components/progressbar/progressbar.component.scss")]
-    }),
-    __metadata("design:paramtypes", [])
-], ProgressbarComponent);
+})();
 
-//# sourceMappingURL=progressbar.component.js.map
+
+
+var GoogleMapsScriptProtocol;
+(function (GoogleMapsScriptProtocol) {
+    GoogleMapsScriptProtocol[GoogleMapsScriptProtocol["HTTP"] = 1] = "HTTP";
+    GoogleMapsScriptProtocol[GoogleMapsScriptProtocol["HTTPS"] = 2] = "HTTPS";
+    GoogleMapsScriptProtocol[GoogleMapsScriptProtocol["AUTO"] = 3] = "AUTO";
+})(GoogleMapsScriptProtocol || (GoogleMapsScriptProtocol = {}));
+/**
+ * Token for the config of the LazyMapsAPILoader. Please provide an object of type {@link
+ * LazyMapsAPILoaderConfig}.
+ */
+var LAZY_MAPS_API_CONFIG = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["OpaqueToken"]('angular-google-maps LAZY_MAPS_API_CONFIG');
+var LazyMapsAPILoader = (function (_super) {
+    __extends(LazyMapsAPILoader, _super);
+    function LazyMapsAPILoader(config, w, d) {
+        var _this = _super.call(this) || this;
+        _this._config = config || {};
+        _this._windowRef = w;
+        _this._documentRef = d;
+        return _this;
+    }
+    LazyMapsAPILoader.prototype.load = function () {
+        var _this = this;
+        if (this._scriptLoadingPromise) {
+            return this._scriptLoadingPromise;
+        }
+        var script = this._documentRef.getNativeDocument().createElement('script');
+        script.type = 'text/javascript';
+        script.async = true;
+        script.defer = true;
+        var callbackName = "angular2GoogleMapsLazyMapsAPILoader";
+        script.src = this._getScriptSrc(callbackName);
+        this._scriptLoadingPromise = new Promise(function (resolve, reject) {
+            _this._windowRef.getNativeWindow()[callbackName] = function () { resolve(); };
+            script.onerror = function (error) { reject(error); };
+        });
+        this._documentRef.getNativeDocument().body.appendChild(script);
+        return this._scriptLoadingPromise;
+    };
+    LazyMapsAPILoader.prototype._getScriptSrc = function (callbackName) {
+        var protocolType = (this._config && this._config.protocol) || GoogleMapsScriptProtocol.HTTPS;
+        var protocol;
+        switch (protocolType) {
+            case GoogleMapsScriptProtocol.AUTO:
+                protocol = '';
+                break;
+            case GoogleMapsScriptProtocol.HTTP:
+                protocol = 'http:';
+                break;
+            case GoogleMapsScriptProtocol.HTTPS:
+                protocol = 'https:';
+                break;
+        }
+        var hostAndPath = this._config.hostAndPath || 'maps.googleapis.com/maps/api/js';
+        var queryParams = {
+            v: this._config.apiVersion || '3',
+            callback: callbackName,
+            key: this._config.apiKey,
+            client: this._config.clientId,
+            channel: this._config.channel,
+            libraries: this._config.libraries,
+            region: this._config.region,
+            language: this._config.language
+        };
+        var params = Object.keys(queryParams)
+            .filter(function (k) { return queryParams[k] != null; })
+            .filter(function (k) {
+            // remove empty arrays
+            return !Array.isArray(queryParams[k]) ||
+                (Array.isArray(queryParams[k]) && queryParams[k].length > 0);
+        })
+            .map(function (k) {
+            // join arrays as comma seperated strings
+            var i = queryParams[k];
+            if (Array.isArray(i)) {
+                return { key: k, value: i.join(',') };
+            }
+            return { key: k, value: queryParams[k] };
+        })
+            .map(function (entry) { return entry.key + "=" + entry.value; })
+            .join('&');
+        return protocol + "//" + hostAndPath + "?" + params;
+    };
+    return LazyMapsAPILoader;
+}(__WEBPACK_IMPORTED_MODULE_2__maps_api_loader__["a" /* MapsAPILoader */]));
+
+LazyMapsAPILoader.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/** @nocollapse */
+LazyMapsAPILoader.ctorParameters = function () { return [
+    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [LAZY_MAPS_API_CONFIG,] },] },
+    { type: __WEBPACK_IMPORTED_MODULE_1__utils_browser_globals__["b" /* WindowRef */], },
+    { type: __WEBPACK_IMPORTED_MODULE_1__utils_browser_globals__["c" /* DocumentRef */], },
+]; };
+//# sourceMappingURL=lazy-maps-api-loader.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/layout/bs-component/components/tabs/tabs.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row mt-3\">\n    <div class=\"col-sm-6\">\n        <div class=\"card\">\n            <div class=\"card-header\">Tabset</div>\n            <div class=\"card-block\">\n                <ngb-tabset>\n                    <ngb-tab title=\"Simple\">\n                        <ng-template ngbTabContent>\n                            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth\n                            master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh\n                            dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum\n                            iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>\n                        </ng-template>\n                    </ngb-tab>\n                    <ngb-tab>\n                        <ng-template ngbTabTitle><b>Fancy</b> title</ng-template>\n                        <ng-template ngbTabContent>\n                            <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table\n                            craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl\n                            cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia\n                            yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean\n                            shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero\n                            sint qui sapiente accusamus tattooed echo park.</p>\n                        </ng-template>\n                    </ngb-tab>\n                    <ngb-tab title=\"Disabled\" [disabled]=\"true\">\n                        <ng-template ngbTabContent>\n                            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth\n                            master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh\n                            dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum\n                            iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>\n                        </ng-template>\n                    </ngb-tab>\n                </ngb-tabset>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-sm-6\">\n        <div class=\"card\">\n            <div class=\"card-header\">Pills</div>\n            <div class=\"card-block\">\n                <ngb-tabset type=\"pills\">\n                    <ngb-tab title=\"Simple\">\n                        <ng-template ngbTabContent>\n                            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth\n                            master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh\n                            dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum\n                            iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>\n                        </ng-template>\n                    </ngb-tab>\n                    <ngb-tab>\n                        <ng-template ngbTabTitle><b>Fancy</b> title</ng-template>\n                        <ng-template ngbTabContent>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.\n                            <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table\n                            craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl\n                            cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia\n                            yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean\n                            shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero\n                            sint qui sapiente accusamus tattooed echo park.</p>\n                        </ng-template>\n                    </ngb-tab>\n                    <ngb-tab title=\"Disabled\" [disabled]=\"true\">\n                        <ng-template ngbTabContent>\n                            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth\n                            master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh\n                            dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum\n                            iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>\n                        </ng-template>\n                    </ngb-tab>\n                </ngb-tabset>\n            </div>\n        </div>\n    </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/tabs/tabs.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/tabs/tabs.component.ts":
+/***/ "../../../../@agm/core/services/maps-api-loader/maps-api-loader.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapsAPILoader; });
 
-var TabsComponent = (function () {
-    function TabsComponent() {
+var MapsAPILoader = (function () {
+    function MapsAPILoader() {
     }
-    TabsComponent.prototype.ngOnInit = function () {
-    };
-    return TabsComponent;
+    return MapsAPILoader;
 }());
-TabsComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-tabs',
-        template: __webpack_require__("../../../../../src/app/layout/bs-component/components/tabs/tabs.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/layout/bs-component/components/tabs/tabs.component.scss")]
-    }),
-    __metadata("design:paramtypes", [])
-], TabsComponent);
 
-//# sourceMappingURL=tabs.component.js.map
+MapsAPILoader.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/** @nocollapse */
+MapsAPILoader.ctorParameters = function () { return []; };
+//# sourceMappingURL=maps-api-loader.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/layout/bs-component/components/timepicker/timepicker.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row mt-3\">\n    <div class=\"col-sm-6\">\n        <div class=\"card\">\n            <div class=\"card-header\">Timepicker (<b>Default</b>)</div>\n            <div class=\"card-block\">\n                <ngb-timepicker [(ngModel)]=\"defaultTime\"></ngb-timepicker>\n                <div class=\"alert alert-info\">\n                    <b>Selected time: </b>{{defaultTime | json}}\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-sm-6\">\n        <div class=\"card\">\n            <div class=\"card-header\">Timepicker (<b>Default</b>)</div>\n            <div class=\"card-block\">\n                <ngb-timepicker [(ngModel)]=\"meridianTime\" [meridian]=\"meridian\"></ngb-timepicker>\n                <button class=\"btn btn-sm btn-outline-{{meridian ? 'success' : 'danger'}}\" (click)=\"toggleMeridian()\">\n                    Meridian - {{meridian ? \"ON\" : \"OFF\"}}\n                </button>\n                <div class=\"alert alert-info mt-3 mb-0\">\n                    <b>Selected time: </b>{{meridianTime | json}}\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-sm-6\">\n        <div class=\"card\">\n            <div class=\"card-header\">Timepicker (<b>Seconds</b>)</div>\n            <div class=\"card-block\">\n                <ngb-timepicker [(ngModel)]=\"SecondsTime\" [seconds]=\"seconds\"></ngb-timepicker>\n                <button class=\"btn btn-sm btn-outline-{{seconds ? 'success' : 'danger'}}\" (click)=\"toggleSeconds()\">\n                    Seconds - {{seconds ? \"ON\" : \"OFF\"}}\n                </button>\n                <div class=\"alert alert-info mt-3 mb-0\">\n                    <b>Selected time: </b>{{SecondsTime | json}}\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-sm-6 mt-3\">\n        <div class=\"card\">\n            <div class=\"card-header\">Timepicker (<b>Custom Step</b>)</div>\n            <div class=\"card-block\">\n                <ngb-timepicker [(ngModel)]=\"customTime\" [seconds]=\"true\"\n                [hourStep]=\"hourStep\" [minuteStep]=\"minuteStep\" [secondStep]=\"secondStep\"></ngb-timepicker>\n\n                <div class=\"row\">\n                    <div class=\"col-sm-4\">\n                        <label for=\"changeHourStep\">Hour Step</label>\n                        <input type=\"number\" class=\"form-control\" [(ngModel)]=\"hourStep\" />\n                    </div>\n                    <div class=\"col-sm-4\">\n                        <label for=\"changeMinuteStep\">Minute Step</label>\n                        <input type=\"number\" class=\"form-control\" [(ngModel)]=\"minuteStep\" />\n                    </div>\n                    <div class=\"col-sm-4\">\n                        <label for=\"changeSecondStep\">Second Step</label>\n                        <input type=\"number\" class=\"form-control\" [(ngModel)]=\"secondStep\" />\n                    </div>\n                </div>\n                <div class=\"alert alert-info mt-3 mb-0\">\n                    <b>Selected time: </b>{{customTime | json}}\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/timepicker/timepicker.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/timepicker/timepicker.component.ts":
+/***/ "../../../../@agm/core/services/maps-api-loader/noop-maps-api-loader.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimepickerComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var TimepickerComponent = (function () {
-    function TimepickerComponent() {
-        this.defaultTime = { hour: 13, minute: 30 };
-        this.meridianTime = { hour: 13, minute: 30 };
-        this.meridian = true;
-        this.SecondsTime = { hour: 13, minute: 30, second: 30 };
-        this.seconds = true;
-        this.customTime = { hour: 13, minute: 30, second: 0 };
-        this.hourStep = 1;
-        this.minuteStep = 15;
-        this.secondStep = 30;
+/* unused harmony export NoOpMapsAPILoader */
+/**
+ * When using the NoOpMapsAPILoader, the Google Maps API must be added to the page via a `<script>`
+ * Tag.
+ * It's important that the Google Maps API script gets loaded first on the page.
+ */
+var NoOpMapsAPILoader = (function () {
+    function NoOpMapsAPILoader() {
     }
-    TimepickerComponent.prototype.toggleSeconds = function () {
-        this.seconds = !this.seconds;
+    NoOpMapsAPILoader.prototype.load = function () {
+        if (!window.google || !window.google.maps) {
+            throw new Error('Google Maps API not loaded on page. Make sure window.google.maps is available!');
+        }
+        return Promise.resolve();
     };
-    TimepickerComponent.prototype.toggleMeridian = function () {
-        this.meridian = !this.meridian;
-    };
-    return TimepickerComponent;
+    ;
+    return NoOpMapsAPILoader;
 }());
-TimepickerComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-timepicker',
-        template: __webpack_require__("../../../../../src/app/layout/bs-component/components/timepicker/timepicker.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/layout/bs-component/components/timepicker/timepicker.component.scss")]
-    })
-], TimepickerComponent);
 
-//# sourceMappingURL=timepicker.component.js.map
+//# sourceMappingURL=noop-maps-api-loader.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/layout/bs-component/components/tooltip/tooltip.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"card\">\n    <div class=\"card-header\">\n        Tooltip\n    </div>\n    <div class=\"card-block\">\n        <button type=\"button\" class=\"btn btn-secondary\" placement=\"top\" ngbTooltip=\"Tooltip on top\">\n          Tooltip on top\n        </button>\n        <button type=\"button\" class=\"btn btn-secondary\" placement=\"right\" ngbTooltip=\"Tooltip on right\">\n          Tooltip on right\n        </button>\n        <button type=\"button\" class=\"btn btn-secondary\" placement=\"bottom\" ngbTooltip=\"Tooltip on bottom\">\n          Tooltip on bottom\n        </button>\n        <button type=\"button\" class=\"btn btn-secondary\" placement=\"left\" ngbTooltip=\"Tooltip on left\">\n          Tooltip on left\n        </button>\n    </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/tooltip/tooltip.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/layout/bs-component/components/tooltip/tooltip.component.ts":
+/***/ "../../../../@agm/core/utils/browser-globals.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TooltipComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var TooltipComponent = (function () {
-    function TooltipComponent() {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return WindowRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return DocumentRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BROWSER_GLOBALS_PROVIDERS; });
+var WindowRef = (function () {
+    function WindowRef() {
     }
-    TooltipComponent.prototype.ngOnInit = function () {
-    };
-    return TooltipComponent;
+    WindowRef.prototype.getNativeWindow = function () { return window; };
+    return WindowRef;
 }());
-TooltipComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-tooltip',
-        template: __webpack_require__("../../../../../src/app/layout/bs-component/components/tooltip/tooltip.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/layout/bs-component/components/tooltip/tooltip.component.scss")]
-    }),
-    __metadata("design:paramtypes", [])
-], TooltipComponent);
 
-//# sourceMappingURL=tooltip.component.js.map
+var DocumentRef = (function () {
+    function DocumentRef() {
+    }
+    DocumentRef.prototype.getNativeDocument = function () { return document; };
+    return DocumentRef;
+}());
+
+var BROWSER_GLOBALS_PROVIDERS = [WindowRef, DocumentRef];
+//# sourceMappingURL=browser-globals.js.map
 
 /***/ }),
 
