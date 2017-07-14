@@ -1,22 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ListaComponent} from './lista.component';
+import { ListaComponent } from './lista.component';
 
 import { AgmCoreModule } from '@agm/core';
-import {MapsModule} from './../maps.module';
+import { MapsModule } from '../maps/maps.module';
 
 @NgModule({
     imports: [
         CommonModule,
-         MapsModule,
-        
-         ],
-    declarations: [
-     
-        
-        ListaComponent
-        
+        MapsModule,
 
-    ],exports:[ListaComponent]
+    ],
+    declarations: [
+        ListaComponent
+    ], exports: [ListaComponent]
 })
 export class ListaModule { }

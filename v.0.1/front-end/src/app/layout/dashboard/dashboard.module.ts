@@ -16,7 +16,7 @@ import {
 import { StatModule } from '../../shared';
 import { AgmCoreModule } from '@agm/core';
      import { PageHeaderModule } from './../../shared';
-import {ListaModule} from './components/maps/lista/lista.module';
+import {ListaModule} from './components/lista/lista.module';
 
 @NgModule({
     imports: [

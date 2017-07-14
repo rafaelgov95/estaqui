@@ -8,19 +8,25 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./maps.component.css']
 })
 export class MapsComponent implements OnInit {
-  //  @Input() est: EstacionamentoGeo;
+   @Input() est: EstacionamentoGeo;
   // est  = new EstacionamentoGeo;
 
-
   title: string = 'Mapa ';
-  // lat = 100000;
-  // lng = 13123123;
+  // lat=0;
+  // lng=0;
   // lat ;
   // lng ;
   constructor() {
+    console.log(this.est);
     // this.lat = this.est.lat;
     // this.lng = this.est.lng;
   }
+    modou(evento){
+      console.log(evento);
+    }
+
+
+
 
   ngOnInit() {
     //  this.estacionamento.lat = 1;
