@@ -57,7 +57,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/layout/profile/profile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-page-header-opcoes [heading]=\"'Perfil'\" [icon]=\"'fa-table'\"></app-page-header-opcoes>\n\n<div class=\"panel panel-default profile-area\">\n    <div class=\"panel-heading\">\n        <h3>Perfil</h3>\n    </div>\n    <div class=\"panel-body\">\n        <div>\n            <label><i class=\"glyphicon glyphicon-user\"></i> Nome</label>\n            <h3 class=\"nickname\">{{ profile.nome }}</h3>\n        </div>\n    </div>\n    <a>Email: {{profile.email}}</a>\n        <a> Criada em:  {{profile.criada_em}}</a>\n    </div>\n</div>"
+module.exports = "<app-page-header-opcoes [heading]=\"'Perfil'\" [icon]=\"'fa-table'\"></app-page-header-opcoes>\n\n<div class=\"panel panel-default profile-area\">\n    <div class=\"panel-heading\">\n        <h3>Perfil</h3>\n    </div>\n    <div class=\"panel-body\">\n        <div>\n            <label><i class=\"glyphicon glyphicon-user\"></i> Nome</label>\n            <h3 class=\"nickname\">{{ profile.nome }}</h3>\n        </div>\n    </div>\n\n    <a>Email: {{profile.email}}</a>\n    <a> Criada em:  {{profile.criada_em}}</a>\n</div>"
 
 /***/ }),
 

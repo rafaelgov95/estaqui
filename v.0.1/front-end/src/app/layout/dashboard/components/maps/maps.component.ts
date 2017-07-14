@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./maps.component.css']
 })
 export class MapsComponent implements OnInit {
-   @Input() est: EstacionamentoGeo;
+  //  @Input() est: EstacionamentoGeo;
   // est  = new EstacionamentoGeo;
 
 
