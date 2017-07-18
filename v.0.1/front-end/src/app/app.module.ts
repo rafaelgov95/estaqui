@@ -1,33 +1,134 @@
+import { CdkTableModule } from '@angular/cdk';
+
+import {
+  MdAutocompleteModule,
+  MdButtonModule,
+  MdButtonToggleModule,
+  MdCardModule,
+  MdCheckboxModule,
+  MdChipsModule,
+  MdCoreModule,
+  MdDatepickerModule,
+  MdDialogModule,
+  MdExpansionModule,
+  MdGridListModule,
+  MdIconModule,
+  MdInputModule,
+  MdListModule,
+  MdMenuModule,
+  MdNativeDateModule,
+  MdPaginatorModule,
+  MdProgressBarModule,
+  MdProgressSpinnerModule,
+  MdRadioModule,
+  MdRippleModule,
+  MdSelectModule,
+  MdSidenavModule,
+  MdSliderModule,
+  MdSlideToggleModule,
+  MdSnackBarModule,
+  MdSortModule,
+  MdTableModule,
+  MdTabsModule,
+  MdToolbarModule,
+  MdTooltipModule,
+} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
 import { Http, HttpModule } from '@angular/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 // import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+import { AutocompleteComponent } from './layout/dashboard/components/autocomplete/autocomplete.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthGuard } from './shared';
-
 import { AlertService } from './shared/services/alert.service';
-
 import { AgmCoreModule } from '@agm/core';
-
-
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ],
+    AppComponent ],
   imports: [
-    FormsModule,
     HttpModule,
     AppRoutingModule,
-    BrowserModule,
-   
-    TranslateModule.forRoot()
+    BrowserModule, 
+    BrowserAnimationsModule,
+    TranslateModule.forRoot(),
+    FormsModule, 
+    ReactiveFormsModule,
+    MdNativeDateModule,
+    MdAutocompleteModule,
+    CdkTableModule,
+    MdButtonModule,
+    MdButtonToggleModule,
+    MdCardModule,
+    MdCheckboxModule,
+    MdChipsModule,
+    MdCoreModule,
+    MdDatepickerModule,
+    MdDialogModule,
+    MdExpansionModule,
+    MdGridListModule,
+    MdIconModule,
+    MdInputModule,
+    MdListModule,
+    MdMenuModule,
+    MdNativeDateModule,
+    MdPaginatorModule,
+    MdProgressBarModule,
+    MdProgressSpinnerModule,
+    MdRadioModule,
+    MdRippleModule,
+    MdSelectModule,
+    MdSidenavModule,
+    MdSliderModule,
+    MdSlideToggleModule,
+    MdSnackBarModule,
+    MdSortModule,
+    MdTableModule,
+    MdTabsModule,
+    MdToolbarModule,
+    MdTooltipModule
+  ], exports: [
+    CdkTableModule,
+    MdAutocompleteModule,
+    MdButtonModule,
+    MdButtonToggleModule,
+    MdCardModule,
+    MdCheckboxModule,
+    MdChipsModule,
+    MdCoreModule,
+    MdDatepickerModule,
+    MdDialogModule,
+    MdExpansionModule,
+    MdGridListModule,
+    MdIconModule,
+    MdInputModule,
+    MdListModule,
+    MdMenuModule,
+    MdNativeDateModule,
+    MdPaginatorModule,
+    MdProgressBarModule,
+    MdProgressSpinnerModule,
+    MdRadioModule,
+    MdRippleModule,
+    MdSelectModule,
+    MdSidenavModule,
+    MdSliderModule,
+    MdSlideToggleModule,
+    MdSnackBarModule,
+    MdSortModule,
+    MdTableModule,
+    MdTabsModule,
+    MdToolbarModule,
+    MdTooltipModule,
+    BrowserAnimationsModule
   ],
   providers: [
-  AuthGuard
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

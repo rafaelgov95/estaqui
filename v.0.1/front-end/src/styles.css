@@ -2,4 +2,6 @@
 
 
 /*@import 'variables';
+
 @import '../node_modules/bootstrap/scss/bootstrap';*/
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";

@@ -11,8 +11,8 @@ export class GerenteComponent implements OnInit {
    constructor(public router: Router) { }
 
     ngOnInit() {
-        if (this.router.url === '/') {
-            this.router.navigate(['/estacionamentos']);
+        if (this.router.url === '/gerente') {
+            this.router.navigate(['/not-found']);
         }
     }
 

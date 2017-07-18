@@ -3,8 +3,8 @@
 <div class="row">
     <div class="col-xl-12 text-xs-center">
         <div class="card card-default">
-            <div class="card-block">
-
+            <div class="card-header">Cadastrar Estacionamento</div>
+            <div class="card-block table-responsive">
                 <lista></lista>
 
 
@@ -12,107 +12,40 @@
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col-xl-3 text-xs-center">
-        <div class="card card-default">
-            <div class="card-block">
 
-
-            </div>
-        </div>
-    </div>
-    <div class="col-xl-9 text-xs-center">
-        <div class="card card-default">
-            <div class="card-block">
-                <!--<app-maps></app-maps>-->
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="row">
     <div class="col-xl-3 text-xs-center">
         <div class="card card-default">
-            <div class="card-block">
-                <div class="col-xl-6 text-xs-center">
-                    <button type="button" class="btn btn-success centralizado">Encontre a vaga mais próxima</button>
-                    <button type="button" class="btn btn-info">Ir para o último local estacionado</button>
+            <div class="card-header">Cadastrar Estacionamento</div>
+            <div class="card-block table-responsive">
 
-
-                    <div class="form-group">
-                        <label>Filtro</label>
-                        <div class="checkbox">
-                            <label>
+                <button type="button" class="btn btn-success centralizado">Encontre a vaga mais próxima</button>
+                <button type="button" class="btn btn-info">Ir para o último local estacionado</button>
+                <div class="form-group">
+                    <label>Filtro</label>
+                    <div class="checkbox">
+                        <label>
                         <input type="checkbox" value=""> Coberta
                     </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
                         <input type="checkbox" value=""> Preferencial
                     </label>
-                        </div>
-
                     </div>
 
                 </div>
+
             </div>
         </div>
     </div>
     <div class="col-xl-9 text-xs-center">
         <div class="card card-default">
-            <div class="card-block">
-                <input type="text">
+            <div class="card-header">Cadastrar Estacionamento</div>
+            <div class="card-block table-responsive">
+                <autocomplete-map></autocomplete-map>
             </div>
         </div>
     </div>
 </div>
-
-
-
-<!--<hr>
-<div class="row">
-    <div class="col-xl-3 col-lg-6">
-        <app-stat [bgClass]="'card-primary'" [icon]="'fa-comments'" [count]="26" [label]="'New Comments!'"></app-stat>
-    </div>
-    <div class="col-xl-3 col-lg-6">
-        <app-stat [bgClass]="'card-info'" [icon]="'fa-tasks'" [count]="12" [label]="'New task!'"></app-stat>
-    </div>
-    <div class="col-xl-3 col-lg-6">
-        <app-stat [bgClass]="'card-success'" [icon]="'fa-shopping-cart'" [count]="124" [label]="'New Orders!'"></app-stat>
-    </div>
-    <div class="col-xl-3 col-lg-6">
-        <app-stat [bgClass]="'card-danger'" [icon]="'fa-support'" [count]="13" [label]="'New Tickets!'"></app-stat>
-    </div>
-</div>
-<hr />
-<ngb-alert [type]="alert.type" (close)="closeAlert(alert)" *ngFor="let alert of alerts">{{ alert.message }}</ngb-alert>
-<hr />
-<div class="row">
-    <div class="col-lg-8">
-        <div class="card card-default">
-            <div class="card-header">
-                <i class="fa fa-clock-o fa-fw"></i> Responsive Timeline
-            </div>
-            /.card-header
-            <app-timeline></app-timeline>
-            /.card-body
-        </div>
-        -- /.card
-    </div>
-    /.col-lg-8
-    <div class="col-lg-4">
-        <div class="card card-default">
-            <div class="card-header">
-                <i class="fa fa-bell fa-fw"></i> Notifications card
-            </div>
-            /.card-header
-            <app-notification></app-notification>
-            /.card-body
-        </div>
-        /.card
-
-        <app-chat></app-chat>
-        /.card .chat-card
-    </div>
-    /.col-lg-4
-</div>-->

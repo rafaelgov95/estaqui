@@ -11,7 +11,7 @@
         </a>
 
         <div class="nested-menu">
-            <a class="list-group-item" (click)="addExpandClass('pages')"  [routerLink]="['/gerente']" [routerLinkActive]="['router-lctive']">
+            <a class="list-group-item" (click)="addExpandClass('pages')" [routerLinkActive]="['router-lctive']">
                 <span><i class="fa fa-fw fa-desktop"></i>&nbsp;{{ 'Gerencia' | translate }}</span>
             </a>
             <li class="nested" [class.expand]="showMenu === 'pages'">
@@ -22,12 +22,12 @@
                         </a>
 
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="javascript:void(0)"><span>{{ 'submenu' | translate }}</span></a>
                     </li>
                     <li>
                         <a href="javascript:void(0)"><span>{{ 'submenu' | translate }}</span></a>
-                    </li>
+                    </li>-->
                 </ul>
             </li>
         </div>
