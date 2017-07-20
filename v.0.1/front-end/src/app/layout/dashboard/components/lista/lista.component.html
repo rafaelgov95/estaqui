@@ -1,8 +1,10 @@
-
+         
             <div class="card-block">
                    <ul class="heroes">
                        <li *ngFor="let estacinamento of estacinamentos" [class.selected]="estacinamento === selectedEstacionamento" (click)="onSelect(estacinamento)">
-                          <span class="badge">{{estacinamento.id}}</span> {{estacinamento.name}}
+                          <span class="badge">{{estacinamento.nome}}</span> {{estacinamento.nome}}
+                      <!--<span class="badge">{{estacinamento._id}}</span> {{estacinamento.nome}}-->
+
                        </li>
                    </ul>
             </div>

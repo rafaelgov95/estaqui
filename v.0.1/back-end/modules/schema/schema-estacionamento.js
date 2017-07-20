@@ -14,7 +14,7 @@ module.exports = new mg.Schema({
     endereco: endereco,
     servicos: String,
     situacao: situacao,
-    localizacao: localizacao,
+    localizacao: {lat:Number,lng:Number},
     funcionarios: [{ type: Schema.Types.ObjectId, ref: 'funcionarios' }],
     criada_em: created_at
 })

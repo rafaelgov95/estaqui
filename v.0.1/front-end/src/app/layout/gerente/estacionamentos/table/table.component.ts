@@ -1,3 +1,4 @@
+import { EstacionamentoService } from './../../../../shared/services/estacionamento/EstacionamentoService.service';
 import {Component, ViewChild} from '@angular/core';
 import {DataSource} from '@angular/cdk';
 import {MdPaginator} from '@angular/material';
@@ -17,6 +18,11 @@ export class TableComponent {
   displayedColumns = ['userId', 'userName', 'progress', 'color'];
   exampleDatabase = new ExampleDatabase();
   dataSource: ExampleDataSource | null;
+ listaEstacionamentos: any;
+  constructor(private estacionamentoServico: EstacionamentoService) {
+    // Fill up the database with 100 users.
+    
+  }
 
   @ViewChild(MdPaginator) paginator: MdPaginator;
 

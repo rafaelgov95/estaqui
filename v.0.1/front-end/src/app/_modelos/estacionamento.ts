@@ -1,12 +1,29 @@
+class Localizacao {
+    constructor(
+  ){  }
+
+        public lat: number;
+        public lng: number;
+}
+
+
+
 export class Estacionamento {
-    id: string;
-    proprietario: string;
-    nome_fantasia: string;
-    cnpj: string;
-    endereco: [{ rua: string, bairro: string, numero: number }];
-    servicos: [{nome:string}];
-    situacao: boolean;
-    localizacao:[{lat: number, lng: number;}];
-    funcionarios: [{id_funcionario:string}];
-    criada_em: string ;    
+    constructor(
+       
+    ) { }
+        public _id: string;
+        public proprietario: string;
+        public nome: string;
+        public nome_fantasia: string;
+        public cnpj: string;
+        public lat:number;
+        public lng:number;
+        public endereco: [{ rua: string, bairro: string, numero: number }];
+        public servicos: [{ nome: string }];
+        public situacao: boolean;
+        public localizacao:Localizacao = new Localizacao();
+        public funcionarios: [{ id_funcionario: string }];
+        public criada_em: string;
+
 }
