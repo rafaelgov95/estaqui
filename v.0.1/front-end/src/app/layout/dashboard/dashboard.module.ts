@@ -1,3 +1,4 @@
+import { ListaComponent } from './components/lista/lista.component';
 import { MapsComponent } from './components/maps/maps.component';
 import { MapsModule } from './components/maps/maps.module';
 import { EstacionamentoService } from './../../shared/services/estacionamento/EstacionamentoService.service';
@@ -60,7 +61,7 @@ import { FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
 import { StatModule } from '../../shared';
 import { AgmCoreModule } from '@agm/core';
 import { PageHeaderModule } from './../../shared';
-import { ListaModule } from './components/lista/lista.module';
+// import { ListaModule } from './components/lista/lista.module';
 import { HttpModule } from '@angular/http';
 import { CdkTableModule } from '@angular/cdk';
 
@@ -73,7 +74,7 @@ import { CdkTableModule } from '@angular/cdk';
         NgbAlertModule.forRoot(),
         DashboardRoutingModule,
         StatModule,
-        ListaModule,
+        // ListaModule,
         MapsModule,
         PageHeaderModule,
         MdNativeDateModule,
@@ -117,7 +118,8 @@ import { CdkTableModule } from '@angular/cdk';
         DashboardComponent,
         TimelineComponent,
         NotificationComponent,
-        AutocompleteComponent
+        AutocompleteComponent,
+        ListaComponent
 
     ], exports: [
         MapsModule,

@@ -11,8 +11,10 @@ export class DashboardComponent implements OnInit {
     ngOnInit() {
         this.setCurrentPosition()
     }
-    selectedEstacionamento: EstacionamentoGeo
-    = { id: 1, name: '', label: '', lat: -1, lng: -1 };
+    // selectedEstacionamentoNovo: EstacionamentoGeo
+
+    selectedEstacionamentoNovo: EstacionamentoGeo
+    = { id: 1, name: 'Local Atual', label: 'Local Atual', lat: -1, lng: -1 };
     constructor() {
     }
     late: any;
@@ -22,19 +24,24 @@ export class DashboardComponent implements OnInit {
             navigator.geolocation.getCurrentPosition((position) => {
                 this.late = position.coords.latitude;
                 this.long = position.coords.longitude;
-                console.log(position)
-                this.selectedEstacionamento.lng = this.long;
-                this.selectedEstacionamento.lat = this.late;
-                this.selectedEstacionamento.name = "";
-                console.log(this.selectedEstacionamento.name)
+                console.log(this.selectedEstacionamentoNovo)
+                this.selectedEstacionamentoNovo.lng = this.long;
+                this.selectedEstacionamentoNovo.lat = this.late;
+                this.selectedEstacionamentoNovo.name = "Local Atual";
+                this.selectedEstacionamentoNovo.label = "Local Atual";
 
+                console.log("Novo: ", this.selectedEstacionamentoNovo)
             });
         }
-
+        console.log(this.selectedEstacionamentoNovo);
     }
 
     AutoC(event) {
         console.log(event)
-        this.selectedEstacionamento = event;
+        this.selectedEstacionamentoNovo = event;
+    }
+    AutoL(event) {
+        console.log(event)
+        this.selectedEstacionamentoNovo = event;
     }
 }

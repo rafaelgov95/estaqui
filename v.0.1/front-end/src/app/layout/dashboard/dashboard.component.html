@@ -3,13 +3,13 @@
 <div class="row">
     <div class="col-xl-12 text-xs-center">
         <div class="card card-default">
-            <div class="card-header">Cadastrar Estacionamento</div>
+            <div class="card-header">Mapa de Navegação</div>
             <div class="card-block table-responsive">
-                <lista (emit)="AutoC($event)"></lista>
-
-                   <app-maps [est]="selectedEstacionamento" ></app-maps>
+                <app-maps [est]="selectedEstacionamentoNovo"></app-maps>
 
             </div>
+
+
         </div>
     </div>
 </div>
@@ -18,25 +18,10 @@
 <div class="row">
     <div class="col-xl-3 text-xs-center">
         <div class="card card-default">
-            <div class="card-header">Cadastrar Estacionamento</div>
+            <div class="card-header">Top 5 </div>
             <div class="card-block table-responsive">
+                <lista (emit)="AutoL($event)"></lista>
 
-                <button type="button" class="btn btn-success centralizado">Encontre a vaga mais próxima</button>
-                <button type="button"  (click)="setCurrentPosition()"class="btn btn-info">Ir para o último local estacionado</button>
-                <div class="form-group">
-                    <label>Filtro</label>
-                    <div class="checkbox">
-                        <label>
-                        <input type="checkbox" value=""> Coberta
-                    </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                        <input type="checkbox" value=""> Preferencial
-                    </label>
-                    </div>
-
-                </div>
 
             </div>
         </div>
@@ -44,9 +29,36 @@
 
     <div class="col-xl-9 text-xs-center">
         <div class="card card-default">
-            <div class="card-header">Cadastrar Estacionamento</div>
+            <div class="card-header">Pesquisa</div>
             <div class="card-block table-responsive">
-                <autocomplete-map (Emite)="AutoC($event)"></autocomplete-map>
+                <div class="row">
+                    <div class="col-xl-3">
+                        <autocomplete-map (Emite)="AutoC($event)"></autocomplete-map>
+                    </div>
+                    <div class="col-xl-2">
+                        <div class="form-group">
+                            <label>Filtro</label>
+                            <div class="checkbox">
+                                <label>
+                        <input type="checkbox" value=""> Coberta
+                    </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                        <input type="checkbox" value=""> Preferencial
+                    </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-xl-3">
+                        <button type="button" (click)="setCurrentPosition()" class="btn btn-info">Ir para o último local estacionado</button>                        </div>
+
+                    <div class="col-xl-3">
+                        <button type="button" class="btn btn-success ">Encontre a vaga mais próxima</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

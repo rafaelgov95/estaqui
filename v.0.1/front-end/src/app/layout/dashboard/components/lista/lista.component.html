@@ -1,22 +1,9 @@
-<div class="row">
-    <div class="col-xl-3 text-xs-center">
-        <div class="card card-default">
+
             <div class="card-block">
-                 <h1>{{title}}</h1>
                    <ul class="heroes">
                        <li *ngFor="let estacinamento of estacinamentos" [class.selected]="estacinamento === selectedEstacionamento" (click)="onSelect(estacinamento)">
                           <span class="badge">{{estacinamento.id}}</span> {{estacinamento.name}}
                        </li>
                    </ul>
             </div>
-        </div>
-    </div>
-
-    <div class="col-xl-9 text-xs-center">
-        <div class="card card-default">
-            <div class="card-block">
-
-            </div>
-        </div>
-    </div>
-</div>
+        

@@ -1,116 +1,19 @@
 <app-page-header [heading]="'Estacionamentos'" [icon]="'fa-bar-chart-o'"></app-page-header>
 
 
-
 <div class="row">
-  <div class="col col-xl-4 col-lg-4">
-    <div class="card mb-3">
-      <div class="card-header">Cadastrar Estacionamento</div>
-      <div class="card-block table-responsive">
-        <!--<div class="col-xl-4">-->
 
 
-        <form role="form">
-          <!--<fieldset disabled="">-->
-          <div class="form-group has-success">
-            <label class="form-control-label" for="inputSuccess">Nome</label>
-            <input type="text" class="form-control form-control-success" id="inputSuccess">
-          </div>
-
-          <div class="form-group has-warning">
-            <label class="form-control-label" for="inputWarning">Nome Fantasia</label>
-            <input type="text" class="form-control form-control-warning" id="inputWarning">
-          </div>
-
-          <div class="form-group has-danger">
-            <label class="form-control-label" for="inputError">CNPJ</label>
-            <input type="text" class="form-control form-control-danger" id="inputError">
-          </div>
-          <div class="form-group has-danger">
-            <label class="form-control-label" for="inputError">Servicos</label>
-            <input type="text" class="form-control form-control-danger" id="inputError">
-          </div>
-          <div class="form-group has-danger">
-            <label class="form-control-label" for="inputError">Localizacao</label>
-            <input type="text" class="form-control form-control-danger" id="inputError">
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary">Disabled Button</button>
-            <button type="submit" class="btn btn-primary">Disabled Button</button>
-          </div>
-          <!--</fieldset>-->
-
-        </form>
-
-      </div>
-    </div>
-  </div>
-
-<div class="col col-xl-8 col-lg-12">
+<div class="col col-xl-12 col-lg-12">
   <div class="card mb-3">
-    <div class="card-header">Table head options</div>
+
+
+    <div class="card-header">Tabela de Estacionamento</div>
+    <app-modal></app-modal>
+  
     <div class="card-block table-responsive">
-      <table class="table">
-        <thead class="thead-inverse">
-          <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="table">
-        <thead class="thead-default">
-          <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob
-              <Validation/td>
-                <td>Thornton</td>
-                <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
+      
+  <app-table></app-table>
     </div>
   </div>
 </div>

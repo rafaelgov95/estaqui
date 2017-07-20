@@ -2,7 +2,7 @@
 
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
-<h1>Local Atual: {{est.name }} </h1>
+<h1>{{est.name }} </h1>
 <agm-map [latitude]="est.lat" [longitude]="est.lng" [zoom]="15"  >
     <agm-marker [latitude]="est.lat" [longitude]="est.lng"  [label]="est.label" > </agm-marker>
 </agm-map>

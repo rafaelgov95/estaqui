@@ -1,4 +1,5 @@
 import { CdkTableModule } from '@angular/cdk';
+import { MaterializeModule } from 'angular2-materialize';
 
 import {
   MdAutocompleteModule,

@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card mb-3">
+            <!-- Large modal -->
+            <div class="card-block">
+                  <a class="btn-floating btn-large waves-effect waves-light red"  (click)="open(content)"> <i class="material-icons">add</i>Adicionar</a>
+
+                <!--<button class="btn btn-primary">Large modal</button>-->
+                <ng-template #content let-c="close" let-d="dismiss">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal title</h4>
+                        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+
+
+                        <div class="card-header">Cadastrar Estacionamento</div>
+                        <div class="card-block table-responsive">
+                            <!--<div class="col-xl-4">-->
+
+
+                            <form role="form">
+                                <!--<fieldset disabled="">-->
+                                <div class="form-group has-success">
+                                    <label class="form-control-label" for="inputSuccess">Nome</label>
+                                    <input type="text" class="form-control form-control-success" id="inputSuccess">
+                                </div>
+
+                                <div class="form-group has-warning">
+                                    <label class="form-control-label" for="inputWarning">Nome Fantasia</label>
+                                    <input type="text" class="form-control form-control-warning" id="inputWarning">
+                                </div>
+
+                                <div class="form-group has-danger">
+                                    <label class="form-control-label" for="inputError">CNPJ</label>
+                                    <input type="text" class="form-control form-control-danger" id="inputError">
+                                </div>
+                                <div class="form-group has-danger">
+                                    <label class="form-control-label" for="inputError">Servicos</label>
+                                    <input type="text" class="form-control form-control-danger" id="inputError">
+                                </div>
+                                <div class="form-group has-danger">
+                                    <label class="form-control-label" for="inputError">Localizacao</label>
+                                    <input type="text" class="form-control form-control-danger" id="inputError">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">Disabled Button</button>
+                                    <button type="submit" class="btn btn-primary">Disabled Button</button>
+                                </div>
+                                <!--</fieldset>-->
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

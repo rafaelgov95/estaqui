@@ -1,13 +1,13 @@
 import { EstacionamentoService } from './../../../../shared/services/estacionamento/EstacionamentoService.service';
 import { Observable } from 'rxjs';
-import { Component, EventEmitter, Output, Input } from '@angular/core';
+import { Component, EventEmitter, Output, Input, OnChanges } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { EstacionamentoGeo } from './../../../../_modelos/estacionamentogeo'
 import { Estacionamento } from './../../../../_modelos/estacionamento'
 
 import { FormControl } from '@angular/forms';
 
-const esta: Estacionamento[]= [
+const esta: Estacionamento[] = [
   {
     id: '1312312',
     proprietario: '1131231',
@@ -17,7 +17,7 @@ const esta: Estacionamento[]= [
     servicos: [{ nome: 'Cobert' }, { nome: 'Limpo' }],
     situacao: true,
     localizacao: [{ lat: -18.5087727, lng: -54.7453306 }],
-    funcionarios: [{ id_funcionario: 'fdaafda'}],
+    funcionarios: [{ id_funcionario: 'fdaafda' }],
     criada_em: '2017'
   }
 ]
@@ -27,31 +27,30 @@ const esta: Estacionamento[]= [
   templateUrl: './lista.component.html',
   styleUrls: ['./lista.component.css']
 })
-export class ListaComponent {
+export class ListaComponent implements OnChanges{
   @Output() emit = new EventEmitter();
-  myControl = new FormControl();
-  title = 'Últimos Visitados';
-  estacinamentos:EstacionamentoGeo[];
-  estacinamentoss=esta;
+
+
+  // myControl = new FormControl();
+  estacinamentos: EstacionamentoGeo[];
   selectedEstacionamento: EstacionamentoGeo;
 
 
   constructor(private estaci: EstacionamentoService) {
     this.estacinamentos = this.estaci.getall();
-    this.selectedEstacionamento = this.estacinamentos[0]
-    console.log(this.estacinamentos);
-  
   }
   onSelect(estacinamento: EstacionamentoGeo): void {
     this.selectedEstacionamento = estacinamento;
-    console.log('MeuTeste', this.selectedEstacionamento);
-    this.emit.emit(estacinamento);
+    // console.log('MeuTeste', this.selectedEstacionamento);
+    this.emit.emit(this.selectedEstacionamento);
   }
+
+  ngOnChanges() {
+    console.log('MeuTeste', this.selectedEstacionamento);
+   }
 
 
 }
-
-
 /*
 Copyright 2017 Google Inc. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
