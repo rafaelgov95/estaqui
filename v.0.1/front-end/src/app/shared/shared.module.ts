@@ -1,19 +1,23 @@
 import { NgModule }     from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import{AlertComponent} from './directivas/alert.component'
 import { ForbiddenValidatorDirective } from './directivas/forbidden-name.directive';
 // import { SubmittedComponent }          from './submitted.component';
 
 @NgModule({
-  imports:      [ CommonModule],
+  imports:[ CommonModule],
   declarations: [ 
     ForbiddenValidatorDirective,
+    AlertComponent
+    // UserService
   //  SubmittedComponent 
    ],
   exports:      [
      ForbiddenValidatorDirective,
+     AlertComponent
+    //  UserService,
   //  SubmittedComponent,
-                  CommonModule ]
+                   ]
 })
 export class SharedModule { }
 

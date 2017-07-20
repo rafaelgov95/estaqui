@@ -8,9 +8,9 @@ import { TranslateService } from '@ngx-translate/core';
     styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-      nome: any ;
+      currentUser: any ;
     constructor(private translate: TranslateService, public router: Router) {
-        this.nome = localStorage.getItem("email");
+        this.currentUser = JSON.parse(localStorage.getItem("currentUser"));
         this.router.events.subscribe((val) => {
             if (val instanceof NavigationEnd && window.innerWidth <= 992) {
                 this.toggleSidebar();

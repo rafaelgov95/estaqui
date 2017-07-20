@@ -21,37 +21,66 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs')
 
 
-app.use(logger('dev'));
+// app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(function(req, res, next) {
+app.use(express.static(path.join(__dirname, path.join('views', 'dist'))));
+// app.use(express.static(path.join(__dirname, 'dist')));
+
+app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
-    // res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
     next();
 });
-app.get('/', function(req, res) {
-    res.render(path.join(__dirname + '/views/index.html'));
-    //__dirname : It will resolve to your project folder.
+
+app.use('/api/*', (req, res) => {
+    console.log('teset')
+    app.post('autentica', login) // autentica
+    app.use('/api/usuario', usuario)
+    app.use(require('./routes/verifica-toke')) // verifica o token 
+    app.use('/api/funcioario', funcionario)
+    app.use('/api/estacionamento', estacionamento);
+    app.use('/api/gerente', gerencia);
 });
 
-// console.log(path.join(__dirname + '/views/index.html'))
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist/index.html'));
+});
 
 
-// console.log('teste');
-app.post('/autentica', login) // autentica
-app.use(require('./routes/verifica-toke')) // verifica o token 
-app.use('/api/usuario', usuario)
-app.use('/api/funcioario', funcionario)
-app.use('/api/estacionamento', estacionamento);
-app.use('/api/gerente', gerencia);
+// app.use(function (req, res, next) {
+// app.get('/*', function (req, res) {
+//     res.render(path.join(__dirname + '/views/dist/index.html'));
+//__dirn    ame : It will resolve to your project folder.
+// next()
+// next()
+// });
 
-app.use(function(req, res) {
+// app.use('/api/*',(req, res)=>{
+//     console.log('entro aqui ufa')
+//     app.post('autentica', login) // autentica
+//     app.use('/api/usuario', usuario)
+//     app.use(require('./routes/verifica-toke')) // verifica o token 
+//     app.use('/api/funcioario', funcionario)
+//     app.use('/api/estacionamento', estacionamento);
+//     app.use('/api/gerente', gerencia);
+// });
+
+// app.get('/*', function (req, res) {
+//     res.render(path.join(__dirname + '/views/dist/index.html'));
+//     //__dirname : It will resolve to your project folder.
+// });
+
+
+// next()
+// })
+
+app.use(function (req, res) {
     res.status(404).send({ url: req.originalUrl + ' not found' })
 });
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};

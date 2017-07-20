@@ -5,7 +5,7 @@ const sexo = require('../filds/fild-sexo')
 const created_at = require('../quarks/quarks-create-now.js');
 // console.log("entro no usuario");
 module.exports = UsuarioSchema = new mg.Schema({
-        // nome: nome,
+        nome: nome,
         email: { type: String, required: true, unique: true },
         senha: String,
         // sexo: String,

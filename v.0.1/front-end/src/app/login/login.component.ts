@@ -1,70 +1,76 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder
-    ,  Validators
- } from '@angular/forms';
-import { Router,ActivatedRoute } from '@angular/router';
+import {
+  FormGroup, FormBuilder
+  , Validators
+} from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
 
-import { LoginUser } from '../_modelos/login-user';
+import { User } from '../_modelos/user';
 // import { forbiddenNameValidator } from '../shared/directivas/forbidden-name.directive';
-import { AuthenticationService } from '../shared/services/autenticacao.service';
+import { LoginService } from '../shared/services/login/LoginService.service';
 import { AlertService } from '../shared/services/alert.service';
+// import { AuthService } from '../auth/auth.service';
 
 @Component({
-    selector: 'app-login',
-    templateUrl: './login.component.html',
-    styleUrls: ['./login.component.scss']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
 
-    alert =true;
-    returnUrl: string;
-    UserForm: FormGroup;
-    user:LoginUser;
-    submitted = false;
+  alert = true;
+  returnUrl: string;
+  UserForm: FormGroup;
+  user: User;
+  submitted = false;
 
   constructor(
-        private fb: FormBuilder,
-        private route: ActivatedRoute,
-        private router: Router,
-        private authenticationService: AuthenticationService,
-        private alertService: AlertService
-        
-    ) {  
-      this.user = new LoginUser(0, '', '');
-    }
+    private fb: FormBuilder,
+    private route: ActivatedRoute,
+    private router: Router,
+    // private loginAuthService: AuthService,
 
-   ngOnInit(): void {
+    private loginService: LoginService,
+    private alertService: AlertService
+
+  ) {
+    //  loginAuthService.handleAuthentication();
+    this.user = new User('', '', '');
+  }
+
+  ngOnInit(): void {
     this.buildForm();
-        // reset login status
-    this.authenticationService.logout();
+    this.alertService.getMessage();
+    // reset login status
+    this.loginService.logout();
 
-        // get return url from route parameters or default to '/'
+    // get return url from route parameters or default to '/'
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || 'dashboard';
   }
 
-   buildForm(): void {
+  buildForm(): void {
     this.UserForm = this.fb.group({
       'email': [this.user.email, [
-          Validators.required,
-          Validators.minLength(4),
-        ]
+        Validators.required,
+        Validators.minLength(4),
+      ]
       ],
-      'senha': [this.user.senha,[
-            Validators.required,
-            Validators.minLength(4)
-           ]]
+      'senha': [this.user.senha, [
+        Validators.required,
+        Validators.minLength(4)
+      ]]
     });
 
     this.UserForm.valueChanges
       .subscribe(data => this.onValueChanged(data));
 
-    this.onValueChanged(); 
+    this.onValueChanged();
   }
 
-   onValueChanged(data?: any) {
+  onValueChanged(data?: any) {
     if (!this.UserForm) { return; }
     const form = this.UserForm;
-    
+
     for (const field in this.formErrors) {
       // clear previous error message (if any)
       this.formErrors[field] = '';
@@ -79,37 +85,41 @@ export class LoginComponent implements OnInit {
     }
   }
 
-   formErrors = {
-    'email': '',
-    'senha': ''
+  formErrors = {
+    'email': ''
+    // ,
+    // 'senha': ''
   };
 
   validationMessages = {
     'email': {
-      'required':      'Name is required.',
-      'minlength':     'Name must be at least 4 characters long.',
-      'maxlength':     'Name cannot be more than 24 characters long.'
-    },
-    'senha': {
-      'required': 'Power is required.'
+      'required': 'Nome de usuário requerido.',
+      'minlength': 'Nome tem que possuir mais de 4 caracteres'
+      // ,
+      // 'maxlength': 'Name cannot be more than 24 characters long.'
     }
+    // ,
+    // 'senha': {
+    //   'required': 'Power is required.'
+    // }
   };
 
-    login() {
- 
-        this.authenticationService.login(this.UserForm.get('email').value, this.UserForm.get('senha').value)
-            .subscribe(
-                data => {
-                     localStorage.setItem('isLoggedin', 'true');
-                     this.router.navigate([this.returnUrl]);
-                                
-             },
-                error => {
-                    console.log('Erro');
-                    this.alertService.error(error);
-                    this.alert=false;
-                    setTimeout(() => this.alert = true, 10000);
+  
+  login() {
 
-                });
-    }
+    this.loginService.logar(this.UserForm.get('email').value, this.UserForm.get('senha').value)
+      .subscribe(
+      data => {
+        localStorage.setItem('isLoggedin', 'true');
+        this.router.navigate([this.returnUrl]);
+
+      },
+      error => {
+        console.log('Erro');
+        this.alertService.error(error);
+        this.alert = false;
+        setTimeout(() => this.alert = true, 10000);
+
+      });
+  }
 }

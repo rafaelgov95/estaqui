@@ -1,0 +1,18 @@
+#!/bin/sh
+
+export PATH=$PATH:/usr/bin
+export NODE_PATH=$NODE_PATH: /home/rafaelgoncalvesdeoliveiraviana/.nvm/v6.11.0/lib/node_modules/
+export SERVER_PORT=3000
+export SERVER_IFACE='127.0.0.1'
+
+case "$1" in
+  start)
+  exec forever --sourceDir=/var/www/estaqui/v.0.1/back-end/ -l /var/run/forever start app.js
+  ;;
+
+  stop)
+  exec forever stop --sourceDir=/var/www/estaqui/v.0.1/back-end app.js
+  ;;
+ esac
+
+exit 0
