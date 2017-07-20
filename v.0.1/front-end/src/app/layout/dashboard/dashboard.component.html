@@ -1,12 +1,13 @@
-<app-page-header [heading]="'Nevegação'" [icon]="'fa-bar-chart-o'"></app-page-header>
+<!--<app-page-header [heading]="'Nevegação'" [icon]="'fa-bar-chart-o'"></app-page-header>-->
 
 <div class="row">
     <div class="col-xl-12 text-xs-center">
         <div class="card card-default">
             <div class="card-header">Cadastrar Estacionamento</div>
             <div class="card-block table-responsive">
-                <lista></lista>
+                <lista (emit)="AutoC($event)"></lista>
 
+                   <app-maps [est]="selectedEstacionamento" ></app-maps>
 
             </div>
         </div>
@@ -21,7 +22,7 @@
             <div class="card-block table-responsive">
 
                 <button type="button" class="btn btn-success centralizado">Encontre a vaga mais próxima</button>
-                <button type="button" class="btn btn-info">Ir para o último local estacionado</button>
+                <button type="button"  (click)="setCurrentPosition()"class="btn btn-info">Ir para o último local estacionado</button>
                 <div class="form-group">
                     <label>Filtro</label>
                     <div class="checkbox">
@@ -40,11 +41,12 @@
             </div>
         </div>
     </div>
+
     <div class="col-xl-9 text-xs-center">
         <div class="card card-default">
             <div class="card-header">Cadastrar Estacionamento</div>
             <div class="card-block table-responsive">
-                <autocomplete-map></autocomplete-map>
+                <autocomplete-map (Emite)="AutoC($event)"></autocomplete-map>
             </div>
         </div>
     </div>

@@ -14,7 +14,7 @@ import {MapsComponent} from './maps.component';
          ],
     declarations: [
      
-        MapsComponent,
+        MapsComponent
         
 
     ],exports:[MapsComponent]

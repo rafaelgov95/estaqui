@@ -7,9 +7,8 @@ import { MapsModule } from '../maps/maps.module';
 
 @NgModule({
     imports: [
-        CommonModule,
-        MapsModule,
-
+        CommonModule
+        // MapsM/odule
     ],
     declarations: [
         ListaComponent

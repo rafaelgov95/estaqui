@@ -1,5 +1,6 @@
+import { EstacionamentoService } from './../../../../shared/services/estacionamento/EstacionamentoService.service';
 import { Observable } from 'rxjs';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { EstacionamentoGeo } from './../../../../_modelos/estacionamentogeo'
 import { Estacionamento } from './../../../../_modelos/estacionamento'
@@ -20,40 +21,34 @@ const esta: Estacionamento[]= [
     criada_em: '2017'
   }
 ]
-const lista: EstacionamentoGeo[] = [
-  { id: 1, name: 'Casa do Higor', label: 'Casa do Higor', lat: -18.5005715, lng: -54.7453306 },
-
-  { id: 2, name: 'Salvina Maria Do Carmo', label: 'Salvina Maria Do Carmo', lat: -18.5087727, lng: -54.7453306 },
-  { id: 3, name: 'Casa do Ramon', label: 'Casa do Ramon', lat: -18.4986773, lng: -54.7455217 },
-  { id: 4, name: 'Pedro Mendes', label: 'Pedro MendesA', lat: -18.5056868, lng: -54.7469895 },
-  { id: 5, name: 'Faculdade', label: 'Faculdade', lat: -18.4863752, lng: -54.7550554 }
-];
-
+// const lista: EstacionamentoGeo[] ;
 @Component({
   selector: 'lista',
   templateUrl: './lista.component.html',
   styleUrls: ['./lista.component.css']
 })
 export class ListaComponent {
+  @Output() emit = new EventEmitter();
   myControl = new FormControl();
   title = 'Últimos Visitados';
-  estacinamentos = lista;
+  estacinamentos:EstacionamentoGeo[];
   estacinamentoss=esta;
   selectedEstacionamento: EstacionamentoGeo;
 
 
-
-
-
-  constructor() {
-
-    this.selectedEstacionamento = lista[0]
+  constructor(private estaci: EstacionamentoService) {
+    this.estacinamentos = this.estaci.getall();
+    this.selectedEstacionamento = this.estacinamentos[0]
+    console.log(this.estacinamentos);
+  
   }
-
   onSelect(estacinamento: EstacionamentoGeo): void {
     this.selectedEstacionamento = estacinamento;
     console.log('MeuTeste', this.selectedEstacionamento);
+    this.emit.emit(estacinamento);
   }
+
+
 }
 
 

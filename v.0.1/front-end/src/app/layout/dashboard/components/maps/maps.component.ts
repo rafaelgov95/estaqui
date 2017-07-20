@@ -8,29 +8,26 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./maps.component.css']
 })
 export class MapsComponent implements OnInit {
-   @Input() est: EstacionamentoGeo;
-  // est  = new EstacionamentoGeo;
+  @Input() est: EstacionamentoGeo;
 
   title: string = 'Mapa ';
-  // lat=0;
-  // lng=0;
-  // lat ;
-  // lng ;
+
   constructor() {
-    console.log(this.est);
-    // this.lat = this.est.lat;
-    // this.lng = this.est.lng;
+    console.log("Meu TEste");
+
   }
-    modou(evento){
-      console.log(evento);
+
+  private setCurrentPosition() {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.est.lat = position.coords.latitude;
+        this.est.lng = position.coords.longitude;
+
+      });
     }
-
-
-
-
+  }
   ngOnInit() {
-    //  this.estacionamento.lat = 1;
-    // this.estacionamento.lng = 1;
+    this.setCurrentPosition()
   }
 
 }

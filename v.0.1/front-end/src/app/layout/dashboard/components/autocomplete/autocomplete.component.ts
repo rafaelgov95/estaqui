@@ -1,5 +1,7 @@
-import {Component} from '@angular/core';
-import {FormControl} from '@angular/forms';
+import { EstacionamentoGeo } from './../../../../_modelos/estacionamentogeo';
+import { EstacionamentoService } from './../../../../shared/services/estacionamento/EstacionamentoService.service';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
@@ -11,70 +13,26 @@ import 'rxjs/add/operator/map';
 export class AutocompleteComponent {
   stateCtrl: FormControl;
   filteredStates: any;
+  selectedEstacionamento: EstacionamentoGeo;
+  states: EstacionamentoGeo[];
+  @Output() Emite = new EventEmitter();
+  constructor(private sercice: EstacionamentoService,
 
-  states = [
-    'Alabama',
-    'Alaska',
-    'Arizona',
-    'Arkansas',
-    'California',
-    'Colorado',
-    'Connecticut',
-    'Delaware',
-    'Florida',
-    'Georgia',
-    'Hawaii',
-    'Idaho',
-    'Illinois',
-    'Indiana',
-    'Iowa',
-    'Kansas',
-    'Kentucky',
-    'Louisiana',
-    'Maine',
-    'Maryland',
-    'Massachusetts',
-    'Michigan',
-    'Minnesota',
-    'Mississippi',
-    'Missouri',
-    'Montana',
-    'Nebraska',
-    'Nevada',
-    'New Hampshire',
-    'New Jersey',
-    'New Mexico',
-    'New York',
-    'North Carolina',
-    'North Dakota',
-    'Ohio',
-    'Oklahoma',
-    'Oregon',
-    'Pennsylvania',
-    'Rhode Island',
-    'South Carolina',
-    'South Dakota',
-    'Tennessee',
-    'Texas',
-    'Utah',
-    'Vermont',
-    'Virginia',
-    'Washington',
-    'West Virginia',
-    'Wisconsin',
-    'Wyoming',
-  ];
-
-  constructor() {
+  ) {
     this.stateCtrl = new FormControl();
+    this.states = this.sercice.getall();
     this.filteredStates = this.stateCtrl.valueChanges
-        .startWith(null)
-        .map(name => this.filterStates(name));
+      .startWith(null)
+      .map(name => this.filterStates(name));
   }
 
   filterStates(val: string) {
-    return val ? this.states.filter(s => s.toLowerCase().indexOf(val.toLowerCase()) === 0)
-               : this.states;
+    return val ? this.states.filter(s => s.name.toLowerCase().indexOf(val.toLowerCase()) === 0)
+      : this.states;
   }
-
+  onSelect(estacinamento: EstacionamentoGeo): void {
+    this.selectedEstacionamento = estacinamento;
+    console.log('MeuTeste', this.selectedEstacionamento);
+    this.Emite.emit(this.selectedEstacionamento);
+  }
 }

@@ -1,3 +1,6 @@
+import { MapsComponent } from './components/maps/maps.component';
+import { MapsModule } from './components/maps/maps.module';
+import { EstacionamentoService } from './../../shared/services/estacionamento/EstacionamentoService.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
     MdAutocompleteModule,
@@ -71,6 +74,7 @@ import { CdkTableModule } from '@angular/cdk';
         DashboardRoutingModule,
         StatModule,
         ListaModule,
+        MapsModule,
         PageHeaderModule,
         MdNativeDateModule,
         MdAutocompleteModule,
@@ -106,14 +110,17 @@ import { CdkTableModule } from '@angular/cdk';
         MdTabsModule,
         MdToolbarModule,
         MdTooltipModule
-    ],
+    ],providers:[
+        EstacionamentoService
+        ],
     declarations: [
         DashboardComponent,
         TimelineComponent,
         NotificationComponent,
-       AutocompleteComponent
+        AutocompleteComponent
 
     ], exports: [
+        MapsModule,
         DashboardComponent,
         MdNativeDateModule,
         MdAutocompleteModule,
