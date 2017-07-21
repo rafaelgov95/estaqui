@@ -1,4 +1,3 @@
-import { EstacionamentoService } from './../../../../shared/services/estacionamento/EstacionamentoService.service';
 import {Component, ViewChild} from '@angular/core';
 import {DataSource} from '@angular/cdk';
 import {MdPaginator} from '@angular/material';
@@ -11,18 +10,13 @@ import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss']
+  styleUrls: ['table.component.scss'],
+  templateUrl: 'table.component.html',
 })
 export class TableComponent {
   displayedColumns = ['userId', 'userName', 'progress', 'color'];
   exampleDatabase = new ExampleDatabase();
   dataSource: ExampleDataSource | null;
- listaEstacionamentos: any;
-  constructor(private estacionamentoServico: EstacionamentoService) {
-    // Fill up the database with 100 users.
-    
-  }
 
   @ViewChild(MdPaginator) paginator: MdPaginator;
 
@@ -50,32 +44,28 @@ export class ExampleDatabase {
   /** Stream that emits whenever the data has been modified. */
   dataChange: BehaviorSubject<UserData[]> = new BehaviorSubject<UserData[]>([]);
   get data(): UserData[] { return this.dataChange.value; }
-
+  banco:any=[{
+      id: 1231,
+      name: "RafaelViana",
+      progress:111,
+      color:"blue"
+    },{id: 1231,
+      name: "RafaelViana",
+      progress:111,
+      color:"blue"}]
+  
   constructor() {
     // Fill up the database with 100 users.
-    for (let i = 0; i < 100; i++) { this.addUser(); }
+  const copiedData = this.data.slice();
+    copiedData.push = this.banco;
+    console.log(copiedData)
+    console.log(this.banco);
+    this.dataChange.next(this.banco);
+    console.log( this.dataChange)
+    // for (let i = 0; i < 100; i++) { this.addUser(); }
   }
 
-  /** Adds a new user to the database. */
-  addUser() {
-    const copiedData = this.data.slice();
-    copiedData.push(this.createNewUser());
-    this.dataChange.next(copiedData);
-  }
-
-  /** Builds and returns a new User. */
-  private createNewUser() {
-    const name =
-        NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
-        NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
-
-    return {
-      id: (this.data.length + 1).toString(),
-      name: name,
-      progress: Math.round(Math.random() * 100).toString(),
-      color: COLORS[Math.round(Math.random() * (COLORS.length - 1))]
-    };
-  }
+  
 }
 
 /**
@@ -99,7 +89,6 @@ export class ExampleDataSource extends DataSource<any> {
 
     return Observable.merge(...displayDataChanges).map(() => {
       const data = this._exampleDatabase.data.slice();
-
       // Grab the page's slice of data.
       const startIndex = this._paginator.pageIndex * this._paginator.pageSize;
       return data.splice(startIndex, this._paginator.pageSize);
@@ -108,8 +97,3 @@ export class ExampleDataSource extends DataSource<any> {
 
   disconnect() {}
 }
-
-
-/**  Copyright 2017 Google Inc. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at http://angular.io/license */

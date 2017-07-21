@@ -3,6 +3,6 @@
 </md-input-container>
 <md-autocomplete #auto="mdAutocomplete">
   <md-option *ngFor="let state of filteredStates | async" [value]="state.nome" (click)="onSelect(state)">
-    {{ state.name}}
+    {{ state.nome}}
   </md-option>
 </md-autocomplete>

@@ -1,10 +1,11 @@
+import { EstacionamentoService } from './../../../shared/services/estacionamento/EstacionamentoService.service';
 import { ModalComponent } from './modal/modal.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { EstacionamentosRoutingModule } from './estacionamentos-routing.module';
 import { EstacionamentosComponent } from './estacionamentos.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import{ MdTableModule,MdPaginatorModule
+import{ MdTableModule,MdPaginatorModule,MdInputModule
 } from '@angular/material'
 import {CdkTableModule} from '@angular/cdk';
 
@@ -23,8 +24,9 @@ import { TableComponent } from './table/table.component';
     ReactiveFormsModule,
     NgbModule.forRoot(),
       MdTableModule,
+      MdInputModule,
       CdkTableModule,MdPaginatorModule
-  ],
+  ],providers:[EstacionamentoService],
   declarations: [
     EstacionamentosComponent,
     ModalComponent, 
@@ -35,6 +37,7 @@ import { TableComponent } from './table/table.component';
     FormsModule,
     ReactiveFormsModule,
     MdTableModule,
+    MdInputModule,
     CdkTableModule,MdPaginatorModule]
 })
 export class EstacionamentosModule { }

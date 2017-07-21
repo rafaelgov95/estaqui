@@ -28,12 +28,17 @@ export class AutocompleteComponent implements OnInit {
   }
   ngOnInit() {
     this.getEstaciomentos();
+    console.log(this.ListaEstacionamentos);
+
+
   }
+
   getEstaciomentos() {
     this.service.getEstacionamentos()
       .subscribe(
-      ListaEstacionamentos => this.ListaEstacionamentos = ListaEstacionamentos,
+      (ListaEstacionamentos: Estacionamento[]) => this.ListaEstacionamentos = ListaEstacionamentos,
       error => this.errorMessage = <any>error);
+
   }
 
   filterStates(val: string) {
