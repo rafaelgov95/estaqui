@@ -1,6 +1,6 @@
-import { EstacionamentoGeo } from './../../../../_modelos/estacionamentogeo';
+import { Estacionamento } from './../../../../_modelos/estacionamento';
 import { EstacionamentoService } from './../../../../shared/services/estacionamento/EstacionamentoService.service';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 import 'rxjs/add/operator/startWith';
@@ -10,27 +10,42 @@ import 'rxjs/add/operator/map';
   selector: 'autocomplete-map',
   templateUrl: 'autocomplete.component.html',
 })
-export class AutocompleteComponent {
+export class AutocompleteComponent implements OnInit {
   stateCtrl: FormControl;
   filteredStates: any;
-  selectedEstacionamento: EstacionamentoGeo;
-  states: EstacionamentoGeo[];
+  ListaEstacionamentos: Estacionamento[];
+  selectedEstacionamento: Estacionamento;
+  errorMessage: string;
+
   @Output() Emite = new EventEmitter();
-  constructor(private sercice: EstacionamentoService,
+  constructor(private service: EstacionamentoService,
 
   ) {
     this.stateCtrl = new FormControl();
-    this.states = this.sercice.getall();
     this.filteredStates = this.stateCtrl.valueChanges
       .startWith(null)
-      .map(name => this.filterStates(name));
+      .map(estacionamento => this.filterStates(estacionamento));
+  }
+  ngOnInit() {
+    this.getEstaciomentos();
+    console.log(this.ListaEstacionamentos);
+
+
+  }
+
+  getEstaciomentos() {
+    this.service.getEstacionamentos()
+      .subscribe(
+      (ListaEstacionamentos: Estacionamento[]) => this.ListaEstacionamentos = ListaEstacionamentos,
+      error => this.errorMessage = <any>error);
+
   }
 
   filterStates(val: string) {
-    return val ? this.states.filter(s => s.name.toLowerCase().indexOf(val.toLowerCase()) === 0)
-      : this.states;
+    return val ? this.ListaEstacionamentos.filter(s => s.nome.toLowerCase().indexOf(val.toLowerCase()) === 0)
+      : this.ListaEstacionamentos;
   }
-  onSelect(estacinamento: EstacionamentoGeo): void {
+  onSelect(estacinamento: Estacionamento): void {
     this.selectedEstacionamento = estacinamento;
     console.log('MeuTeste', this.selectedEstacionamento);
     this.Emite.emit(this.selectedEstacionamento);
