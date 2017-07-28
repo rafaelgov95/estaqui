@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
             navigator.geolocation.getCurrentPosition((position) => {
                 this.selectedEstacionamentoNovo.localizacao.lat = position.coords.latitude;
                 this.selectedEstacionamentoNovo.localizacao.lng = position.coords.longitude;
-                // console.log(this.selectedEstacionamentoNovo)
+                console.log(this.selectedEstacionamentoNovo)
 
             });
         }
