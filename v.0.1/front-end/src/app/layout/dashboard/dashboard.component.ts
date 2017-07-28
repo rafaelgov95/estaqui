@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
 
-    selectedEstacionamentoNovo:Estacionamento = new Estacionamento;
+    selectedEstacionamentoNovo:Estacionamento = new Estacionamento('','','','','',1,1,true);;
 
     constructor() {
        

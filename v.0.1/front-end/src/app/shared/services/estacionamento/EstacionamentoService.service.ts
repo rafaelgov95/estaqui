@@ -11,7 +11,7 @@ export class EstacionamentoService {
     constructor(private http: Http) { }
 
 
-    create() {
+    get():Observable<Estacionamento[]>{
         return this.http.get('http://localhost:3000/api/estacionamento/listar').map((response: Response) => response.json());
     }
 
@@ -27,6 +27,7 @@ export class EstacionamentoService {
         //let temp = res.json()['Location'];
         //let body = JSON.parse(temp); Unexpected token o on line 1 ... this is because of unrequired parsing i have discovered
         //return body || { }; this is nonsense.
+        console.log(body);
         return body || { };
     }
 

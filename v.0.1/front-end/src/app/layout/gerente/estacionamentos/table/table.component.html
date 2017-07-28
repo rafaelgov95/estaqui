@@ -1,3 +1,14 @@
+
+ <div class="card-block">
+                   <ul class="heroes">
+                       <li *ngFor="let estacinamento of estacionamentos" [class.selected]="estacinamento === selectedEstacionamento" (click)="onSelect(estacinamento)">
+                          <span class="badge">{{estacinamento.nome}}</span> {{estacinamento.nome}}
+                      <!--<span class="badge">{{estacinamento._id}}</span> {{estacinamento.nome}}-->
+
+                       </li>
+                   </ul>    
+            </div>
+
 <div class="example-container mat-elevation-z8">
 
   <md-table #table [dataSource]="dataSource">
@@ -24,9 +35,9 @@
     </ng-container>
 
     <!-- Color Column -->
-    <ng-container cdkColumnDef="color">
-      <md-header-cell *cdkHeaderCellDef> Color </md-header-cell>
-      <md-cell *cdkCellDef="let row" [style.color]="row.color"> {{row.color}} </md-cell>
+    <ng-container cdkColumnDef="nome_fantasia">
+      <md-header-cell *cdkHeaderCellDef> Nome Fantasia </md-header-cell>
+      <md-cell *cdkCellDef="let row" > {{row.nome_fantasia}} </md-cell>
     </ng-container>
 
     <md-header-row *cdkHeaderRowDef="displayedColumns"></md-header-row>

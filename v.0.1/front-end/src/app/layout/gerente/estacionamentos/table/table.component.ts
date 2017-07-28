@@ -1,8 +1,10 @@
-import {Component, ViewChild} from '@angular/core';
-import {DataSource} from '@angular/cdk';
-import {MdPaginator} from '@angular/material';
-import {BehaviorSubject} from 'rxjs/BehaviorSubject';
-import {Observable} from 'rxjs/Observable';
+import { EstacionamentoService } from './../../../../shared/services/estacionamento/EstacionamentoService.service';
+import { Estacionamento } from './../../../../_modelos/estacionamento';
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { DataSource } from '@angular/cdk';
+import { MdPaginator } from '@angular/material';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/observable/merge';
 import 'rxjs/add/operator/map';
@@ -13,59 +15,72 @@ import 'rxjs/add/operator/map';
   styleUrls: ['table.component.scss'],
   templateUrl: 'table.component.html',
 })
-export class TableComponent {
-  displayedColumns = ['userId', 'userName', 'progress', 'color'];
-  exampleDatabase = new ExampleDatabase();
+export class TableComponent implements OnInit {
+  estacionamentos: any;
+  displayedColumns = ['userId', 'userName', 'progress', 'nome_fantasia'];
+  exampleDatabase:ExampleDatabase;
   dataSource: ExampleDataSource | null;
-
+  errorMessage: string;
   @ViewChild(MdPaginator) paginator: MdPaginator;
+  constructor(private servico: EstacionamentoService) {
+
+  }
 
   ngOnInit() {
+    this.estacionamentos = new Estacionamento();
     this.dataSource = new ExampleDataSource(this.exampleDatabase, this.paginator);
+    this.exampleDatabase = new ExampleDatabase(this.estacionamentos);
+    this.Estacionamento()
+    if (this.estacionamentos != null ) {
+      console.log("Validado")
+    } else { console.log("Erro Validacao") }
+
+    if (this.estacionamentos != null && this.estacionamentos.length > 0) {
+     for (let b of this.estacionamentos) {
+     console.log(b);
+    }
+  }
+}
+
+  Estacionamento() {
+    this.servico.getEstacionamentos()
+      .subscribe(
+      (ListaEstacionamentos: Estacionamento[]) => this.estacionamentos = ListaEstacionamentos,
+      error => this.errorMessage = <any>error);
+
   }
 }
 
 /** Constants used to fill up our data base. */
-const COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
-  'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-const NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
-  'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
-  'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
 
-export interface UserData {
-  id: string;
-  name: string;
-  progress: string;
-  color: string;
-}
 
 /** An example database that the data source uses to retrieve data for the table. */
 export class ExampleDatabase {
   /** Stream that emits whenever the data has been modified. */
-  dataChange: BehaviorSubject<UserData[]> = new BehaviorSubject<UserData[]>([]);
-  get data(): UserData[] { return this.dataChange.value; }
-  banco:any=[{
-      id: 1231,
-      name: "RafaelViana",
-      progress:111,
-      color:"blue"
-    },{id: 1231,
-      name: "RafaelViana",
-      progress:111,
-      color:"blue"}]
-  
-  constructor() {
-    // Fill up the database with 100 users.
-  const copiedData = this.data.slice();
-    copiedData.push = this.banco;
-    console.log(copiedData)
-    console.log(this.banco);
-    this.dataChange.next(this.banco);
-    console.log( this.dataChange)
-    // for (let i = 0; i < 100; i++) { this.addUser(); }
+  dataChange: BehaviorSubject<Estacionamento[]> = new BehaviorSubject<Estacionamento[]>([]);
+  get data(): Estacionamento[] { return this.dataChange.value; }
+  bancoc: any = [{
+    id: 1231,
+    name: "RafaelViana",
+    progress: 111,
+    nome_fantasia: "blue"
+  }]
+  constructor(private banco :any[]) {
+    if (banco != null ) {
+      console.log("Validado")
+    } else { console.log("Erro Validacao") }
+    // for (let b of banco) {
+    //   const copiedData = this.data.slice();
+    //   copiedData.push(b);
+    //   this.dataChange.next(copiedData);
+    // }
+    const copiedData = this.data.slice()
+    copiedData.push(this.bancoc);
+    this.dataChange.next(copiedData);
   }
 
-  
+  /** Adds a new user to the database. */
+
 }
 
 /**
@@ -81,7 +96,7 @@ export class ExampleDataSource extends DataSource<any> {
   }
 
   /** Connect function called by the table to retrieve one stream containing the data to render. */
-  connect(): Observable<UserData[]> {
+  connect(): Observable<Estacionamento[]> {
     const displayDataChanges = [
       this._exampleDatabase.dataChange,
       this._paginator.page,
@@ -95,5 +110,5 @@ export class ExampleDataSource extends DataSource<any> {
     });
   }
 
-  disconnect() {}
+  disconnect() { }
 }
