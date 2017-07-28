@@ -45,7 +45,6 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { AutocompleteComponent } from './layout/dashboard/components/autocomplete/autocomplete.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthGuard } from './shared';
-import { AlertService } from './shared/services/alert.service';
 import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
 

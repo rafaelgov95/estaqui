@@ -15,19 +15,21 @@ export class ListaComponent implements OnInit {
   @Output() emit = new EventEmitter();
   errorMessage: string;
   estacinamentos: Estacionamento[];
-
+  
 
 
   selectedEstacionamento: Estacionamento;
 
 
   constructor(private estaci: EstacionamentoService) {
-
+      this.selectedEstacionamento = new Estacionamento('','','','','',1,1,true);
   }
 
   onSelect(estacinamento: Estacionamento): void {
+  
     this.selectedEstacionamento = estacinamento;
-    this.emit.emit(this.selectedEstacionamento);
+    // esta
+    this.emit.emit( this.selectedEstacionamento);
   }
 
   ngOnInit() {
@@ -38,11 +40,10 @@ export class ListaComponent implements OnInit {
   }
 
   getEstaciomentos() {
-    this.estaci.getEstacionamentos()
+    this.estaci.getAll()
       .subscribe(
       (ListaEstacionamentos: Estacionamento[]) => this.estacinamentos = ListaEstacionamentos,
       error => this.errorMessage = <any>error);
-
   }
 
 }

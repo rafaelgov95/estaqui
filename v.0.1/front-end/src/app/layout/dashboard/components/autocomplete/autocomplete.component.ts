@@ -34,11 +34,10 @@ export class AutocompleteComponent implements OnInit {
   }
 
   getEstaciomentos() {
-    this.service.getEstacionamentos()
+    this.service.getAll()
       .subscribe(
       (ListaEstacionamentos: Estacionamento[]) => this.ListaEstacionamentos = ListaEstacionamentos,
       error => this.errorMessage = <any>error);
-
   }
 
   filterStates(val: string) {

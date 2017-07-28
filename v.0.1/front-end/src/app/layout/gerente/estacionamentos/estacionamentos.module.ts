@@ -1,3 +1,4 @@
+import { AgmCoreModule } from '@agm/core';
 import { CadastrarModule } from './cadastrar/cadastrar.module';
 import { EstacionamentoService } from './../../../shared/services/estacionamento/EstacionamentoService.service';
 import { EstacionamentosRoutingModule } from './estacionamentos-routing.module';
@@ -13,9 +14,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PageHeaderModule } from '../../../shared';
 import { TableComponent } from './table/table.component';
+import { GoogleComponent } from './google/google.component';
 
 @NgModule({
   imports: [
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDYeNFzbOHKshPnZ11jefzhIlvUmufvr5w',
+      libraries: ["places"]
+    }),
     CadastrarModule,
     CommonModule,
     EstacionamentosRoutingModule,
@@ -30,7 +36,8 @@ import { TableComponent } from './table/table.component';
   ], providers: [EstacionamentoService],
   declarations: [
     EstacionamentosComponent,
-    TableComponent],
+    TableComponent,
+    GoogleComponent],
   exports: [
     CadastrarModule,
     EstacionamentosComponent,

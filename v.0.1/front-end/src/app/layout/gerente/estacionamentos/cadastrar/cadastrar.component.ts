@@ -1,3 +1,4 @@
+import { EstacionamentoService } from './../../../../shared/services/estacionamento/EstacionamentoService.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Estacionamento } from './../../../../_modelos/estacionamento';
 import { Component } from '@angular/core';
@@ -14,19 +15,15 @@ export class CadastrarComponent {
     CadastraForm: FormGroup;
     estacionamento: Estacionamento;
     constructor(private fb: FormBuilder,
-        private modalService: NgbModal
+        private modalService: NgbModal,
+        private service: EstacionamentoService
     ) {
-        this.estacionamento = new Estacionamento('', '', '', '', '', 1, 1, true);
+        this.estacionamento = new Estacionamento('', '', '', '', '', 0, 0, true);
         console.log(this.estacionamento);
     }
     ngOnInit(): void {
         this.buildForm();
-        // this.alertService.getMessage();
-        // reset login status
-        // this.loginService.logout();
-
-        // get return url from route parameters or default to '/'
-        // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || 'dashboard';
+        console.log(this.CadastraForm)
     }
 
 
@@ -35,9 +32,7 @@ export class CadastrarComponent {
             'nome': [this.estacionamento.nome, [
                 Validators.required,
                 Validators.minLength(4)
-                // Validators.pattern(this.emailRegex)
-            ]
-            ],
+            ]],
             'nome_fantasia': [this.estacionamento.nome_fantasia, [
                 Validators.required,
                 Validators.minLength(4)
@@ -66,6 +61,7 @@ export class CadastrarComponent {
     onValueChanged(data?: any) {
         if (!this.CadastraForm) { return; }
         const form = this.CadastraForm;
+        console.log(this.CadastraForm);
         for (const field in this.formErrors) {
             this.formErrors[field] = '';
             const control = form.get(field);
@@ -95,9 +91,42 @@ export class CadastrarComponent {
             'required': 'Nome de usuário requerido',
             'minlength': 'Nome tem que possuir mais de 4 caracteres',
             // 'pattern': 'Formato de email esta incorreto'
+        },
+        'nome_fantasia': {
+            'required': 'Nome de usuário requerido',
+            'minlength': 'Nome tem que possuir mais de 4 caracteres',
+            // 'pattern': 'Formato de email esta incorreto'
+        },
+        'cpf': {
+            'required': 'Nome de usuário requerido',
+            'minlength': 'Nome tem que possuir mais de 4 caracteres',
+            // 'pattern': 'Formato de email esta incorreto'
+        },
+        'lat': {
+            'required': 'Nome de usuário requerido',
+            'minlength': 'Nome tem que possuir mais de 4 caracteres',
+            // 'pattern': 'Formato de email esta incorreto'
+        },
+        'lng': {
+            'required': 'Nome de usuário requerido',
+            'minlength': 'Nome tem que possuir mais de 4 caracteres',
+            // 'pattern': 'Formato de email esta incorreto'
         }
 
     };
+
+    OnSubmit(event) {
+        // console.log(JSON.parse(event))
+
+        var test = this.service.create(event).subscribe(data=>{
+            console.log("Deu Bom!!")
+        },erro=>{
+            console.log("Deu ruim!!")
+        });
+
+        
+    }
+
     open(content) {
         this.modalService.open(content).result.then((result) => {
             this.closeResult = `Closed with: ${result}`;
