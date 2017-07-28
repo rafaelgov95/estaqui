@@ -1,3 +1,4 @@
+import { EstacionamentoService } from './../../shared/services/estacionamento/EstacionamentoService.service';
 import { EstacionamentosModule } from './estacionamentos/estacionamentos.module';
 import { GerenteRoutingModule } from './gerente-routing.module';
 import { NgModule } from '@angular/core';
@@ -10,8 +11,10 @@ import { GerenteComponent } from './gerente.component';
     CommonModule,
     GerenteRoutingModule,
     EstacionamentosModule
+  ],providers:[
+    EstacionamentoService
   ],
-  declarations: [GerenteComponent]
+    declarations: [GerenteComponent]
   ,exports:[GerenteComponent]
 })
 export class GerenteModule { }
