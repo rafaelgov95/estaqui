@@ -27,7 +27,7 @@ export class TableComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.estacionamentos = new Estacionamento();
+    // this.estacionamentos = new Estacionamento();
     this.dataSource = new ExampleDataSource(this.exampleDatabase, this.paginator);
     this.exampleDatabase = new ExampleDatabase(this.estacionamentos);
     this.Estacionamento()
