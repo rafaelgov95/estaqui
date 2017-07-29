@@ -10,10 +10,10 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
 
-    selectedEstacionamentoNovo:Estacionamento ; 
+    selectedEstacionamentoNovo: Estacionamento;
 
     constructor() {
-       this.selectedEstacionamentoNovo = new Estacionamento('','','','','',1,1,true);;
+        this.selectedEstacionamentoNovo = new Estacionamento('', '', '', '', '', 1, 1, true);;
     }
     ngOnInit() {
         this.setCurrentPosition()
@@ -24,11 +24,12 @@ export class DashboardComponent implements OnInit {
                 this.selectedEstacionamentoNovo.localizacao.lat = position.coords.latitude;
                 this.selectedEstacionamentoNovo.localizacao.lng = position.coords.longitude;
                 console.log(this.selectedEstacionamentoNovo)
+                var estacionaemnto: Estacionamento;
 
             });
         }
     }
-    
+
     AutoC(event) {
         console.log(event)
         this.selectedEstacionamentoNovo = event;

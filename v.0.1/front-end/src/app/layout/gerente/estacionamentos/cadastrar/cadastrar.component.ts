@@ -1,7 +1,9 @@
+import { GoogleComponent } from './../google/google.component';
+import { FormControl } from '@angular/forms';
 import { EstacionamentoService } from './../../../../shared/services/estacionamento/EstacionamentoService.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Estacionamento } from './../../../../_modelos/estacionamento';
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -14,18 +16,28 @@ export class CadastrarComponent {
     closeResult: string;
     CadastraForm: FormGroup;
     estacionamento: Estacionamento;
+
+
+    public latitude: number;
+    public longitude: number;
+    public searchControl: FormControl;
+    public zoom: number;
+
     constructor(private fb: FormBuilder,
         private modalService: NgbModal,
-        private service: EstacionamentoService
+        private service: EstacionamentoService,
+
     ) {
+        
         this.estacionamento = new Estacionamento('', '', '', '', '', 0, 0, true);
         console.log(this.estacionamento);
     }
     ngOnInit(): void {
         this.buildForm();
-        console.log(this.CadastraForm)
-    }
+        console.log("Meu teste",this.CadastraForm.value)
 
+
+    }
 
     buildForm(): void {
         this.CadastraForm = this.fb.group({
@@ -62,6 +74,7 @@ export class CadastrarComponent {
         if (!this.CadastraForm) { return; }
         const form = this.CadastraForm;
         console.log(this.CadastraForm);
+        console.log(this.estacionamento.lat)
         for (const field in this.formErrors) {
             this.formErrors[field] = '';
             const control = form.get(field);
@@ -116,23 +129,21 @@ export class CadastrarComponent {
     };
 
     OnSubmit(event) {
-        // console.log(JSON.parse(event))
-
-        var test = this.service.create(event).subscribe(data=>{
+        var test = this.service.create(event).subscribe(data => {
             console.log("Deu Bom!!")
-        },erro=>{
+        }, erro => {
             console.log("Deu ruim!!")
         });
-
-        
     }
 
     open(content) {
+        this.buildForm();
         this.modalService.open(content).result.then((result) => {
             this.closeResult = `Closed with: ${result}`;
         }, (reason) => {
             this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
         });
+
     }
     openEndereco(content) {
         this.modalService.open(content).result.then((result) => {
@@ -153,4 +164,13 @@ export class CadastrarComponent {
             return `with: ${reason}`;
         }
     }
+
+    Auto(event) {
+        this.estacionamento.localizacao.lat = event[0];
+        this.estacionamento.localizacao.lng = event[1];
+        this.CadastraForm.get("lat").setValue(event[0]);
+        this.CadastraForm.get("lng").setValue(event[1]);
+        console.log("Ta chegando", this.CadastraForm.get("lat"),this.CadastraForm.get("lng"))
+    }
+
 }

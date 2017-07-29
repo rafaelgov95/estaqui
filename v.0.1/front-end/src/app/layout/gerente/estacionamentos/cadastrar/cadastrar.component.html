@@ -56,22 +56,20 @@
                                     </div>
                                 </div>
 
-
+                             
                                 <div class="form-group">
-                                    <button (click)="c('Close click')"  class="btn btn-primary">Cancelar</button>
+                                    <button (click)="c('Close click')" class="btn btn-primary">Cancelar</button>
                                     <button [disabled]="!CadastraForm.valid" ype="submit" class="btn btn-primary">Salvar</button>
                                 </div>
-                                <!--</fieldset>-->
-
+                             
                             </form>
 
                         </div>
                     </div>
 
-                    <!--<div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
-                    </div>-->
+
                 </ng-template>
+                   <app-google (envia)="Auto($event)"></app-google>
             </div>
         </div>
     </div>

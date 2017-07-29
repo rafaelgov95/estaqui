@@ -1,18 +1,16 @@
-import { ElementRef, Component, NgZone, OnInit, ViewChild } from '@angular/core';
+import { ElementRef, Component, NgZone, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
 import { FormControl } from "@angular/forms";
 import { MapsAPILoader } from '@agm/core';
-import {} from '@types/googlemaps'; 
+import { } from '@types/googlemaps';
 
 @Component({
   selector: 'app-google',
   styles: [`
-    agm-map {
-      height: 300px;
-    }
+ 
   `],
   template: `
     <div class="container">
-      <h1>Angular 2 + Google Maps Places Autocomplete</h1>
+      <h1>Escolha um endereço para cadastro</h1>
       <div class="form-group">
         <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
       </div>
@@ -29,6 +27,8 @@ export class GoogleComponent implements OnInit {
   public searchControl: FormControl;
   public zoom: number;
 
+
+  @Output() envia = new EventEmitter();
   @ViewChild("search")
   public searchElementRef: ElementRef;
 
@@ -68,6 +68,8 @@ export class GoogleComponent implements OnInit {
           this.latitude = place.geometry.location.lat();
           this.longitude = place.geometry.location.lng();
           this.zoom = 12;
+          
+          this.envia.emit([this.longitude,this.longitude]);
         });
       });
     });
