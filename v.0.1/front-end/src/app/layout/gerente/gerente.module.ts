@@ -9,10 +9,6 @@ import { AgmCoreModule } from "angular2-google-maps/core";
 
 @NgModule({
   imports: [
-     AgmCoreModule.forRoot({
-      apiKey: "YOUR KEY GOES HERE",
-      libraries: ["places"]
-    }),
     CommonModule,
     GerenteRoutingModule,
     EstacionamentosModule

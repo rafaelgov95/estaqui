@@ -5,18 +5,14 @@ import { } from '@types/googlemaps';
 
 @Component({
   selector: 'app-google',
-  styles: [`
- 
-  `],
+   styleUrls: ['./google.component.scss'],
   template: `
     <div class="container">
       <h1>Escolha um endereço para cadastro</h1>
       <div class="form-group">
         <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
       </div>
-      <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
-        <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
-      </agm-map>
+    
     </div>
   `
 })
@@ -53,17 +49,18 @@ export class GoogleComponent implements OnInit {
     this.mapsAPILoader.load().then(() => {
       let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
         types: ["address"]
-      });
-      autocomplete.addListener("place_changed", () => {
+        
+      }
+    );
+    autocomplete.addListener("place_changed", () => {
         this.ngZone.run(() => {
           //get the place result
           let place: google.maps.places.PlaceResult = autocomplete.getPlace();
-
           //verify result
           if (place.geometry === undefined || place.geometry === null) {
             return;
           }
-
+          
           //set latitude, longitude and zoom
           this.latitude = place.geometry.location.lat();
           this.longitude = place.geometry.location.lng();
@@ -72,8 +69,7 @@ export class GoogleComponent implements OnInit {
           this.envia.emit([this.longitude,this.longitude]);
         });
       });
-    });
-  }
+    });  }
 
   private setCurrentPosition() {
     if ("geolocation" in navigator) {

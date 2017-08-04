@@ -5,7 +5,7 @@
             <div class="card-block">
                 <a class="btn-floating btn-large waves-effect waves-light red" (click)="open(content)"> <i class="material-icons">add</i>Adicionar</a>
 
-                <ng-template #content let-c="close" let-d="dismiss">
+                <ng-template #content let-c="close" let-d="dismiss" >
                     <div class="modal-header">
                         <h4 class="modal-title">Cadastrar Estacionamento</h4>
                         <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
@@ -55,13 +55,12 @@
                                         {{ formErrors.lng }}
                                     </div>
                                 </div>
-
-                             
+                                <app-google> </app-google>
                                 <div class="form-group">
                                     <button (click)="c('Close click')" class="btn btn-primary">Cancelar</button>
                                     <button [disabled]="!CadastraForm.valid" ype="submit" class="btn btn-primary">Salvar</button>
                                 </div>
-                             
+
                             </form>
 
                         </div>
@@ -69,7 +68,7 @@
 
 
                 </ng-template>
-                   <app-google (envia)="Auto($event)"></app-google>
+                <app-google (envia)="Auto($event)"></app-google>
             </div>
         </div>
     </div>
