@@ -17,7 +17,7 @@ export class SignupComponent implements OnInit {
       message:any;
       UserForm: FormGroup;
       erro:boolean = false;
-      sucesso:boolean=false;
+      sucesso:boolean = false;
    constructor(
      private fb: FormBuilder,
         private router: Router,
@@ -123,7 +123,7 @@ export class SignupComponent implements OnInit {
                     // this.router.navigate(['/login']);
                     this.sucesso = true;
                     
-                    setTimeout(() => this.router.navigate(['/login']), 15000);
+                    // setTimeout(() => this.router.navigate(['/login']), 15000);
                 },
                 error => {
                   console.log("erro")

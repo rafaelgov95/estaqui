@@ -95,8 +95,13 @@ export class LoginComponent implements OnInit {
     'email': {
       'required': 'Nome de usuário requerido.',
       'minlength': 'Nome tem que possuir mais de 4 caracteres'
+      // ,
+      // 'maxlength': 'Name cannot be more than 24 characters long.'
     }
-   
+    // ,
+    // 'senha': {
+    //   'required': 'Power is required.'
+    // }
   };
 
   
