@@ -17,7 +17,7 @@ import { AlertService } from '../shared/services/alert.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  emailRegex = '^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$';
   alert = true;
   returnUrl: string;
   UserForm: FormGroup;
@@ -28,13 +28,11 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
-    // private loginAuthService: AuthService,
 
     private loginService: LoginService,
     private alertService: AlertService
 
   ) {
-    //  loginAuthService.handleAuthentication();
     this.user = new User('', '', '');
   }
 
@@ -53,6 +51,7 @@ export class LoginComponent implements OnInit {
       'email': [this.user.email, [
         Validators.required,
         Validators.minLength(4),
+        Validators.pattern(this.emailRegex)
       ]
       ],
       'senha': [this.user.senha, [
@@ -94,7 +93,8 @@ export class LoginComponent implements OnInit {
   validationMessages = {
     'email': {
       'required': 'Nome de usuário requerido.',
-      'minlength': 'Nome tem que possuir mais de 4 caracteres'
+      'minlength': 'Nome tem que possuir mais de 4 caracteres',
+      'pattern':'Email esta incorreto'
       // ,
       // 'maxlength': 'Name cannot be more than 24 characters long.'
     }
