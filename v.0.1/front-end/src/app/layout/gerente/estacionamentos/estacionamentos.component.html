@@ -3,11 +3,27 @@
 
 <div class="row">
 
-
   <div class="col col-xl-12 col-lg-12">
-    <div class="card mb-3">
-      <app-cadastrar> </app-cadastrar>
+    <div class="card-block table-responsive">
+     <md-toolbar>
+        <button md-icon-button [mdMenuTriggerFor]="anchorMenu" aria-label="Open anchor menu">
+        <md-icon>more_vert</md-icon>
+       </button>Meus Estacionamentos
+      </md-toolbar>
+      <!-- <div class="card-header">Meus Estacionamentos</div> -->
 
+      <div class="menu-section">
+     
+        <md-menu #anchorMenu="mdMenu">
+          <a md-menu-item *ngFor="let item of items" (click)='adicionar=!adicionar' [disabled]="item.disabled">
+        {{ item.text }}
+      </a>
+        </md-menu>
+      </div>
+      <div [hidden]="!adicionar" class="col-lg-12">
+        <app-cadastrar> </app-cadastrar>
+      </div>
+      
       <div class="card-header">Tabela de Estacionamento</div>
       <div class="card-block table-responsive">
 
