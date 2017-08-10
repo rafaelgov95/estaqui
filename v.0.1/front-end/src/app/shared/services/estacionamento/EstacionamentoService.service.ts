@@ -10,7 +10,7 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class EstacionamentoService {
-   EmitterDelivery = new EventEmitter();
+  EmitterDelivery = new EventEmitter();
 
   private testUrl = 'http://localhost:3000/api/estacionamento/listar';
 
@@ -21,11 +21,11 @@ export class EstacionamentoService {
     return this.http.get('http://localhost:3000/api/estacionamento/listar').map((response: Response) => response.json());
   }
 
-  create(user: Estacionamento) : Observable<Estacionamento[]> {
-      //  headers.append('Authorization', 'Basic ' +
-      // btoa('username:password')); 
-    return this.http.post('http://localhost:3000/api/estacionamento/save',user).map((response: Response) => response.json());
-    }
+  create(user: Estacionamento): Observable<Estacionamento[]> {
+    //  headers.append('Authorization', 'Basic ' +
+    // btoa('username:password')); 
+    return this.http.post('http://localhost:3000/api/estacionamento/save', user).map((response: Response) => response.json());
+  }
 
   getEstacionamentos() {
     return this.http.get(this.testUrl)
@@ -36,16 +36,18 @@ export class EstacionamentoService {
   getAllEstacionamentos(): Observable<Estacionamento[]> {
 
     return this.http.get(this.testUrl).map((response: Response) => response.json());
-      
+
   }
 
- remove(est:Estacionamento): Observable<Estacionamento> {
-   var body =JSON.stringify(est);
+  remove(est: any): Observable<Estacionamento> {
+
     return this.http
-        .delete('http://localhost:3000/api/estacionamento/remove',body)
-        .map(this.extractData)
-        .catch(this.handleError);
-    }  
+      .delete('http://localhost:3000/api/estacionamento/remove',est )
+      .map(this.extractData)
+      .catch(this.handleError);
+  }
+
+  
   private extractData(res: Response) {
     let body = res.json();
     return body || {};

@@ -36,11 +36,9 @@ export class TableComponent implements OnInit {
       this.dataSource = this.estacionamentos;
   }
 
-  Apagar(event:Estacionamento){
-    this.servico.remove(event)
-      .subscribe(data => console.log(data));
-
-    console.log(event)
-        // this.servico.EmitterDelivery.subscribe(est => this.estacionamentos(event))
-  }
+  Apagar(estacionamento:Estacionamento){
+    console.log(estacionamento)
+    this.servico.remove(estacionamento)
+      .subscribe(data => this.estacionamentos.splice(this.estacionamentos.indexOf(data),1), err => console.log(err) );
+       }
 }

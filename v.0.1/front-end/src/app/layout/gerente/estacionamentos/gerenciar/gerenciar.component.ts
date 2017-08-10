@@ -214,6 +214,7 @@ export class GerenciarComponent {
  ngOnChanges() {
         // // Listen to the 'edit'emitted event so as populate the model
         // // with the event payload
+        this.service.EmitterDelivery.subscribe(estacionamento => console.log(estacionamento))
         // EmitterDelivery.get(this.estacionamento._id).subscribe((comment:Estacionamento) => {
         //     this.estacionamento = comment
         // });

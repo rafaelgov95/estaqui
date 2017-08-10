@@ -5,7 +5,7 @@ module.exports = (Schema, Banco) => {
     const model = require('../../modules/genericModel')(Schema, Banco)
     const callback = (err, data, res) => {
         if (err) return console.log('erro', err)
-        console.log(data);
+        console.log("Service: ",data);
         return res.json(data);
     }
     const Actions = {}
