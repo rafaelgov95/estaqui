@@ -17,12 +17,15 @@ export class MapsComponent implements OnInit {
   private setCurrentPosition() {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
-        this.est.localizacao.lat=position.coords.latitude;
-        this.est.localizacao.lng = position.coords.longitude;
+        console.log(position.coords.latitude)
+  console.log(position.coords.longitude )
+          this.est.lat= position.coords.latitude;
+        this.est.lng = position.coords.longitude;
       });
     }
   }
   ngOnInit() {
+    this.setCurrentPosition()
   }
 
 }

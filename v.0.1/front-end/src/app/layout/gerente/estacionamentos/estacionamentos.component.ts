@@ -1,3 +1,4 @@
+import { Estacionamento } from './../../../_modelos/estacionamento';
 import { Component, OnInit } from '@angular/core';
 import {MdMenuModule} from '@angular/material';
 
@@ -9,27 +10,22 @@ import {MdMenuModule} from '@angular/material';
 export class EstacionamentosComponent implements OnInit {
  adicionar = false;
  selected = '';
+ est : Estacionamento;
   items = [
-    {text: 'Adicionar'},
-    // {text: 'Settings'},
-    // {text: 'Help', disabled: true},
-    // {text: 'Sign Out'}
+    {text: 'Adicionar'}
   ];
 
-  iconItems = [
-    {text: 'Redial', icon: 'dialpad'},
-    {text: 'Check voicemail', icon: 'voicemail', disabled: true},
-    {text: 'Disable alerts', icon: 'notifications_off'}
-  ];
+  
 
-  select(text: string) { this.selected = text; }
   constructor() { }
-  Abrir(){
-    console.log("Entro")
-    this.adicionar=!this.adicionar;
-  }
+
   ngOnInit() {
     
   }
 
+  chego(event){
+    console.log(event)
+    this.est=event;
+    this.adicionar=!this.adicionar;
+  }
 }

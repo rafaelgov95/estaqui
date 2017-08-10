@@ -11,7 +11,7 @@ module.exports = UsuarioSchema = new mg.Schema({
         // sexo: String,
         // cpf: { type: String, required: true, unique: true },
         // telefone: Number,
-        accessToken: { type: String },
+        accessToken: String ,
         criada_em: created_at
     })
     // console.log(UsuarioSchema)

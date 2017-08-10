@@ -11,6 +11,8 @@ module.exports = new mg.Schema({
     nome: name,
     nome_fantasia: name,
     cnpj: String,
+    lat:Number,
+    lng:Number,
     endereco: endereco,
     servicos: String,
     situacao: situacao,

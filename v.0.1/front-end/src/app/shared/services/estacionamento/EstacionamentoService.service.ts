@@ -8,7 +8,7 @@ import { Http, Headers, RequestOptions, Response } from '@angular/http';
 export class EstacionamentoService {
   private testUrl = 'http://localhost:3000/api/estacionamento/listar';
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) { console.log("Servico de Estacionamentos") }
 
 
   getAll(): Observable<Estacionamento[]> {

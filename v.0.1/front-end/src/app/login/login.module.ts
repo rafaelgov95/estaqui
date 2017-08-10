@@ -5,15 +5,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginService } from '../shared/services/login/LoginService.service';
-// import { AuthService } from '../auth/auth.service';
 
 import { AlertService } from '../shared/services/alert.service';
 import { SharedModule } from '../shared/shared.module';
 import { LoginComponent } from './login.component';
-
-// import { ProfileComponent } from '../profile/profile.component';
-// import { CallbackComponent } from '../callback/callback.component';
-
 
 @NgModule({
   imports: [
