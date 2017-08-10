@@ -22,7 +22,9 @@ export class EstacionamentoService {
   }
 
   create(user: Estacionamento) : Observable<Estacionamento[]> {
-    return this.http.post('est', user).map((response: Response) => response.json());
+      //  headers.append('Authorization', 'Basic ' +
+      // btoa('username:password')); 
+    return this.http.post('http://localhost:3000/api/estacionamento/save',user).map((response: Response) => response.json());
     }
 
   getEstacionamentos() {
@@ -38,8 +40,9 @@ export class EstacionamentoService {
   }
 
  remove(est:Estacionamento): Observable<Estacionamento> {
+   var body =JSON.stringify(est);
     return this.http
-        .delete('http://localhost:3000/api/estacionamento/remove' + "/?" + '_id' + "=" + est._id)
+        .delete('http://localhost:3000/api/estacionamento/remove',body)
         .map(this.extractData)
         .catch(this.handleError);
     }  

@@ -98,7 +98,7 @@ export class GerenciarComponent {
         this.CadastraForm = this.fb.group({
             'nome': [this.estacionamento.nome, [
                 Validators.required,
-                Validators.minLength(4)
+                Validators.minLength(8)
             ]],
             'nome_fantasia': [this.estacionamento.nome_fantasia, [
                 Validators.required,
@@ -167,12 +167,12 @@ export class GerenciarComponent {
     validationMessages = {
         'nome': {
             'required': 'Nome de usuário requerido',
-            'minlength': 'Nome tem que possuir mais de 4 caracteres',
+            'minlength': 'Nome tem que possuir mais de 8 caracteres',
             // 'pattern': 'Formato de email esta incorreto'
         },
         'nome_fantasia': {
             'required': 'Nome Fantasma requerido',
-            'minlength': 'Nome Fantasma tem que possuir mais de 4 caracteres',
+            'minlength': 'Nome Fantasma tem que possuir mais de 8 caracteres',
         },
         'cnpj': {
             'required': 'CNPJ de Firma requerido',

@@ -30,52 +30,22 @@ app.use(express.static(path.join(__dirname, path.join('views', 'dist'))));
 
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    
     next();
 });
 
-// app.use('/api/*', (req, res) => {
-    console.log('teset')
     app.post('/api/autentica', login) // autentica
     app.use('/api/usuario', usuario)
     // app.use(require('./routes/verifica-toke')) // verifica o token 
     app.use('/api/funcioario', funcionario)
     app.use('/api/estacionamento', estacionamento);
     app.use('/api/gerente', gerencia);
-// });
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
-
-
-// app.use(function (req, res, next) {
-// app.get('/*', function (req, res) {
-//     res.render(path.join(__dirname + '/views/dist/index.html'));
-//__dirn    ame : It will resolve to your project folder.
-// next()
-// next()
-// });
-
-// app.use('/api/*',(req, res)=>{
-//     console.log('entro aqui ufa')
-//     app.post('autentica', login) // autentica
-//     app.use('/api/usuario', usuario)
-//     app.use(require('./routes/verifica-toke')) // verifica o token 
-//     app.use('/api/funcioario', funcionario)
-//     app.use('/api/estacionamento', estacionamento);
-//     app.use('/api/gerente', gerencia);
-// });
-
-// app.get('/*', function (req, res) {
-//     res.render(path.join(__dirname + '/views/dist/index.html'));
-//     //__dirname : It will resolve to your project folder.
-// });
-
-
-// next()
-// })
 
 app.use(function (req, res) {
     res.status(404).sendFile(path.join(__dirname, 'index.html'))
