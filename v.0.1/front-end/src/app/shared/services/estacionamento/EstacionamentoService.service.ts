@@ -42,7 +42,7 @@ export class EstacionamentoService {
   remove(est: any): Observable<Estacionamento> {
 
     return this.http
-      .delete('http://localhost:3000/api/estacionamento/remove',est )
+      .post('http://localhost:3000/api/estacionamento/remove',est )
       .map(this.extractData)
       .catch(this.handleError);
   }

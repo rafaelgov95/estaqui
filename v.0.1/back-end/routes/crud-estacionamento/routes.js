@@ -22,7 +22,7 @@ module.exports=(Actions)=>{
 		action:Actions.update
 	},
 	{
-		method:'delete',
+		method:'post',
 		path:'/remove',
 		action:Actions.remove
 	}
