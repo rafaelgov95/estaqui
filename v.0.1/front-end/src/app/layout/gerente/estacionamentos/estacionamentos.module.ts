@@ -1,4 +1,4 @@
-import { CadastrarModule } from './cadastrar/cadastrar.module';
+import { GerenciarModule } from './gerenciar/gerenciar.module';
 import { EstacionamentoService } from './../../../shared/services/estacionamento/EstacionamentoService.service';
 import { EstacionamentosRoutingModule } from './estacionamentos-routing.module';
 import { EstacionamentosComponent } from './estacionamentos.component';
@@ -72,7 +72,7 @@ import { TableComponent } from './table/table.component';
     MdToolbarModule,
     MdTooltipModule,
     StyleModule,
-    CadastrarModule,
+    GerenciarModule,
     CommonModule,
     EstacionamentosRoutingModule,
     PageHeaderModule,
@@ -91,7 +91,7 @@ import { TableComponent } from './table/table.component';
     TableComponent],
   exports: [
     MdMenuModule,
-    CadastrarModule,
+    GerenciarModule,
     EstacionamentosComponent,
     NgbModule,
     FormsModule,

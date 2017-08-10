@@ -1,3 +1,4 @@
+import { EmitterDelivery } from './../../../../shared/services/EmitterDelivery/EmitterDelivery';
 import { EstacionamentoService } from './../../../../shared/services/estacionamento/EstacionamentoService.service';
 import { Estacionamento } from './../../../../_modelos/estacionamento';
 import { Component, ViewChild, OnInit, Input } from '@angular/core';
@@ -8,28 +9,30 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/observable/merge';
 import 'rxjs/add/operator/map';
-
-
 @Component({
   selector: 'app-table',
   styleUrls: ['table.component.scss'],
   templateUrl: 'table.component.html',
 })
 export class TableComponent implements OnInit {
+  displayedColumns = ['Email'];
+  dataSource: Estacionamento[]| null;
   estacionamentos: Estacionamento[];
   errorMessage: string;
-  @Input() data;
+
 
   constructor(private servico: EstacionamentoService) {
 
   }
 
   ngOnInit() {
-    this.servico.getEstacionamentos()
+    this.servico.getAllEstacionamentos()
       .subscribe(
       (ListaEstacionamentos: Estacionamento[]) => this.estacionamentos = ListaEstacionamentos,
       error => this.errorMessage = <any>error);
-    console.log(this.estacionamentos)
 
-  } 
+      this.servico.EmitterDelivery.subscribe(est => this.estacionamentos.push(est))
+      
+      this.dataSource = this.estacionamentos;
+  }
 }

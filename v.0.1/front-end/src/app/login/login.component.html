@@ -1,5 +1,4 @@
 <div class="login-page">
-    <!-- <div class="login-page" [ngStyle]="{'background-image': 'url(http://3.bp.blogspot.com/-ugCXN_KuRqw/ThY-pL33nqI/AAAAAAAAA4I/TorbuV2o194/s1600/Zixpk_HD_Wallpaper_230-2.jpeg)'}"> -->
     <div [hidden]="submitted">
         <div class="col-md-4 push-md-4 login">
 
@@ -31,40 +30,7 @@
                 </div>
                 <a class="btn rounded-btn" [routerLink]="['/dashboard']" (click)="login()"> Entrar </a> &nbsp;
                 <a class="btn rounded-btn" [routerLink]="['/signup']">Registrar</a>
-                <!--<a class="btn rounded-btn" [routerLink]="['/dashboard']" (click)="loginAuthService.login()">  Auth Login </a> &nbsp;-->
             </form>
         </div>
     </div>
 </div>
-
-
-<!--
-<div class=" container ">
-    <div [hidden]="submitted ">
-        <h1>Hero Form 3 (Reactive)</h1>
-        <form [formGroup]="UserForm " *ngIf="active ">
-            <div class="form-group ">
-                <label for="email ">Name</label>
-
-                <input type="text " id="email " class="form-control " formControlName="email " required>
-
-                <div *ngIf="formErrors.email " class="alert alert-danger ">
-                    {{ formErrors.email }}
-                </div>
-            </div>
-
-            <div class="form-group ">
-                <label for="alterEgo ">Alter Ego</label>
-                <input type="text " id="senha " class="form-control " formControlName="senha ">
-            </div>
-
-
-
-            <button type="submit " class="btn btn-default " [disabled]="!UserForm.valid ">Submit</button>
-            <button type="button " class="btn btn-default " (click)="addUser() ">New Hero</button>
-        </form>
-    </div>
-
-</div>-->
-
-<!--<hero-submitted [hero]="hero " [(submitted)]="submitted "></hero-submitted>-->

@@ -2,7 +2,7 @@
 import { AgmCoreModule } from '@agm/core';
 import { GoogleComponent } from './../google/google.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { CadastrarComponent } from './cadastrar.component';
+import { GerenciarComponent } from './gerenciar.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageHeaderModule } from '../../../../shared';
@@ -19,8 +19,8 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [GoogleComponent, CadastrarComponent],
-  exports:[CadastrarComponent,GoogleComponent],
+  declarations: [GoogleComponent, GerenciarComponent],
+  exports:[GerenciarComponent,GoogleComponent],
   providers:[]
 })
-export class CadastrarModule { }
+export class GerenciarModule { }

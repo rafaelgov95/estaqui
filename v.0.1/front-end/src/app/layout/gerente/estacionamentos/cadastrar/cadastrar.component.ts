@@ -6,29 +6,12 @@ import { Estacionamento } from './../../../../_modelos/estacionamento';
 import { Component, Output, EventEmitter } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
-import { ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
-
-import { MapsAPILoader } from '@agm/core';
-import { } from '@types/googlemaps';
-
-
-
 @Component({
     selector: 'app-cadastrar',
     templateUrl: './cadastrar.component.html',
     styleUrls: ['./cadastrar.component.scss']
 })
 export class CadastrarComponent {
-    public latitude: number;
-    public longitude: number;
-    public searchControl: FormControl;
-    public zoom: number;
-
-    @Output() sub = new EventEmitter();
-    @ViewChild("search")
-    public searchElementRef: ElementRef;
-
-
     emailRegex = '^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$';
     cpfRegex = '[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}';
     closeResult: string;
@@ -37,63 +20,26 @@ export class CadastrarComponent {
     estacionamento: Estacionamento;
 
 
+    public latitude: number;
+    public longitude: number;
+    public searchControl: FormControl;
+    public zoom: number;
+
     constructor(private fb: FormBuilder,
         private modalService: NgbModal,
         private service: EstacionamentoService,
-        private mapsAPILoader: MapsAPILoader,
-        private ngZone: NgZone
+
     ) {
-        this.estacionamento = new Estacionamento('', '', '', '', '', this.latitude, this.longitude, true);
+
+        this.estacionamento = new Estacionamento('', '', '', '', '', 0, 0, true);
         console.log(this.estacionamento);
     }
     ngOnInit(): void {
         this.buildForm();
-        this.zoom = 4;
-        this.latitude = 39.8282;
-        this.longitude = -98.5795;
+        console.log("Meu teste", this.CadastraForm.value)
 
 
-        this.searchControl = new FormControl();
-
-
-        this.mapsAPILoader.load().then(() => {
-            let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
-                types: ["address"]
-
-            }
-
-            );
-            autocomplete.addListener("place_changed", () => {
-                this.ngZone.run(() => {
-                    //get the place result
-                    let place: google.maps.places.PlaceResult = autocomplete.getPlace();
-                    //verify result
-                    if (place.geometry === undefined || place.geometry === null) {
-                        return;
-                    }
-
-                    //set latitude, longitude and zoom
-                    this.latitude = place.geometry.location.lat();
-                    this.longitude = place.geometry.location.lng();
-                    this.zoom = 12;
-
-                });
-            });
-        });
     }
-
-
-    private setCurrentPosition() {
-        if ("geolocation" in navigator) {
-            navigator.geolocation.getCurrentPosition((position) => {
-                this.latitude = position.coords.latitude;
-                this.longitude = position.coords.longitude;
-                this.zoom = 12;
-            });
-        }
-    }
-
-
 
     buildForm(): void {
         this.CadastraForm = this.fb.group({
@@ -105,7 +51,7 @@ export class CadastrarComponent {
                 Validators.required,
                 Validators.minLength(8)
             ]],
-            'cnpj': [this.estacionamento.cnpj, [
+            'cpf': [this.estacionamento.cnpj, [
                 Validators.required,
                 Validators.pattern(this.cpfRegex),
 
@@ -133,14 +79,8 @@ export class CadastrarComponent {
     onValueChanged(data?: any) {
         if (!this.CadastraForm) { return; }
         const form = this.CadastraForm;
-        form.value.lng =this.longitude;
-        form.value.lat =this.latitude;
-        
-        this.estacionamento.lat = this.latitude;
-        this.estacionamento.lng = this.longitude;
-
-
-
+        console.log(this.CadastraForm);
+        console.log(this.estacionamento.lat)
         for (const field in this.formErrors) {
             this.formErrors[field] = '';
             const control = form.get(field);
@@ -158,7 +98,7 @@ export class CadastrarComponent {
     formErrors = {
         'nome': '',
         'nome_fantasia': '',
-        'cnpj': '',
+        'cpf': '',
         'lat': '',
         'lng': ''
     };
@@ -175,9 +115,9 @@ export class CadastrarComponent {
             'required': 'Nome Fantasma requerido',
             'minlength': 'Nome Fantasma tem que possuir mais de 4 caracteres',
         },
-        'cnpj': {
-            'required': 'CNPJ de Firma requerido',
-            'pattern': 'CNPJ Inválido.',
+        'cpf': {
+            'required': 'CPF de usuário requerido',
+            'pattern': 'CPF Inválido.',
             'minlength': ''
         },
         'lat': {
@@ -199,13 +139,47 @@ export class CadastrarComponent {
     OnSubmit(event) {
         var test = this.service.create(event).subscribe(data => {
             console.log("Deu Bom!!")
-            this.sub.emit(data);
+            this.closeResult = `Closed with: Closed`;
         }, erro => {
             console.log("Deu ruim!!")
         });
     }
 
-    
+    open(content) {
+        this.buildForm();
+        this.modalService.open(content).result.then((result) => {
+            this.closeResult = `Closed with: ${result}`;
+        }, (reason) => {
+            this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
 
+    }
+    openEndereco(content) {
+        this.modalService.open(content).result.then((result) => {
+            this.closeResult = `Closed with: ${result}`;
+        }, (reason) => {
+            this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
+    }
+
+
+
+    private getDismissReason(reason: any): string {
+        if (reason === ModalDismissReasons.ESC) {
+            return 'by pressing ESC';
+        } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+        } else {
+            return `with: ${reason}`;
+        }
+    }
+
+    Auto(event) {
+        this.estacionamento.localizacao.lat = event[0];
+        this.estacionamento.localizacao.lng = event[1];
+        this.CadastraForm.get("lat").setValue(event[0]);
+        this.CadastraForm.get("lng").setValue(event[1]);
+        console.log("Ta chegando", this.CadastraForm.get("lat"), this.CadastraForm.get("lng"))
+    }
 
 }

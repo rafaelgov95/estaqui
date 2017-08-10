@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card mb-3">
+
+            <div class="card-block">
+                <div class="card-header">Cadastrar Estacionamento</div>
+                <div class="card-block table-responsive">
+
+                    <form role="form" [formGroup]="CadastraForm" (ngSubmit)="OnSubmit(CadastraForm.value)" method="post">
+                        <div class="form-group" [ngClass]="{' has-success':!formErrors.nome,'has-danger':formErrors.nome}">
+                            <label class="form-control-label" for="inputSuccess">Nome</label>
+                            <input type="text" class="form-control " formControlName="nome" id="inputSuccess" [ngClass]="{'form-control-success':!formErrors.nome,'form-control-danger':formErrors.nome}">
+                            <div *ngIf="formErrors.nome" class="alert alert-danger">
+                                {{ formErrors.nome }}
+                            </div>
+                        </div>
+                        <div class="form-group" [ngClass]="{' has-success':!formErrors.nome_fantasia,'has-danger':formErrors.nome_fantasia}">
+                            <label class="form-control-label" for="inputSuccess">Nome Fantasia</label>
+                            <input type="text" class="form-control " formControlName="nome_fantasia" id="inputSuccess" [ngClass]="{'form-control-success':!formErrors.nome_fantasia,'form-control-danger':formErrors.nome_fantasia}">
+                            <div *ngIf="formErrors.nome_fantasia" class="alert alert-danger">
+                                {{ formErrors.nome_fantasia }}
+                            </div>
+                        </div>
+                        <div class="form-group" [ngClass]="{' has-success':!formErrors.cnpj,'has-danger':formErrors.cnpj}">
+                            <label class="form-control-label" for="inputSuccess">CNPJ</label>
+                            <input type="text" class="form-control " formControlName="cnpj" id="inputSuccess" [ngClass]="{'form-control-success':!formErrors.cnpj,'form-control-danger':formErrors.cnpj}">
+                            <div *ngIf="formErrors.cnpj" class="alert alert-danger">
+                                {{ formErrors.cnpj }}
+                            </div>
+                        </div>
+                        <div class="form-group" [ngClass]="{' has-success':!formErrors.lat,'has-danger':formErrors.lat}">
+                            <label class="form-control-label" for="inputSuccess">Latitude</label>
+                            <input type="text" class="form-control " formControlName="lat"  [value]='latitude'id="inputSuccess" [ngClass]="{'form-control-success':!formErrors.lat,'form-control-danger':formErrors.lat}">
+                            <div *ngIf="formErrors.lat" class="alert alert-danger">
+                                {{ formErrors.lat }}
+                            </div>
+                        </div>
+                        <div class="form-group" [ngClass]="{' has-success':!formErrors.lng,'has-danger':formErrors.lng}">
+                            <label class="form-control-label" for="inputSuccess">Longitude</label>
+                            <input type="text" class="form-control " formControlName="lng" [value]='longitude' id="inputSuccess" [ngClass]="{'form-control-success':!formErrors.lng,'form-control-danger':formErrors.lng}">
+                            <div *ngIf="formErrors.lng" class="alert alert-danger">
+                                {{ formErrors.lng }}
+                            </div>
+                        </div>
+                        <div>
+                            <h1>Escolha um endereço para cadastro</h1>
+                            <div class="form-group">
+                                <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control"
+                                    #search [formControl]="searchControl">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button [disabled]="!CadastraForm.valid" ype="submit" class="btn btn-primary">Salvar</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

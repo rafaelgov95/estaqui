@@ -27,5 +27,6 @@ export class EstacionamentosComponent implements OnInit {
     console.log(event)
     this.est=event;
     this.adicionar=!this.adicionar;
+    
   }
 }

@@ -1,8 +1,17 @@
-<div class="card-block">
-  <ul class="heroes">
-    <li *ngFor="let estacinamento of estacionamentos" [class.selected]="estacinamento === selectedEstacionamento">
-     {{estacinamento.nome}}
+<div class="example-container mat-elevation-z8">
+  <md-table #table [dataSource]="dataSource">
 
-    </li>
-  </ul>
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- ID Column -->
+    <ng-container cdkColumnDef="userId">
+      <md-header-cell *cdkHeaderCellDef> ID </md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.email}} </md-cell>
+    </ng-container>
+
+
+    <md-header-row *cdkHeaderRowDef="displayedColumns"></md-header-row>
+    <md-row *cdkRowDef="let row; columns: displayedColumns;"></md-row>
+  </md-table>
 </div>
