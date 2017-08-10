@@ -22,7 +22,7 @@ export class EstacionamentoService {
   }
 
   create(user: Estacionamento) : Observable<Estacionamento[]> {
-    return this.http.post('http://localhost:3000/api/estacionamento/save', user).map((response: Response) => response.json());
+    return this.http.post('est', user).map((response: Response) => response.json());
     }
 
   getEstacionamentos() {
@@ -37,6 +37,12 @@ export class EstacionamentoService {
       
   }
 
+ remove(est:Estacionamento): Observable<Estacionamento> {
+    return this.http
+        .delete('http://localhost:3000/api/estacionamento/remove' + "/?" + '_id' + "=" + est._id)
+        .map(this.extractData)
+        .catch(this.handleError);
+    }  
   private extractData(res: Response) {
     let body = res.json();
     return body || {};

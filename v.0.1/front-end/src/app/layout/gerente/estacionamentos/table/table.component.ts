@@ -15,7 +15,7 @@ import 'rxjs/add/operator/map';
   templateUrl: 'table.component.html',
 })
 export class TableComponent implements OnInit {
-  displayedColumns = ['Email'];
+  displayedColumns = ['Nome','Nome Fantasia',''];
   dataSource: Estacionamento[]| null;
   estacionamentos: Estacionamento[];
   errorMessage: string;
@@ -34,5 +34,13 @@ export class TableComponent implements OnInit {
       this.servico.EmitterDelivery.subscribe(est => this.estacionamentos.push(est))
       
       this.dataSource = this.estacionamentos;
+  }
+
+  Apagar(event:Estacionamento){
+    this.servico.remove(event)
+      .subscribe(data => console.log(data));
+
+    console.log(event)
+        // this.servico.EmitterDelivery.subscribe(est => this.estacionamentos(event))
   }
 }

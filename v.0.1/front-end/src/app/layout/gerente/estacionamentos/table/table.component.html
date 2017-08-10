@@ -1,17 +1,20 @@
-<div class="example-container mat-elevation-z8">
-  <md-table #table [dataSource]="dataSource">
+<table class="table">
+    <thead class="thead-inverse">
+        <tr>
+            <th>#</th>
+            <th *ngFor="let display of displayedColumns">{{display}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let estacionamento of estacionamentos; let i = index">
+            <th scope="row">{{i}}</th>
+            <td>{{estacionamento.nome}}</td>
+            <td>{{estacionamento.nome_fantasia}}</td>
+            <td>
+                <button type="button" class="btn btn-danger" (click)="Apagar(estacionamento)">Excluir</button>
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
+            </td>
+        </tr>
 
-    <!-- ID Column -->
-    <ng-container cdkColumnDef="userId">
-      <md-header-cell *cdkHeaderCellDef> ID </md-header-cell>
-      <md-cell *cdkCellDef="let row"> {{row.email}} </md-cell>
-    </ng-container>
-
-
-    <md-header-row *cdkHeaderRowDef="displayedColumns"></md-header-row>
-    <md-row *cdkRowDef="let row; columns: displayedColumns;"></md-row>
-  </md-table>
-</div>
+    </tbody>
+</table>
